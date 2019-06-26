@@ -1,0 +1,19 @@
+@import '../styles/index.scss';
+
+
+.header {
+    border-top: solid $primary 5px;
+    
+}
+
+.layoutContent {
+
+    // padding-top: 60px;
+    // min-height: 100vh;
+    min-height: 100%;
+}
+
+.headerLogo {
+    width: 120px;
+    height: auto;
+}

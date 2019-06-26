@@ -1,0 +1,11 @@
+@import 'variables.scss';
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+// blog stuff.
+// we keep in in the main namespace in order to use classes in markdown
+@import 'blog.scss';
+
+
+// @import 'theme.scss';

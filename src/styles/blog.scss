@@ -1,0 +1,26 @@
+.blog-post-content {
+    
+    img {
+        max-width: 100%;
+    }
+
+    img.with-caption {
+        max-width: 600px !important;
+        margin-bottom: 10px;
+    }
+
+    .caption {
+        display: block;
+    }
+
+    // p:not(:first-child)
+    p, ul, li {
+        width: 720px !important;
+        text-align: initial;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+
+
+
+}
