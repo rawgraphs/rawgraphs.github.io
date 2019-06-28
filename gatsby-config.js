@@ -50,7 +50,13 @@ module.exports = {
           // `gatsby-remark-images`,
           // `gatsby-remark-copy-images`,
           'gatsby-remark-attr',
-          
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400
+            }
+          },
           {
             resolve: "gatsby-remark-copy-linked-files",
             options: {
@@ -88,7 +94,7 @@ module.exports = {
                   "type": "htmlQuery",
                   "sourceField": "html",
                   "excerptSelector": "html > *",
-                  "ignoreSelector": "img, .gatsby-highlight",
+                  "ignoreSelector": "img, .gatsby-highlight, iframe",
                   "stripSelector": "a",
                   "elementReplacements": [
                       // {

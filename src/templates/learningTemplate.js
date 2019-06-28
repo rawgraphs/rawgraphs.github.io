@@ -10,28 +10,51 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  const { steps, resources } = frontmatter
+
   return (
     
     <Layout>
     <SEO title={frontmatter.title} />
-    <div className="container">
+    <div className="container pb-5">
       <div className="learning-post-container">
-        <div className="learning-post">
-          <div className="text-left">
-            <h6 className="text-primary text-uppercase">{frontmatter.category} &gt;{frontmatter.subCategory} </h6>
-            <h1>{frontmatter.title}</h1>
-            {(frontmatter.tags || frontmatter.time) && <div>
-                {frontmatter.time}
-                {frontmatter.tags && frontmatter.tags.map((tag, i) => (
-                  <span key={i}>&nbsp;{tag}</span>
-                )) }
-            </div>}
+        <div className="row">
+         {steps && <div className="col-md-3 d-none d-md-block">
+            {steps && <div className="position-fixed"><small>
+              <b className="text-primary">STEPS</b>
+              <div>
+                { steps.map((step, i) => (
+                  <div key={i}>
+                    {i+1}. <a href={`${step.href}`}>{step.title}</a>
+                  </div>
+                ))}
+              </div>
+            </small></div>}
+          </div>}
+          
+          
+          <div className="col-md-9">
+            <div className="learning-post">
+            <div className="text-left">
+              <h6 className="text-primary text-uppercase">{frontmatter.category} &gt;{frontmatter.subCategory} </h6>
+              <h1>{frontmatter.title}</h1>
+              {(frontmatter.tags || frontmatter.time) && <div className="mb-4">
+                  <span className="mr-2">{frontmatter.time}</span>
+                  {frontmatter.tags && frontmatter.tags.map((tag, i) => (
+                    <span className="badge badge-primary mr-1" key={i}>&nbsp;{tag}</span>
+                  )) }
+              </div>}
+            </div>
+            <div
+              className={"learning-post-content"}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
-          <div
-            className={"learning-post-content"}
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+
+          </div>
+
         </div>
+        
       </div>
     </div>
   </Layout>)
@@ -50,6 +73,10 @@ export const pageQuery = graphql`
         subCategory
         tags
         time
+        steps {
+          title
+          href
+        }
       }
     }
   }`

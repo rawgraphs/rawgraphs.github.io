@@ -48,6 +48,7 @@ query {
           subCategory
           time
           author
+          
         }
         html
         snippet

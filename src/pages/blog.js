@@ -43,6 +43,9 @@ query {
           date
           category
           author
+          image {
+            publicURL
+          }
         }
         html
         snippet

@@ -10,6 +10,7 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  const { image } = frontmatter
   return (
     
     <Layout>
@@ -21,6 +22,9 @@ export default function Template({
             <h6 className="text-primary text-uppercase">{frontmatter.category}</h6>
             <h1>{frontmatter.title}</h1>
             <p className="small">{frontmatter.date}, by {frontmatter.author}</p>
+            { image && <div className="p-3 border shadow mb-5">
+              <img className="img-responsive" style={{maxWidth: '100%'}} alt="" src={image.publicURL}></img>
+            </div>}
           </div>
           <div
             className={"blog-post-content"}
@@ -43,6 +47,9 @@ export const pageQuery = graphql`
         title
         author
         category
+        image {
+          publicURL
+        }
       }
     }
   }`
