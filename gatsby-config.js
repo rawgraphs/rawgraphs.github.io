@@ -3,7 +3,17 @@ module.exports = {
     title: `RAWGraphs`,
     description: `The missing link between spreadsheets and data visualization.`,
     author: `@rawgraphs`,
+
+    learningCategories : [
+      'introduction',
+      'charts',
+      'data',
+    ]
+
+
   },
+
+
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,

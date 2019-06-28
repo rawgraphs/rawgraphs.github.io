@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-
+import { Link} from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
  
@@ -36,7 +36,9 @@ export default function Template({
           <div className="col-md-9">
             <div className="learning-post">
             <div className="text-left">
-              <h6 className="text-primary text-uppercase">{frontmatter.category} &gt;{frontmatter.subCategory} </h6>
+              <h6 className="text-primary text-uppercase">
+                <Link to={frontmatter.category}>{frontmatter.category}</Link>
+               &gt;{frontmatter.subCategory} </h6>
               <h1>{frontmatter.title}</h1>
               {(frontmatter.tags || frontmatter.time) && <div className="mb-4">
                   <span className="mr-2">{frontmatter.time}</span>
