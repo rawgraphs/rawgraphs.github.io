@@ -3,6 +3,7 @@ import React from "react"
 import { Link} from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import get from 'lodash/get'
  
 
 export default function Template({
@@ -37,8 +38,9 @@ export default function Template({
             <div className="learning-post">
             <div className="text-left">
               <h6 className="text-primary text-uppercase">
-                <Link to={frontmatter.category}>{frontmatter.category}</Link>
-               &gt;{frontmatter.subCategory} </h6>
+                {/* <Link to={frontmatter.category}>{frontmatter.category}</Link> */}
+                &gt; {get(frontmatter, 'categories', []).map(cat => <span key={cat}>{cat}&nbsp;</span>)}
+              </h6>
               <h1>{frontmatter.title}</h1>
               {(frontmatter.tags || frontmatter.time) && <div className="mb-4">
                   <span className="mr-2">{frontmatter.time}</span>
@@ -71,8 +73,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        category
-        subCategory
+        categories
         tags
         time
         steps {

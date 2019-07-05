@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogBlock from "../components/blog-block"
-import groupBy from 'lodash/groupBy'
 import get from 'lodash/get'
 import { Link } from 'gatsby'
 
@@ -10,10 +9,18 @@ const LearningPage = ({data}) => {
   const { site , allMarkdownRemark} = data
   const edges = allMarkdownRemark.edges
   const { siteMetadata} = site
-  const bySubCategory = groupBy(edges, 'node.frontmatter.subCategory')
   // const subcats = Object.keys(bySubCategory).map(k => )
   console.log("123", siteMetadata.learningCategories)
-  
+
+  const bySubCategory = siteMetadata.learningCategories.reduce((bySubCategory, item) => {
+    bySubCategory[item] = edges.filter(edge => {
+      const categories = get(edge, 'node.frontmatter.categories', []).map(x => x.toLowerCase())
+      return categories.indexOf(item.toLowerCase()) !== -1
+    })
+    return bySubCategory
+  }, {})
+
+  console.log("bySubCategory", bySubCategory)
 
   return <Layout>
     <SEO title="Learning" />
@@ -62,7 +69,7 @@ query {
   }
   allMarkdownRemark(
     filter : {
-      frontmatter: { category: { eq: "learning" } }
+      frontmatter: { layout: { eq: "post" } }
     }
     sort: { order: DESC, fields: [frontmatter___date] }
     limit: 1000
@@ -73,11 +80,10 @@ query {
           title
           path
           date
-          category
-          subCategory
+          layout
+          categories
           time
           author
-          
         }
         html
         snippet
