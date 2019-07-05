@@ -17,6 +17,7 @@ const Header = ({ siteTitle }) => (
         <div className="navbar-nav ml-auto">
           <Link className="nav-item nav-link" activeClassName="active" to="/blog">Blog</Link>
           <Link className="nav-item nav-link" activeClassName="active" to="/learning">Learning</Link>
+          <Link className="nav-item nav-link" activeClassName="active" to="/gallery">Gallery</Link>
         </div>
       </div>
     </div>

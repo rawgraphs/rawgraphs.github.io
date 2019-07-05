@@ -13,14 +13,21 @@ exports.createPages = ({ actions, graphql }) => {
   
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
   const learningTemplate = path.resolve(`src/templates/learningTemplate.js`)
+  const galleryTemplate = path.resolve(`src/templates/galleryTemplate.js`)
 
   const getTemplate = (frontmatter) => {
-    const categories = get(frontmatter, 'categories', []).map(x => x.toLowerCase());
-    const isLearning = categories.indexOf('learning') !== -1;
-    if(isLearning){
+    
+    // If path starts with /learning it's a learning article
+    // If it has a "submitted_by" attribute it's gallery
+    // Otherwise it's a blog post
+    const path = get(frontmatter, 'path')
+    if (path.indexOf('/learning') === 0){
       return learningTemplate
+    } else if (frontmatter.layout === 'gallery_project'){
+      return galleryTemplate
+    } else {
+      return blogPostTemplate  
     }
-    return blogPostTemplate
   }
 
   return graphql(`
@@ -33,11 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
-              category
-              subCategory
-              author
-              date
-              
+              layout
             }
           }
         }

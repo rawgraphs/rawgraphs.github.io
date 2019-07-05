@@ -6,43 +6,31 @@ import groupBy from 'lodash/groupBy'
 import get from 'lodash/get'
 import { Link } from 'gatsby'
 
-const LearningPage = ({data}) => {
+const GalleryPage = ({data}) => {
   const { site , allMarkdownRemark} = data
   const edges = allMarkdownRemark.edges
   const { siteMetadata} = site
   const bySubCategory = groupBy(edges, 'node.frontmatter.subCategory')
   // const subcats = Object.keys(bySubCategory).map(k => )
-  console.log("123", siteMetadata.learningCategories)
+
   
 
   return <Layout>
-    <SEO title="Learning" />
+    <SEO title="Gallery" />
     
     <div className="container py-5">
-      <h1>Learning</h1>
-      <p className="lead">Quick reference guides for learning how to use and how to hack RAW Graphs.</p>
+      <h1>Gallery</h1>
+      <p className="lead">A place to showcase the best examples of RAWGraphs in use.</p>
     </div>
     <div className="bg-light py-4">
       <div className="container">
-        {siteMetadata.learningCategories.map(k => (
-          <div className="row" key={k}>
-            <div className="col-4">
-              {k}
-            </div>
-            <div className="col-8">
-              {get(bySubCategory, k, []).map(edge=> (
-                <div className="row">
-                  <div className="col">
-                    <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
-                  </div>
-                  <div className="col">
-                    {edge.node.frontmatter.time}
-                  </div>
-                </div>
-              ))}
-            </div>
-          
-        </div>))}
+        <div className="row">
+        {edges.map(edge => <div className="col-md-3" key={edge.node.frontmatter.path} ><Link to={edge.node.frontmatter.path} as="div">
+          <h4>{edge.node.frontmatter.title}</h4>
+          <img className="img-thumbnail" src={edge.node.frontmatter.image.publicURL}></img>
+        </Link></div>)}
+        </div>
+        
       </div>
       
     </div>
@@ -51,7 +39,7 @@ const LearningPage = ({data}) => {
   </Layout>
 }
 
-export default LearningPage
+export default GalleryPage
 
 export const query = graphql`
 query {
@@ -62,7 +50,7 @@ query {
   }
   allMarkdownRemark(
     filter : {
-      frontmatter: { category: { eq: "learning" } }
+      frontmatter: { layout: { eq: "gallery_project" } }
     }
     sort: { order: DESC, fields: [frontmatter___date] }
     limit: 1000
@@ -73,11 +61,12 @@ query {
           title
           path
           date
-          category
-          subCategory
-          time
-          author
-          
+          categories
+          submitted_by
+          image {
+            publicURL
+          }
+          tags
         }
         html
         snippet

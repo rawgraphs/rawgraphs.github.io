@@ -31,8 +31,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        category
-        subCategory
+        categories
+        submitted_by
         tags
         time
         steps {
