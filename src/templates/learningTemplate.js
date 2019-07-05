@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 import { Link} from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -63,7 +63,7 @@ export default function Template({
     
 }
 
-export const pageQuery = graphql(`
+export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
@@ -81,4 +81,4 @@ export const pageQuery = graphql(`
         }
       }
     }
-  }`);
+  }`;

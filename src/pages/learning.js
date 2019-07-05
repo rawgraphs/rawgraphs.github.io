@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import BlogBlock from "../components/blog-block"
 import groupBy from 'lodash/groupBy'
 import get from 'lodash/get'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 const LearningPage = ({data}) => {
   const { site , allMarkdownRemark} = data
@@ -53,7 +53,7 @@ const LearningPage = ({data}) => {
 
 export default LearningPage
 
-export const query = graphql(`
+export const query = graphql`
 query {
   site {
     siteMetadata {
@@ -86,4 +86,4 @@ query {
   }
 }
 
-`)
+`
