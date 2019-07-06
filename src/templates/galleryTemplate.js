@@ -17,6 +17,25 @@ export default function Template({
     <Layout>
     <SEO title={frontmatter.title} />
     <div className="container pb-5">
+      <div className="row">
+        <div className="col-md-8">
+          <h2>{frontmatter.title}</h2>
+          <div>
+            by {frontmatter.submitted_by}
+          </div>
+          <div
+            className={"blog-post-content"}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+          <div>
+            <img className="img-responsive" src={frontmatter.image.publicURL} style={{maxWidth:'100%'}}></img>
+          </div>
+        </div>
+        <div className="col-md-4">
+
+        </div>
+
+      </div>
       
     </div>
   </Layout>)
@@ -35,9 +54,8 @@ export const pageQuery = graphql`
         submitted_by
         tags
         time
-        steps {
-          title
-          href
+        image {
+          publicURL
         }
       }
     }

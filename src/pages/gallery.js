@@ -27,6 +27,7 @@ const GalleryPage = ({data}) => {
         <div className="row">
         {edges.map(edge => <div className="col-md-3" key={edge.node.frontmatter.path} ><Link to={edge.node.frontmatter.path} as="div">
           <h4>{edge.node.frontmatter.title}</h4>
+          <h6>{edge.node.frontmatter.submitted_by}</h6>
           <img className="img-thumbnail" src={edge.node.frontmatter.image.publicURL}></img>
         </Link></div>)}
         </div>
