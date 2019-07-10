@@ -43,7 +43,7 @@ const LearningPage = ({data}) => {
                     <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
                   </div>
                   <div className="col">
-                    {edge.node.frontmatter.time}
+                    {edge.node.frontmatter.reading_time} min.
                   </div>
                 </div>
               ))}
@@ -82,7 +82,7 @@ query {
           date
           layout
           categories
-          time
+          reading_time
           author
         }
         html
