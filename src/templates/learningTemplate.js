@@ -11,7 +11,7 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
-  const { resources } = frontmatter
+  const { files } = frontmatter
 
   const domparser = new DOMParser()
   var doc = domparser.parseFromString(html, 'text/html')
@@ -21,7 +21,7 @@ export default function Template({
   headings.forEach(heading => {
     const s = {
       href: `#${heading.id}`,
-      title: heading.textContent,
+      title: heading.innerText,
     }
     headingsSteps.push(s)
 
@@ -40,8 +40,9 @@ export default function Template({
     <div className="container pb-5">
       <div className="learning-post-container">
         <div className="row">
-         {(steps || resources) && <div className="col-md-3 d-none d-md-block">
-            {steps && <div className="position-fixed"><small>
+         {(steps || files) && <div className="col-md-3 d-none d-md-block">
+           <div className="position-sticky">
+            {steps && <div><small>
               <b className="text-primary">STEPS</b>
               <div>
                 { steps.map((step, i) => (
@@ -51,16 +52,17 @@ export default function Template({
                 ))}
               </div>
             </small></div>}
-            {resources && <div className="position-fixed"><small>
+            {files && <div><small>
               <b className="text-primary">RESOURCES</b>
               <div>
-                { resources.map((resource, i) => (
+                { files.map((file, i) => (
                   <div key={i}>
-                    <a href={`${resource.href}`}>{resource.title}</a>
+                    <a href={`${file.href.publicURL}`}>{file.title}</a>
                   </div>
                 ))}
               </div>
             </small></div>}
+            </div>
           </div>}
           
           
@@ -106,6 +108,12 @@ export const pageQuery = graphql`
         categories
         tags
         reading_time
+        files {
+          title
+          href {
+            publicURL
+          }
+        }
       }
     }
   }`;

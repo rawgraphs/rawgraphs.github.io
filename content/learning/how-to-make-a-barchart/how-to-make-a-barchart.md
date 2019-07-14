@@ -22,8 +22,9 @@ discover_more_right:
   - 'null'
 reading_time:
   - '4'
-resources:
-  - '685'
+files:
+  - title: ciao
+    href: ./barchart_sample.tsv.zip 
 featured_video:
   - ''
 image: ./barchart-cover.png
