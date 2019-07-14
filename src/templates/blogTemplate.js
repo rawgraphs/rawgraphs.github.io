@@ -46,7 +46,7 @@ export const pageQuery = graphql`
         path
         title
         author
-        category
+        categories
         image {
           publicURL
         }

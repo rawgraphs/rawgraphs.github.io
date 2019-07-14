@@ -81,6 +81,11 @@ module.exports = {
               ignoreFileExtensions: [],
             },
           },
+
+          "gatsby-remark-autolink-headers",
+          
+
+          // not really used right now, remove?
           {
             resolve: "gatsby-remark-custom-blocks",
             options: {

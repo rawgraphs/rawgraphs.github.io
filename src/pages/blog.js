@@ -42,7 +42,7 @@ query {
           title
           path
           date
-          category
+          categories
           author
           image {
             publicURL

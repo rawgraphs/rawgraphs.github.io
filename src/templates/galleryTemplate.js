@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         categories
         submitted_by
         tags
-        time
+        reading_time
         image {
           publicURL
         }

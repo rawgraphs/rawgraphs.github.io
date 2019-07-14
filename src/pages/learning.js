@@ -37,8 +37,8 @@ const LearningPage = ({data}) => {
               {k}
             </div>
             <div className="col-8">
-              {get(bySubCategory, k, []).map(edge=> (
-                <div className="row">
+              {get(bySubCategory, k, []).map((edge, i)=> (
+                <div className="row" key={i}>
                   <div className="col">
                     <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
                   </div>

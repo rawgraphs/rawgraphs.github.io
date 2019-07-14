@@ -11,7 +11,27 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
-  const { steps, resources } = frontmatter
+  const { resources } = frontmatter
+
+  const domparser = new DOMParser()
+  var doc = domparser.parseFromString(html, 'text/html')
+  const headings = doc.querySelectorAll('h1, h2, h3, h4, h5')
+
+  let headingsSteps = []
+  headings.forEach(heading => {
+    const s = {
+      href: `#${heading.id}`,
+      title: heading.textContent,
+    }
+    headingsSteps.push(s)
+
+  })
+  const steps = [{
+    href: '#article-start',
+    title: 'Intro'
+  }].concat(headingsSteps)
+
+
 
   return (
     
@@ -20,13 +40,23 @@ export default function Template({
     <div className="container pb-5">
       <div className="learning-post-container">
         <div className="row">
-         {steps && <div className="col-md-3 d-none d-md-block">
+         {(steps || resources) && <div className="col-md-3 d-none d-md-block">
             {steps && <div className="position-fixed"><small>
               <b className="text-primary">STEPS</b>
               <div>
                 { steps.map((step, i) => (
                   <div key={i}>
-                    {i+1}. <a href={`${step.href}`}>{step.title}</a>
+                    <a href={`${step.href}`}>{step.title}</a>
+                  </div>
+                ))}
+              </div>
+            </small></div>}
+            {resources && <div className="position-fixed"><small>
+              <b className="text-primary">RESOURCES</b>
+              <div>
+                { resources.map((resource, i) => (
+                  <div key={i}>
+                    <a href={`${resource.href}`}>{resource.title}</a>
                   </div>
                 ))}
               </div>
@@ -39,9 +69,9 @@ export default function Template({
             <div className="text-left">
               <h6 className="text-primary text-uppercase">
                 {/* <Link to={frontmatter.category}>{frontmatter.category}</Link> */}
-                &gt; {get(frontmatter, 'categories', []).map(cat => <span key={cat}>{cat}&nbsp;</span>)}
+                {get(frontmatter, 'categories', []).join(' > ')}
               </h6>
-              <h1>{frontmatter.title}</h1>
+              <h1 id="article-start">{frontmatter.title}</h1>
               {(frontmatter.tags || frontmatter.time) && <div className="mb-4">
                   <span className="mr-2">{frontmatter.time}</span>
                   {frontmatter.tags && frontmatter.tags.map((tag, i) => (
@@ -75,11 +105,7 @@ export const pageQuery = graphql`
         title
         categories
         tags
-        time
-        steps {
-          title
-          href
-        }
+        reading_time
       }
     }
   }`;
