@@ -4,7 +4,7 @@ import React from "react"
 
 const BlogBlock = ({ node }) => {
 
-  const { html, snippet, frontmatter} = node
+  const { html, excerpt, frontmatter} = node
   const { image } = frontmatter
 
   
@@ -25,7 +25,7 @@ const BlogBlock = ({ node }) => {
             <h1>{node.frontmatter.title}</h1>
             <div
               // className={styles.blogPostContent}
-              dangerouslySetInnerHTML={{ __html: snippet }}
+              dangerouslySetInnerHTML={{ __html: excerpt }}
             />
           </div>
           <div>

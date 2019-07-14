@@ -2,9 +2,14 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogBlock from "../components/blog-block"
-// import { graphql } from 'gatsby'
+import range from 'lodash/range'
+import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
-const BlogPage = ({data}) => {
+
+const BlogPage = ({data, pathContext}) => {
+
+  const { numPages, currentPage } = pathContext
+  
 
   return <Layout>
     <SEO title="Blog" />
@@ -21,8 +26,22 @@ const BlogPage = ({data}) => {
         ))}
         </div>
       </div>
+
+
+      {/* pagination */}
+      {numPages > 1 && <div className="d-flex flex-row justify-content-center mt-5"><Pagination aria-label="Page navigation example">
+        { range(numPages).map(page => (
+          <PaginationItem key={page} active={currentPage === page + 1}>
+            <PaginationLink href={`/blog/${page === 0 ? '' : page + 1}`}>
+              {page + 1}
+            </PaginationLink>
+          </PaginationItem>
+        ))}
+      </Pagination></div>}
+    
       
     </div>
+
     
     
   </Layout>
@@ -30,11 +49,13 @@ const BlogPage = ({data}) => {
 
 export default BlogPage
 
-export const query = graphql`
-query {
+export const pageQuery = graphql`
+query blogListQuery($skip: Int!, $limit: Int!){
   allMarkdownRemark(
+    filter: {frontmatter: {layout: {ne: "gallery_project"}}}
     sort: { order: DESC, fields: [frontmatter___date] }
-    limit: 1000
+    limit: $limit
+    skip: $skip
   ) {
     edges {
       node {
@@ -50,6 +71,7 @@ query {
         }
         html
         snippet
+        excerpt
       }
     }
   }
