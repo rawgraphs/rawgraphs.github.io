@@ -1,11 +1,200 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 // Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 
 // blog stuff.
 // we keep in in the main namespace in order to use classes in markdown
-@import 'blog.scss';
-
+@import "blog.scss";
 
 // @import 'theme.scss';
+
+:root {
+  --green-raw: "#2dd8b1";
+}
+/*Typography*/
+body {
+  font-family: "Karla", sans-serif;
+  color: #3e3e41;
+}
+
+h1 {
+  font-size: 33px;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+h1.big {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 22px;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+h2.light {
+  font-weight: 400;
+}
+
+.main-page h2 {
+  margin-top: 10px;
+  margin-bottom: 27px;
+}
+
+h3 {
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+}
+
+.main-page h3 {
+  margin-top: 15px;
+}
+
+h4 {
+  font-size: 14px;
+  letter-spacing: 0px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+  font-weight: 300;
+  hyphens: none;
+  margin: 0 0 18px;
+}
+
+p.small {
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  color: #6f6f6f;
+  line-height: 20px;
+}
+
+a {
+  color: #2dd8b1;
+  border-bottom: 0px solid transparent;
+  transition: color 0.3s ease-in-out;
+  opacity: 0.9;
+}
+
+a:hover {
+  color: #2dd8b1;
+  text-decoration: none;
+  border-bottom: 1px solid #2dd8b1;
+  opacity: 1;
+}
+
+a:focus {
+  text-decoration: none;
+  color: #2dd8b1;
+}
+
+a.with-img:hover {
+  text-decoration: none;
+  border-bottom: 0px;
+}
+
+p a,
+li a {
+  color: #3e3e41;
+  border-bottom: 1px solid #3e3e41;
+  transition: all 0.3s ease-in-out;
+}
+
+p a:hover,
+li a:hover {
+  color: #2dd8b1;
+  text-decoration: none;
+  border-bottom: 1px solid #2dd8b1;
+}
+
+code {
+  color: #c7254e;
+  background-color: #f9f2f4;
+}
+
+.wp-caption-text {
+  margin: 5px 0 27px;
+  font-size: 12px;
+}
+
+.grecaptcha-badge {
+  visibility: collapse !important;
+}
+
+/*End Typography*/
+
+/* utils*/
+.h-100vh {
+  height: 100vh;
+}
+
+.step {
+  background-color: #ffffff;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+.step:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+/*General UI*/
+
+.btn {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 8px 20px;
+  border-radius: 3px;
+  opacity: 0.9;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
+  color: #3e3e41;
+  background-color: #ffffff;
+  outline: 0;
+}
+
+.btn-green,
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active {
+  color: #fff;
+  background-color: #0dc4a3;
+}
+
+.btn-grey,
+.btn-grey:hover,
+.btn-grey:focus,
+.btn-grey:active {
+  color: #fff;
+  background-color: #3e3e41;
+}
+
+.btn-larger {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/*End General UI*/

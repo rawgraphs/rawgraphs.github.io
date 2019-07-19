@@ -1,0 +1,46 @@
+/* Navigation */
+.navbar {
+  background-color: #fff;
+  border-bottom: none;
+  border-top: 10px solid #2dd8b1;
+}
+
+.brand {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+  color: #3e3e41 !important;
+  font-size: 1.43rem;
+}
+
+.brand-green {
+  font-weight: 300;
+  color: #2dd8b1;
+}
+
+.item {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3e3e41;
+  border-bottom: 2px solid transparent;
+}
+
+.item:focus,
+.item:hover {
+  border-bottom: 2px solid rgba(45, 217, 176, 0.3);
+  background-color: transparent;
+}
+
+.item.active {
+  background-color: transparent;
+  border-bottom: 2px solid #2dd8b1;
+}
+
+.item.active:hover {
+  background-color: transparent;
+}
+
+// .navbar-default .navbar-toggle {
+//   border: none;
+// }
+
+/* END Navigation */
