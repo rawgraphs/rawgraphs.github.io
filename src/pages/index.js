@@ -30,6 +30,7 @@ const style = {
   backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
+  height: "calc(100vh - 60px)",
 }
 
 const images = [bg1, bg2, bg3]
@@ -133,7 +134,7 @@ const HomePage = () => (
   <Layout headerBg={"transparent"}>
     <SEO title="Home" />
     <div
-      className="container-fluid h-100vh d-flex align-items-center justify-content-around flex-column"
+      className="container-fluid d-flex align-items-center justify-content-around flex-column"
       style={{
         ...style,
         backgroundImage: `url(${images[Math.floor(Math.random() * 3)]})`,

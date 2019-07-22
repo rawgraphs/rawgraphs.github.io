@@ -5,7 +5,7 @@ import styles from "./header.module.scss"
 
 const Header = ({ siteTitle, headerBg }) => (
   <nav
-    className={`navbar navbar-expand-lg navbar-light bg-white fixed-top ${styles.navbar}`}
+    className={`navbar navbar-expand-lg navbar-light bg-white sticky-top ${styles.navbar}`}
   >
     <div className="container">
       <Link className={`navbar-brand ${styles.brand}`} to="/">
