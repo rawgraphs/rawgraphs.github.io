@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `RAWGraphs`,
-    description: `The missing link between spreadsheets and data visualization.`,
-    author: `@rawgraphs`,
+    title: "RAWGraphs",
+    description:
+      "The missing link between spreadsheets and data visualization.",
+    author: "@rawgraphs",
 
     learningCategories: ["introduction", "charts", "data"],
   },

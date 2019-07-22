@@ -1,0 +1,32 @@
+h1 {
+  margin-top: 12px;
+}
+
+.guide {
+  height: 66px;
+  border-top: 1px solid #dedede;
+  display: flex;
+  align-items: center;
+}
+.guide:last-child {
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 90px;
+}
+.guide > div {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.guide .reading-time {
+  margin-top: 25px;
+}
+.guide h2 {
+  margin-top: 18px;
+}
+.guide a {
+  color: #6f6f6f;
+}
+.guide a:hover {
+  color: #2dd8b1;
+}

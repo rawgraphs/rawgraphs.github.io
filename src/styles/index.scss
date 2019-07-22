@@ -132,7 +132,8 @@ code {
 
 /*End Typography*/
 
-/* utils*/
+/*General UI*/
+
 .h-100vh {
   height: 100vh;
 }
@@ -147,7 +148,14 @@ code {
   background-color: #f3f3f3;
 }
 
-/*General UI*/
+.main-header {
+  padding: 30px 0 90px 0;
+}
+
+.grey-bg {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
 
 .btn {
   font-size: 14px;
