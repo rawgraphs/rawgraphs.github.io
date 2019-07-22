@@ -1,0 +1,139 @@
+.learning-nav {
+  position: sticky;
+  top: 70px;
+}
+
+.learning-nav h4 {
+  margin: 20px 0px 20px 0px;
+  color: #2dd8b1;
+}
+
+.nav-element {
+  padding: 0px 0px 7px 0px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.nav-element a {
+  color: #3e3e41;
+  border-bottom: none;
+}
+
+.nav-element a:hover {
+  color: var(--green-raw);
+}
+
+.learning-header h2 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.learning-header p {
+  font-size: 14px;
+  color: #6f6f6f;
+}
+
+.learning-header p span {
+  margin-right: 30px;
+}
+
+.learning-header p span i {
+  margin-right: 5px;
+}
+
+.learning-header img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.video-thumbnail {
+  display: block;
+  position: relative;
+  padding: 5px;
+  padding-bottom: 56.25%;
+  border: 5px solid #ffffff;
+  border-color: #3e3e41;
+  border-color: black;
+  box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 0px;
+  background-color: #3e3e41;
+  background-color: black;
+  height: 0px;
+}
+
+.learning-content h3 {
+  margin-top: 81px;
+  /* 	margin-bottom: 27px; */
+  font-size: 26px;
+}
+
+.learning-content img {
+  width: 100%;
+  max-width: 150%;
+  /* 	margin: 0 0 27px; */
+}
+
+.learning-content table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  font-size: 12px;
+}
+
+.learning-content table i {
+  color: #2dd8b1;
+  color: #0dc4a3;
+}
+
+.learning-content table tr {
+  transition: all 0.5s ease-out;
+}
+
+.learning-content table tr:not(:first-child):hover {
+  background-color: rgba(13, 196, 163, 0.04);
+}
+
+.learning-content table tr:not(:first-child) td:hover {
+}
+
+.learning-content table tr td {
+  padding: 12px;
+  line-height: 1.42857143;
+  border-top: 1px solid #ddd;
+  vertical-align: middle;
+  transition: all 0.5s ease-out;
+}
+
+.learning-content table tr:first-child td span {
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+.learning-content table tr:not(:first-child) td:first-child span {
+  font-weight: bold !important;
+  text-transform: capitalize;
+}
+
+.learning-content table tr:last-child td {
+  border-bottom: 1px solid #ddd;
+}
+
+/*
+.learning-content table tr td:nth-child(1) {
+  border-left: 1px solid #ddd;
+}
+.learning-content table tr td:last-child {
+  border-right: 1px solid #ddd;
+}
+*/
+
+.learning-content table tr td:nth-child(3),
+.learning-content table tr td:nth-child(4) {
+  text-align: center;
+}
+
+.learning-content table tr:nth-child(2) {
+}

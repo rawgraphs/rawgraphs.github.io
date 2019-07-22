@@ -1,26 +1,25 @@
 ---
-title: 'Contactlab, DensityDesign and Calibro working together to create RAWGraphs.'
+title: "Contactlab, DensityDesign and Calibro working together to create RAWGraphs."
 date: 2017-01-17T06:00:11.000Z
 author: RAW Graphs Team
 layout: post
 page_subtitle:
-  - ''
+  - ""
 discover_more_left:
-  - 'null'
+  - "null"
 discover_more_right:
-  - 'null'
+  - "null"
 subtitle:
-  - ''
+  - ""
 secondary_title:
-  - 'Contactlab, DensityDesign and Calibro on RAWGraphs.'
+  - "Contactlab, DensityDesign and Calibro on RAWGraphs."
 discover_more_description:
-  - ''
+  - ""
 background_image:
-  - '0'
+  - "0"
 page_background_image:
-  - ''
-featured_video:
-  - ''
+  - ""
+featured_video: ""
 image: ./featured-images-post-1.png
 categories:
   - News
@@ -31,6 +30,7 @@ tags:
   - partnertship
 path: /news/contactlab-to-sponsor-raw-graphs/
 ---
+
 More data is being generated than ever before. By the year 2020, about 1.7 megabytes of new data will be created every second for each human being on the planet. The difficulty of mining data to produce actionable insights is turning businesses towards the developing field of data visualization.
 
 &nbsp;

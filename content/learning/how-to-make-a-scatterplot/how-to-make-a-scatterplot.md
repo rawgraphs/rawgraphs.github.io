@@ -4,37 +4,37 @@ date: 2017-05-22T10:55:27.000Z
 author: RAW Graphs Team
 layout: post
 subtitle:
-  - ''
+  - ""
 secondary_title:
-  - ''
+  - ""
 discover_more_description:
   - >-
     With this guide you’ll learn how to create a scatterplot, showing
     correlations among production budget and box office revenue for the
     highest-grossing movies.
 background_image:
-  - '0'
+  - "0"
 page_background_image:
-  - ''
-featured_video:
-  - ''
+  - ""
+featured_video: ""
 discover_more_left:
-  - 'null'
+  - "null"
 discover_more_right:
-  - 'null'
+  - "null"
 reading_time:
-  - '3'
+  - "3"
 resources:
-  - '909'
+  - "909"
 image: ./scatterplot-cover-1.png
 categories:
-  - Charts
   - Learning
+  - Charts
 tags:
   - dispersion
   - scatterplot
 path: /learning/how-to-make-a-scatterplot/
 ---
+
 <span style="font-weight: 400;">In RAWGraphs, scatterplot and bubble graph are presented as variants of the same layout. This layout is useful to see correlations among dimensions. In this example, we will use it to visualize some data related to a list of movies.</span>
 
 **GOAL OF THE TUTORIAL**: c<span style="font-weight: 400;">omparing movies according box office, production budget, return on investment and genre.</span>
@@ -47,8 +47,6 @@ path: /learning/how-to-make-a-scatterplot/
 
 Here you can see the dataset we are going to use:
 
-
-
 You can also download the dataset through the link on the left of this post or <span style="font-weight: 400;">load the data from using the “Try our samples” button then choosing “Movies &#8211; Dispersion”.</span>
 
 <span style="font-weight: 400;">In few second you should see the green bar saying “26 records in your data have been successfully parsed!”</span>
@@ -57,7 +55,7 @@ You can also download the dataset through the link on the left of this post or�
 
 After pasting your data, scroll down and select the “scatter plot” visual model.
 
-![](./scatterplot-selection.png) 
+![](./scatterplot-selection.png)
 
 ### **03. Map your dimensions**
 
@@ -68,125 +66,131 @@ After pasting your data, scroll down and select the “scatter plot” visual mo
     <td>
       <strong>VARIABLE</strong>
     </td>
-    
+
     <td>
       <strong>TYPE</strong>
     </td>
-    
+
     <td>
       <strong>REQUIRED</strong>
     </td>
-    
+
     <td>
       <strong>MULTIPLE</strong>
     </td>
-    
+
     <td>
       <strong>DESCRIPTION</strong>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>X Axis</strong>
     </td>
-    
+
     <td>
       Number, date
     </td>
-    
+
     <td>
       [fa class=&#8221;fa-asterisk&#8221;]
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
       The horizontal position of the circles.
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Y Axis</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Number, date</span>
     </td>
-    
+
     <td>
       [fa class=&#8221;fa-asterisk&#8221;]
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">The vertical position of the circles.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Size</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Number</span>
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Area of the circles. If not provided, size will be proportional to the count of rows.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Color</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">String, numbers, dates</span>
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">For each unique value found in the dimension, a color is created.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Label</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">String, numbers, dates</span>
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
       [fa class=&#8221;fa-tags&#8221;]
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Values will be used as labels. If more than one dimension is dragged, the label will contains the values separated by comma.</span>
     </td>
+
   </tr>
 </table>
 
@@ -194,13 +198,13 @@ After pasting your data, scroll down and select the “scatter plot” visual mo
 
 <span style="font-weight: 400;">Drag and drop the dimensions as following:</span>
 
-  * <span class="data-dimension" style="background-color: #2dd8b1;">Production budget</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">X Axis</span>;</span>
-  * <span class="data-dimension" style="background-color: #2dd8b1;">Box Office</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Y Axis</span>;</span>
-  * <span class="data-dimension" style="background-color: #2dd8b1;">Roi</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Size</span>;</span>
-  * <span class="data-dimension" style="background-color: #2dd8b1;">Genre</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Color</span>;</span>
-  * <span class="data-dimension" style="background-color: #2dd8b1;">Movie</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Label</span>.</span>
+- <span class="data-dimension" style="background-color: #2dd8b1;">Production budget</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">X Axis</span>;</span>
+- <span class="data-dimension" style="background-color: #2dd8b1;">Box Office</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Y Axis</span>;</span>
+- <span class="data-dimension" style="background-color: #2dd8b1;">Roi</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Size</span>;</span>
+- <span class="data-dimension" style="background-color: #2dd8b1;">Genre</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Color</span>;</span>
+- <span class="data-dimension" style="background-color: #2dd8b1;">Movie</span> as <span class="layout-dimension" style="background-color: #e6e6e6;">Label</span>.</span>
 
-![](./scatterplot-mapping.png) 
+![](./scatterplot-mapping.png)
 
 <span style="font-weight: 400;">In this way we created a circle for each movie in the dataset, disposing it on the cartesian plane according to its production budget and its box office. We then set the area of each circle proportional to the ROI. We colored circles according to genres, and finally put the movie’s name as label.</span>
 
@@ -217,60 +221,66 @@ After pasting your data, scroll down and select the “scatter plot” visual mo
     <td>
       <strong>OPTION</strong>
     </td>
-    
+
     <td>
       <strong>DESCRIPTION</strong>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Width</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">artboard width in pixels</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Height</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">artboard height in pixels</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Max Radius</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">The radius for the circle with the highest value in the dimension mapped as Size.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>Set origin at (0,0)</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">If selected, the scatterplot origin will be set at the zero value for both the axes. If not selected, origin will be set to the minimum value for the two axes.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <strong>colour scale</strong>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">list of uniques values in the dimension mapped as “color”. If set to ordinal, you can set a color for each value. If set to linear, the app will try to find the minimum and maximum value contained in the dimension, and then creating a gradient among those two values.</span>
     </td>
+
   </tr>
 </table>
 

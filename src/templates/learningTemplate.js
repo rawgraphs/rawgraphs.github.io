@@ -1,21 +1,21 @@
 import React from "react"
-// import { graphql } from "gatsby"
-import { Link} from 'gatsby'
+import { Link } from "gatsby"
+import { FaRegClock, FaTags } from "react-icons/fa"
+import YoutubeEmbed from "../components/youtubeEmbed"
+import GuideCitation from "../components/guideCitation"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import get from 'lodash/get'
- 
+import get from "lodash/get"
+import styles from "./learningTemplate.module.scss"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+export default function Template({ data, location }) {
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { files } = frontmatter
 
   const domparser = new DOMParser()
-  var doc = domparser.parseFromString(html, 'text/html')
-  const headings = doc.querySelectorAll('h1, h2, h3, h4, h5')
+  var doc = domparser.parseFromString(html, "text/html")
+  const headings = doc.querySelectorAll("h1, h2, h3, h4, h5")
 
   let headingsSteps = []
   headings.forEach(heading => {
@@ -24,79 +24,128 @@ export default function Template({
       title: heading.innerText,
     }
     headingsSteps.push(s)
-
   })
-  const steps = [{
-    href: '#article-start',
-    title: 'Intro'
-  }].concat(headingsSteps)
+  const steps = [
+    {
+      href: "#article-start",
+      title: "Intro",
+    },
+  ]
+    .concat(headingsSteps)
+    .concat([
+      {
+        href: "#how-to-cite-this-guide",
+        title: "How to cite this guide",
+      },
+    ])
 
-
+  const breadcrumbs = frontmatter.categories.map(d => {
+    const elm = {
+      link:
+        d.toLowerCase() === "learning"
+          ? "/learning"
+          : "/learning#" + d.toLowerCase(),
+      label: d,
+    }
+    return elm
+  })
 
   return (
-    
     <Layout>
-    <SEO title={frontmatter.title} />
-    <div className="container pb-5">
-      <div className="learning-post-container">
+      <SEO title={frontmatter.title} />
+      <div className="container py-5">
         <div className="row">
-         {(steps || files) && <div className="col-md-3 d-none d-md-block">
-           <div className="position-sticky">
-            {steps && <div><small>
-              <b className="text-primary">STEPS</b>
-              <div>
-                { steps.map((step, i) => (
-                  <div key={i}>
-                    <a href={`${step.href}`}>{step.title}</a>
+          {(steps || files) && (
+            <div className="col-md-3 d-none d-md-block">
+              <div className={styles.learningNav}>
+                {steps && (
+                  <div>
+                    <h4 className="text-uppercase mt-0">steps</h4>
+                    {steps.map((step, i) => (
+                      <div className={styles.navElement} key={i}>
+                        <a href={`${step.href}`}>{step.title}</a>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </small></div>}
-            {files && <div><small>
-              <b className="text-primary">RESOURCES</b>
-              <div>
-                { files.map((file, i) => (
-                  <div key={i}>
-                    <a href={`${file.href.publicURL}`}>{file.title}</a>
+                )}
+                {files && (
+                  <div>
+                    <b className="text-primary">RESOURCES</b>
+                    <div>
+                      {files.map((file, i) => (
+                        <div key={i}>
+                          <a href={`${file.href.publicURL}`}>{file.title}</a>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
+                )}
               </div>
-            </small></div>}
             </div>
-          </div>}
-          
-          
+          )}
+
           <div className="col-md-9">
-            <div className="learning-post">
-            <div className="text-left">
-              <h6 className="text-primary text-uppercase">
-                {/* <Link to={frontmatter.category}>{frontmatter.category}</Link> */}
-                {get(frontmatter, 'categories', []).join(' > ')}
-              </h6>
+            <div className={styles.learningHeader}>
+              <h4 className="text-uppercase">
+                {breadcrumbs.map((breadcrumb, index) => (
+                  <React.Fragment key={index}>
+                    <Link to={breadcrumb.link}>{breadcrumb.label}</Link>
+                    {breadcrumbs.length - 1 !== index && (
+                      <span className="mx-1">></span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </h4>
               <h1 id="article-start">{frontmatter.title}</h1>
-              {(frontmatter.tags || frontmatter.time) && <div className="mb-4">
-                  <span className="mr-2">{frontmatter.time}</span>
-                  {frontmatter.tags && frontmatter.tags.map((tag, i) => (
-                    <span className="badge badge-primary mr-1" key={i}>&nbsp;{tag}</span>
-                  )) }
-              </div>}
+              {(frontmatter.tags || frontmatter.time) && (
+                <p className="d-flex align-items-center">
+                  <FaRegClock></FaRegClock>
+                  <span className="ml-2 mr-3">
+                    {frontmatter.reading_time} min.
+                  </span>
+                  <FaTags></FaTags>
+                  {frontmatter.tags &&
+                    frontmatter.tags.map((tag, i) => (
+                      <span className="mx-2" key={i}>
+                        {tag}
+                      </span>
+                    ))}
+                </p>
+              )}
+              {frontmatter.discover_more_description && (
+                <h2 className="light">
+                  {frontmatter.discover_more_description}
+                </h2>
+              )}
+              {frontmatter.featured_video && (
+                <div className={styles.videoThumbnail}>
+                  <YoutubeEmbed url={frontmatter.featured_video}></YoutubeEmbed>
+                </div>
+              )}
+              {!frontmatter.featured_video && frontmatter.image && (
+                <img
+                  className="img-fluid img-thumbnail"
+                  src={frontmatter.image.publicURL}
+                  alt={frontmatter.title}
+                ></img>
+              )}
             </div>
-            <div
-              className={"learning-post-content"}
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            <div className={styles.learningContent}>
+              <div dangerouslySetInnerHTML={{ __html: html }}></div>
+              <h3 id="how-to-cite-this-guide">How to cite this guide</h3>
+              <GuideCitation
+                title={frontmatter.title}
+                url={location.href}
+              ></GuideCitation>
+            </div>
           </div>
-
-          </div>
-
         </div>
-        
       </div>
-    </div>
-  </Layout>)
-    
+    </Layout>
+  )
 }
 
+// eslint-disable-next-line
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
@@ -108,6 +157,11 @@ export const pageQuery = graphql`
         categories
         tags
         reading_time
+        featured_video
+        discover_more_description
+        image {
+          publicURL
+        }
         files {
           title
           href {
@@ -116,4 +170,5 @@ export const pageQuery = graphql`
         }
       }
     }
-  }`;
+  }
+`

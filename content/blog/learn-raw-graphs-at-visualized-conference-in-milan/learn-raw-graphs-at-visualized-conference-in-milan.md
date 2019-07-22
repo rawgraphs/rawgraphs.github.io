@@ -6,7 +6,7 @@ layout: post
 subtitle:
   - A workshop open to all the attendees of Visualized Milan
 secondary_title:
-  - ''
+  - ""
 discover_more_description:
   - >-
     During this workshop we will show you how to create a visualization with the
@@ -14,13 +14,14 @@ discover_more_description:
     publish it on the web, optimizing the visualization in order to be readable
     both on desktop and on mobile devices.
 background_image:
-  - '0'
+  - "0"
 page_background_image:
-  - ''
+  - ""
 discover_more_left:
-  - 'null'
+  - "null"
 discover_more_right:
-  - 'null'
+  - "null"
+featured_video: ""
 image: ./raw_visualized-2.png
 categories:
   - Workshop
@@ -29,6 +30,7 @@ tags:
   - Visualized Conference
 path: /workshop/learn-raw-graphs-at-visualized-conference-in-milan/
 ---
+
 We are very happy to announce that we have been invited to hold a workshop about RAW Graphs at the upcoming [Visualized](http://visualized.com/milan/) conference in Milan.
 
 &nbsp;

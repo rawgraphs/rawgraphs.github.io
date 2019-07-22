@@ -13,8 +13,7 @@ background_image:
   - "0"
 page_background_image:
   - ""
-featured_video:
-  - ""
+featured_video: ""
 discover_more_left:
   - "null"
 discover_more_right:
@@ -25,8 +24,8 @@ resources:
   - "1069"
 image: ./beeswarm-cover.png
 categories:
-  - Charts
   - Learning
+  - Charts
 tags:
   - beeswarm plot
   - dispersion
@@ -216,8 +215,6 @@ By using <span class="data-dimension" style="background-color: #2dd8b1;">Goal US
 <span style="font-weight: 400;">To reach the final results we can customize the visualization with some parameters you can find next to the visualization. </span>
 
 <span style="font-weight: 400;">For the beeswarm plot the options available are the following:</span>
-
-
 
 <table>
   <tr>

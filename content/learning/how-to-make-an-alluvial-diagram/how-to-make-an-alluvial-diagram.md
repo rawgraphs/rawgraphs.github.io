@@ -4,9 +4,9 @@ date: 2017-03-27T10:43:20.000Z
 author: RAW Graphs Team
 layout: post
 subtitle:
-  - ''
+  - ""
 secondary_title:
-  - ''
+  - ""
 discover_more_description:
   - >-
     In this guide you’ll learn how to create an alluvial diagram to see
@@ -15,28 +15,28 @@ discover_more_description:
     ‘nodes’ the black rectangles. We will call ‘flows’ the coloured areas
     linking nodes. We will call ‘steps’ the vertical groups of nodes.
 background_image:
-  - '0'
+  - "0"
 page_background_image:
-  - ''
-featured_video:
-  - ''
+  - ""
+featured_video: ""
 discover_more_left:
-  - 'null'
+  - "null"
 discover_more_right:
-  - 'null'
+  - "null"
 reading_time:
-  - '4'
+  - "4"
 resources:
-  - '809'
+  - "809"
 image: ./alluvial_cover.png
 categories:
-  - Charts
   - Learning
+  - Charts
 tags:
   - alluvial diagram
   - sankey
 path: /learning/how-to-make-an-alluvial-diagram/
 ---
+
 <span style="font-weight: 400;">Alluvial diagrams are in many ways similar to sankey diagrams: they represents weighted flows among nodes. Alluvial diagrams are a specific kind of Sankey diagrams: they use the same logic to show how the same set of items regroups according to different dimensions.</span>
 
 <span style="font-weight: 400;">Before starting we can define a small vocabulary, to avoid misinterpretations. </span><span style="font-weight: 400;">We will call ‘nodes’ the black rectangles. We will call ‘flows’ the colored areas linking nodes. We will call ‘steps’ the vertical groups of nodes.</span>
@@ -58,70 +58,75 @@ path: /learning/how-to-make-an-alluvial-diagram/
     <td>
       <span style="font-weight: 400;">Name</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Age</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">City</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">John</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">30</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">London</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Richard</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">20</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Berlin</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Frank</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">20</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Berlin</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Gabriele</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">30</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Milan</span>
     </td>
+
   </tr>
 </table>
 
@@ -129,15 +134,13 @@ The data must contain at least two columns defining properties. <span style="fo
 
 <span style="font-weight: 400;">Here you can see the dataset we are going to use:</span>
 
-
-
 <span style="font-weight: 400;">You can also select it directly in the app through clicking on ‘Try our samples’ > ‘Titanic’s Passengers’. </span><span style="font-weight: 400;">In few second you should see the green bar saying</span> <span style="font-weight: 400;">“1309 records in your data have been successfully parsed!”.</span>
 
 ### **02. Choose the layout**
 
 <span style="font-weight: 400;">After pasting your data, scroll down and select the “Alluvial Diagram” chart layout.</span>
 
-![](./Screen-Shot-2017-03-27-at-12.27.10.png) 
+![](./Screen-Shot-2017-03-27-at-12.27.10.png)
 
 ### **03. Map your dimensions**
 
@@ -148,64 +151,67 @@ The data must contain at least two columns defining properties. <span style="fo
     <td>
       <span style="font-weight: 400;">VARIABLE</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">TYPE</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">REQUIRED</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">MULTIPLE</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">DESCRIPTION</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span class="layout-dimension" style="font-weight: 400; background-color: #e6e6e6;">Steps</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">String, numbers</span>
     </td>
-    
+
     <td>
       [fa class=&#8221;fa-asterisk&#8221;]
     </td>
-    
+
     <td>
       [fa class=&#8221;fa-tags&#8221;]
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">It accept multiple values, at least two column must be selected. Each dragged column will define a step (a vertical group of nodes). The dragging order is also the visualization order. For each unique value found in each column a node will be created.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span class="layout-dimension" style="font-weight: 400; background-color: #e6e6e6;">Size</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Numbers</span>
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Defines the weight of each line of the dataset. If not defined, all the lines will have the same weight.</span>
     </td>
+
   </tr>
 </table>
 
@@ -215,7 +221,7 @@ The data must contain at least two columns defining properties. <span style="fo
 
 <span style="font-weight: 400;">Drag and drop the dimensions as following:</span>
 
-![](./alluvial-mapping.png) 
+![](./alluvial-mapping.png)
 
 <span style="font-weight: 400;">In this way we will create four different <span class="layout-dimension" style="background-color: #e6e6e6;">Steps</span>. The first is <span class="data-dimension" style="background-color: #2dd8b1;">Gender</span>, with two nodes, male and female. The size of the two nodes is proportional to the number of nodes containing that value.</span>
 
@@ -236,60 +242,66 @@ The data must contain at least two columns defining properties. <span style="fo
     <td>
       <span style="font-weight: 400;">OPTION</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">DESCRIPTION</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">width</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">artboard width in pixels</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">height</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">artboard height in pixels</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Nodes width</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Width of black bars representing nodes, in pixels.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Sort by</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Sorting of nodes inside each step. It can be ‘automatic’ (trying to reduce the number of overlappings among flows), ‘size’ (nodes ordered from the biggest to the smallest), and ‘alphabetical’.</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Color scale</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">The color of flows. The color is defined by the source node. For each unique value found in the dimension dragged as ‘steps’ a color is defined.</span>
     </td>
+
   </tr>
 </table>
 

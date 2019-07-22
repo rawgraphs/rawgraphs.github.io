@@ -1,0 +1,14 @@
+.copy-paste {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.copy-paste:hover {
+  color: var(--green-raw);
+}
+
+.copied {
+  background-color: rgba(44, 216, 176, 0.2);
+  transition: background-color 0.5s ease-out;
+}

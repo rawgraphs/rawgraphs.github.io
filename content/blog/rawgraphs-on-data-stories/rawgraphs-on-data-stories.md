@@ -16,13 +16,14 @@ discover_more_description:
     On the show we talk about how we decided to develop RAWGraphs, how we
     started, the lessons we've learned and our future plans.
 background_image:
-  - '0'
+  - "0"
 page_background_image:
-  - ''
+  - ""
 discover_more_left:
-  - 'null'
+  - "null"
 discover_more_right:
-  - 'null'
+  - "null"
+featured_video: ""
 image: ./featured-images-CS5.png
 categories:
   - News
@@ -31,6 +32,7 @@ tags:
   - interview
 path: /news/rawgraphs-on-data-stories/
 ---
+
 Last week we have been interviewed for the [episode n°91](http://datastori.es/91-visualizing-data-with-raw/) of [Data Stories](http://datastori.es/), a podcast on data visualization with [Enrico Bertini](http://enrico.bertini.io/) and [Moritz Stefaner](http://truth-and-beauty.net/).
 
 &nbsp;
@@ -39,6 +41,6 @@ During the episode we talked about how we decided to develop RAWGraphs, how we 
 
 &nbsp;
 
-We want to thank the [Data Stories team](http://datastori.es/team/) for the possibility and we invite our user to [support](https://www.patreon.com/datastories) the show by becoming a Data Stories patron. Backing starts at $3 per episode.
+We want to thank the [Data Stories team](http://datastori.es/team/) for the possibility and we invite our user to [support](https://www.patreon.com/datastories) the show by becoming a Data Stories patron. Backing starts at \$3 per episode.
 
 &nbsp;

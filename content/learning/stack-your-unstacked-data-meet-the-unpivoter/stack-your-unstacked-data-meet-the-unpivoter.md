@@ -4,9 +4,9 @@ date: 2017-03-29T11:07:52.000Z
 author: RAW Graphs Team
 layout: post
 subtitle:
-  - ''
+  - ""
 secondary_title:
-  - ''
+  - ""
 discover_more_description:
   - >-
     Wide and narrow (sometimes un-stacked and stacked) are terms used to
@@ -14,27 +14,27 @@ discover_more_description:
     most of the cases data in the narrow format: in this guide you’ll learn how
     to use your data in RAWGraphs even it’s in the wide format.
 background_image:
-  - '0'
+  - "0"
 page_background_image:
-  - ''
+  - ""
 discover_more_left:
-  - 'null'
+  - "null"
 discover_more_right:
-  - 'null'
+  - "null"
 reading_time:
-  - '2'
+  - "2"
 resources:
-  - '727'
-featured_video:
-  - ''
+  - "727"
+featured_video: ""
 image: ./stakc_unstack-1.png
 categories:
-  - Data
   - Learning
+  - Data
 tags:
   - unpivoter
 path: /learning/stack-your-unstacked-data-meet-the-unpivoter/
 ---
+
 <span style="font-weight: 400;">Wide, or unstacked data is presented with each different data variable in a separate column. Narrow, or stacked data is presented with one column containing all the values and another column listing the context of the value.</span>
 
 <span style="font-weight: 400;">Here are two example of the same data in the two formats.</span>
@@ -46,56 +46,60 @@ path: /learning/stack-your-unstacked-data-meet-the-unpivoter/
     <th>
       Person
     </th>
-    
+
     <th>
       Age
     </th>
-    
+
     <th>
       Weight
     </th>
+
   </tr>
-  
+
   <tr>
     <td>
       Bob
     </td>
-    
+
     <td>
       32
     </td>
-    
+
     <td>
       128
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       Alice
     </td>
-    
+
     <td>
       24
     </td>
-    
+
     <td>
       86
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       Steve
     </td>
-    
+
     <td>
       64
     </td>
-    
+
     <td>
       95
     </td>
+
   </tr>
 </table>
 
@@ -108,98 +112,105 @@ The same data in a **narrow (stacked) table**:
     <td>
       <b>Person</b>
     </td>
-    
+
     <td>
       <b>Variable</b>
     </td>
-    
+
     <td>
       <b>Value</b>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Bob</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Age</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">32</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Bob</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Weight</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">128</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Alice</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Age</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">24</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Alice</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Weight</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">86</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Steve</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Age</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">64</span>
     </td>
+
   </tr>
-  
+
   <tr>
     <td>
       <span style="font-weight: 400;">Steve</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">Weight</span>
     </td>
-    
+
     <td>
       <span style="font-weight: 400;">95</span>
     </td>
+
   </tr>
 </table>
 
@@ -217,25 +228,23 @@ The same data in a **narrow (stacked) table**:
 
 We prepared a simplified version of the dataset for this tutorial, you can see it here:
 
-
-
 You can also download it through the link on the left. Once your data is loaded, you should see this:
 
-![](./01-unstacked-data.png) 
+![](./01-unstacked-data.png)
 
 ### 02. Unstack your data
 
 <span style="font-weight: 400;">In the bottom-right corner of the data field, you should see the sentence “Your data seems unstacked. Click here to stack it”, as in the image below. </span><span style="font-weight: 400;">Click on it.</span>
 
-<img class="alignnone wp-image-822 size-full" src="https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack.png" alt="" width="1920" height="1080" srcset="https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack.png 1920w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-332x187.png 332w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-400x225.png 400w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-768x432.png 768w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-711x400.png 711w" sizes="(max-width: 1920px) 100vw, 1920px" /> 
+<img class="alignnone wp-image-822 size-full" src="https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack.png" alt="" width="1920" height="1080" srcset="https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack.png 1920w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-332x187.png 332w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-400x225.png 400w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-768x432.png 768w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-711x400.png 711w" sizes="(max-width: 1920px) 100vw, 1920px" />
 
 <span style="font-weight: 400;">A new menu (select a dimension to stack on) will appear. Open it, and select “Country Name”.</span>
 
 <span style="font-weight: 400;">Now, the data is stacked, as in the image below:</span>
 
-![](./03-stacked-data.png) 
+![](./03-stacked-data.png)
 
- <span style="font-weight: 400;">in the first column you have the names of the countries, in the second one you have the years, and in the third ones the values.</span>
+<span style="font-weight: 400;">in the first column you have the names of the countries, in the second one you have the years, and in the third ones the values.</span>
 
 With this operation you defined the main dimension (in this case, <span class="data-dimension" style="background-color: #2dd8b1;">Country</span> Name), which became the first column of the new dataset. In the second column, named <span class="data-dimension" style="background-color: #2dd8b1;">column</span>, are listed all the remaining headers of the previous table. In the third column, named <span class="data-dimension" style="background-color: #2dd8b1;">value</span>, are listed the values of the previous table.
 

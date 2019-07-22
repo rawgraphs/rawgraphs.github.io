@@ -4,19 +4,20 @@ date: 2017-01-17T06:30:34.000Z
 author: RAW Graphs Team
 layout: post
 discover_more_left:
-  - '43'
+  - "43"
 discover_more_right:
-  - 'null'
+  - "null"
 subtitle:
-  - ''
+  - ""
 secondary_title:
-  - ''
+  - ""
 discover_more_description:
-  - ''
+  - ""
 background_image:
-  - '0'
+  - "0"
 page_background_image:
-  - ''
+  - ""
+featured_video: ""
 image: ./featured-images-post-2.png
 categories:
   - New Release
@@ -26,6 +27,7 @@ tags:
   - visual models
 path: /new-release/raw-graphs-updates-with-version-1-2-0/
 ---
+
 Today we are releasing a <a href="https://github.com/densitydesign/raw/releases/tag/v1.2.0" target="_blank">new version of RAWGraphs (1.2.0)</a> that can be used on our brand new website: <a href="http://app.rawgraphs.io/" target="_blank">app.rawgraphs.io</a>.
 
 &nbsp;
@@ -36,32 +38,32 @@ Now, thanks to the [sponsorship provided by ContactLab](https://rawgraphs.io/201
 
 ### Data import
 
-  * Import data from a file by drag and drop. Supported files: plain texts (CSV, TSV) and Microsoft Excel files (XLSX), JSON files.
-  * Load data from URL (**VERY experimental**, only for websites with cross-origin resource sharing enabled, <a href="http://enable-cors.org/" target="_blank">see here</a>)
-  * Parse JSON files (both by copy and paste or by drag and drop), load arrays of objects as tables.
-  * Stack/unstack your data! If you have the dataset as a matrix, you can easily convert it in a dataset within the RAW interface. <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data" target="_blank">See here</a> for more information about stacked/unstacked (or wide/narrow) data.
+- Import data from a file by drag and drop. Supported files: plain texts (CSV, TSV) and Microsoft Excel files (XLSX), JSON files.
+- Load data from URL (**VERY experimental**, only for websites with cross-origin resource sharing enabled, <a href="http://enable-cors.org/" target="_blank">see here</a>)
+- Parse JSON files (both by copy and paste or by drag and drop), load arrays of objects as tables.
+- Stack/unstack your data! If you have the dataset as a matrix, you can easily convert it in a dataset within the RAW interface. <a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data" target="_blank">See here</a> for more information about stacked/unstacked (or wide/narrow) data.
 
-![](./gif-post2.gif) 
+![](./gif-post2.gif)
 
 ### Data samples
 
-  * More data samples, one example per graph type.
+- More data samples, one example per graph type.
 
 ### Visual models
 
-  * Added chart categories: charts are now grouped by type (e.g. hierarchies, dispersions, time series…)
-  * Added new visual models: Sunburst, Bump Charts, Horizon Charts, Box Plot, Pie Charts, Bar Charts.
-  * Improved existing models, adding new options and addressing suggestions provided by users.
+- Added chart categories: charts are now grouped by type (e.g. hierarchies, dispersions, time series…)
+- Added new visual models: Sunburst, Bump Charts, Horizon Charts, Box Plot, Pie Charts, Bar Charts.
+- Improved existing models, adding new options and addressing suggestions provided by users.
 
-![](./gif-post.gif) 
+![](./gif-post.gif)
 
 ### Visualization
 
-  * When a field is mandatory (e.g. hierarchy in treemap), instead of displaying the visualization, the list of the required fields will appear.
+- When a field is mandatory (e.g. hierarchy in treemap), instead of displaying the visualization, the list of the required fields will appear.
 
 ### License
 
-  * We changed the license to Apache 2.0. The project remains open-source, and the new licence allows you to reuse the code with any other kind of license.
+- We changed the license to Apache 2.0. The project remains open-source, and the new licence allows you to reuse the code with any other kind of license.
 
 &nbsp;
 
