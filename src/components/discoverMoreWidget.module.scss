@@ -1,0 +1,30 @@
+.item {
+  background-color: white;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
+  height: 140px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  min-height: 220px;
+  margin-top: 3vh;
+  justify-content: space-between;
+}
+
+.item:hover {
+  box-shadow: 0 4px 31px 0 rgba(163, 162, 162, 0.7);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.item.with-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}

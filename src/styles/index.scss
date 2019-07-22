@@ -10,7 +10,7 @@
 // @import 'theme.scss';
 
 :root {
-  --green-raw: "#2dd8b1";
+  --green-raw: #2dd8b1;
 }
 /*Typography*/
 body {
@@ -79,22 +79,22 @@ p.small {
 }
 
 a {
-  color: #2dd8b1;
+  color: var(--green-raw);
   border-bottom: 0px solid transparent;
   transition: color 0.3s ease-in-out;
   opacity: 0.9;
 }
 
 a:hover {
-  color: #2dd8b1;
+  color: var(--green-raw);
   text-decoration: none;
-  border-bottom: 1px solid #2dd8b1;
+  border-bottom: 1px solid var(--green-raw);
   opacity: 1;
 }
 
 a:focus {
   text-decoration: none;
-  color: #2dd8b1;
+  color: var(--green-raw);
 }
 
 a.with-img:hover {
@@ -111,9 +111,9 @@ li a {
 
 p a:hover,
 li a:hover {
-  color: #2dd8b1;
+  color: var(--green-raw);
   text-decoration: none;
-  border-bottom: 1px solid #2dd8b1;
+  border-bottom: 1px solid var(--green-raw);
 }
 
 code {

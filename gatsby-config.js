@@ -4,15 +4,8 @@ module.exports = {
     description: `The missing link between spreadsheets and data visualization.`,
     author: `@rawgraphs`,
 
-    learningCategories : [
-      'introduction',
-      'charts',
-      'data',
-    ]
-
-
+    learningCategories: ["introduction", "charts", "data"],
   },
-
 
   plugins: [
     `gatsby-plugin-sass`,
@@ -37,7 +30,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // {
@@ -54,19 +47,19 @@ module.exports = {
         path: `${__dirname}/content/`,
       },
     },
-    { 
-      resolve : `gatsby-transformer-remark`, 
-      options : {
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
         plugins: [
           // `gatsby-remark-images`,
           // `gatsby-remark-copy-images`,
-          'gatsby-remark-attr',
+          "gatsby-remark-attr",
           {
             resolve: "gatsby-remark-embed-youtube",
             options: {
               width: 800,
-              height: 400
-            }
+              height: 400,
+            },
           },
           {
             resolve: "gatsby-remark-copy-linked-files",
@@ -84,7 +77,6 @@ module.exports = {
           },
 
           "gatsby-remark-autolink-headers",
-          
 
           // not really used right now, remove?
           {
@@ -97,68 +89,70 @@ module.exports = {
               },
             },
           },
-        ]
-      }
-    },
-
-    {
-      "resolve": "gatsby-plugin-excerpts",
-      "options": {
-          "sources": {
-              
-              "default": {
-                  "type": "htmlQuery",
-                  "sourceField": "html",
-                  "excerptSelector": "html > *",
-                  "ignoreSelector": "img, .gatsby-highlight, iframe",
-                  "stripSelector": "a",
-                  "elementReplacements": [
-                      // {
-                      //     "selector": "h6",
-                      //     "replaceWith": "strong"
-                      // },
-                      // {
-                      //     "selector": "h5",
-                      //     "replaceWith": "h6"
-                      // },
-                      // {
-                      //     "selector": "h4",
-                      //     "replaceWith": "h5"
-                      // },
-                      // {
-                      //     "selector": "h3",
-                      //     "replaceWith": "h4"
-                      // },
-                      // {
-                      //     "selector": "h2",
-                      //     "replaceWith": "h3"
-                      // },
-                  ],
-                  "truncate": {
-                      "length": 80,
-                      "byWords": true,
-                      "ellipsis": "…"
-                  },
-              }
-          },
-          "sourceSets": {
-              "markdownHtml": [
-                  "default"
-              ]
-          },
-          "excerpts": {
-              "snippet": {
-                  "type": "html",
-                  "nodeTypeSourceSet": {
-                      "MarkdownRemark": "markdownHtml"
-                  }
-              }
-          }
+        ],
       },
-  }
-
-
-
+    },
+    {
+      resolve: "gatsby-plugin-excerpts",
+      options: {
+        sources: {
+          default: {
+            type: "htmlQuery",
+            sourceField: "html",
+            excerptSelector: "html > *",
+            ignoreSelector: "img, .gatsby-highlight, iframe",
+            stripSelector: "a",
+            elementReplacements: [
+              // {
+              //     "selector": "h6",
+              //     "replaceWith": "strong"
+              // },
+              // {
+              //     "selector": "h5",
+              //     "replaceWith": "h6"
+              // },
+              // {
+              //     "selector": "h4",
+              //     "replaceWith": "h5"
+              // },
+              // {
+              //     "selector": "h3",
+              //     "replaceWith": "h4"
+              // },
+              // {
+              //     "selector": "h2",
+              //     "replaceWith": "h3"
+              // },
+            ],
+            truncate: {
+              length: 80,
+              byWords: true,
+              ellipsis: "…",
+            },
+          },
+        },
+        sourceSets: {
+          markdownHtml: ["default"],
+        },
+        excerpts: {
+          snippet: {
+            type: "html",
+            nodeTypeSourceSet: {
+              MarkdownRemark: "markdownHtml",
+            },
+          },
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-5816319-7",
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

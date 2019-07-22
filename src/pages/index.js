@@ -2,7 +2,7 @@ import React from "react"
 // import { Link } from "gatsby"
 import {
   FaChevronDown,
-  FaClipboard,
+  FaPaste,
   FaLock,
   FaChartBar,
   FaRegHandPointUp,
@@ -12,6 +12,8 @@ import {
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeStep from "../components/homeStep"
+import DiscoverMoreWidget from "../components/DiscoverMoreWidget"
+import AskInfo from "../components/AskInfo"
 import logo from "../images/logo@2x.png"
 import bg1 from "../images/cover-bg-1@2x.png"
 import bg2 from "../images/cover-bg-2@2x.png"
@@ -25,11 +27,12 @@ import logoDD from "../images/logo-DD-black@2x.png"
 import styles from "./index.module.scss"
 
 const style = {
-  backgroundImage: `url(${bg1})`,
   backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
 }
+
+const images = [bg1, bg2, bg3]
 
 const steps = [
   {
@@ -38,7 +41,7 @@ const steps = [
     subSteps: [
       {
         title: "As simple as a copy-paste.",
-        icon: <FaClipboard className={styles.substepIcon} />,
+        icon: <FaPaste className={styles.substepIcon} />,
         text:
           "RAWGraphs works with delimiter-separated values (i.e. csv and tsv files) as well as with copied-and-pasted texts from other applications (e.g. Microsoft Excel, Google Spreadsheets, TextEdit, …). It also works with CORS-enabled endpoints (APIs).",
       },
@@ -94,12 +97,47 @@ const steps = [
   },
 ]
 
+const discoverMoreWidgets = [
+  {
+    title: "RAW Graphs is open",
+    description:
+      "RAW Graphs is built on top of the amazing d3.js library by Mike Bostock. RAW.js is released under Apache 2 licence and it’s open to the community for improvements or for your own projects.",
+    link: "https://github.com/densitydesign/raw/",
+    linkLabel: "Check our repository on GitHub",
+  },
+  {
+    title: "RAW Graphs is scalable",
+    description:
+      "Not satisfied with the layouts? Check how to easily add new charts with a basic knowledge of D3.js.",
+    link: "https://github.com/densitydesign/raw/wiki/Adding-New-Charts",
+    linkLabel: "Adding new charts",
+  },
+]
+
+const askInfos = [
+  {
+    question: "Have you bumped into any issue while using the app?",
+    button: "ask on google group",
+    link: "https://groups.google.com/forum/?hl=en#!forum/densitydesign-raw",
+    bgLight: true,
+  },
+  {
+    question:
+      "Do you want to contribute to the project? Any general question or feedback?",
+    button: "contatc us",
+    link: "mailto:hello@rawgraphs.io",
+  },
+]
+
 const HomePage = () => (
-  <Layout>
+  <Layout headerBg={"transparent"}>
     <SEO title="Home" />
     <div
       className="container-fluid h-100vh d-flex align-items-center justify-content-around flex-column"
-      style={style}
+      style={{
+        ...style,
+        backgroundImage: `url(${images[Math.floor(Math.random() * 3)]})`,
+      }}
     >
       <div className="row">
         <div className="col-10 offset-1 text-center">
@@ -115,7 +153,11 @@ const HomePage = () => (
           </h2>
         </div>
         <div className="col-10 offset-1 col-sm-4 offset-sm-2 col-md-3 offset-md-3 col-lg-2 offset-lg-4">
-          <a target="_blank" href="https://app.rawgraphs.io">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://app.rawgraphs.io"
+          >
             <button
               className="btn btn-default btn-green btn-larger"
               type="submit"
@@ -125,7 +167,11 @@ const HomePage = () => (
           </a>
         </div>
         <div className="col-10 offset-1 offset-sm-0 col-sm-4  col-md-3  col-lg-2 ">
-          <a target="_blank" href="https://github.com/rawgraphs/raw/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/rawgraphs/raw/"
+          >
             <button
               className="btn btn-default btn-grey btn-larger"
               type="submit"
@@ -153,6 +199,11 @@ const HomePage = () => (
           <div className="col-md-12 text-center">
             <h2>Discover more</h2>
           </div>
+          {discoverMoreWidgets.map((widget, index) => {
+            return (
+              <DiscoverMoreWidget key={index} {...widget}></DiscoverMoreWidget>
+            )
+          })}
         </div>
       </div>
     </div>
@@ -168,24 +219,33 @@ const HomePage = () => (
           <div className="col-md-4 col-xs-6">
             <a
               target="_blank"
+              rel="noopener noreferrer"
               className={`${styles.withImg} my-5`}
               href="https://densitydesign.org"
             >
-              <img className="img-fluid" src={logoDD} />
+              <img
+                className="img-fluid"
+                src={logoDD}
+                alt="Logo DensityDesign"
+              />
             </a>
           </div>
           <div className="col-md-4 col-xs-6">
             <a
               target="_blank"
+              rel="noopener noreferrer"
               className={styles.withImg}
               href="https://calib.ro/"
             >
-              <img className="img-fluid" src={logoCalibro} />
+              <img className="img-fluid" src={logoCalibro} alt="Logo Calibro" />
             </a>
           </div>
         </div>
       </div>
     </div>
+    {askInfos.map((askInfo, index) => {
+      return <AskInfo key={index} {...askInfo}></AskInfo>
+    })}
   </Layout>
 )
 

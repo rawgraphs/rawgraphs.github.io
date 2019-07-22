@@ -1,10 +1,9 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import logo from "../images/logo@2x.png"
 import styles from "./header.module.scss"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, headerBg }) => (
   <nav
     className={`navbar navbar-expand-lg navbar-light bg-white fixed-top ${styles.navbar}`}
   >
@@ -61,6 +60,7 @@ const Header = ({ siteTitle }) => (
             className={`nav-item nav-link ${styles.item}`}
             href="https://github.com/densitydesign/raw/wiki/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Documentation
           </a>
@@ -76,6 +76,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   siteTitle: ``,
+  headerBg: "white",
 }
 
 export default Header

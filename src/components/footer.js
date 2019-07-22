@@ -16,24 +16,24 @@ const Footer = () => (
             RAW<span className={styles.brandGreen}>Graphs</span>
           </h4>
           <div className="d-block d-xs-none">
-            <div class="menu-footer-menu-container">
+            <div className="menu-footer-menu-container">
               <ul
                 id="menu-footer-menu"
-                class={`nav navbar-nav navbar-right ${styles.nav}`}
+                className={`nav navbar-nav navbar-right ${styles.nav}`}
               >
-                <li class="menu-item">
+                <li className="menu-item">
                   <Link to="/">Home</Link>
                 </li>
-                <li class="menu-item">
+                <li className="menu-item">
                   <Link to="/about">About</Link>
                 </li>
-                <li class="menu-item">
+                <li className="menu-item">
                   <Link to="/learning">Learning</Link>
                 </li>
-                <li class="menu-item">
+                <li className="menu-item">
                   <Link to="/blog">Blog</Link>
                 </li>
-                <li class="menu-item">
+                <li className="menu-item">
                   <a
                     target="_blank"
                     href="https://github.com/densitydesign/raw/wiki"
@@ -41,10 +41,10 @@ const Footer = () => (
                     Documentation
                   </a>
                 </li>
-                <li class="menu-item">
+                <li className="menu-item">
                   <Link to="/gallery">Gallery</Link>
                 </li>
-                {/*                <li class="menu-item">
+                {/*                <li className="menu-item">
                   <a
                     title="Submit your work"
                     href="https://rawgraphs.io/submit-your-work/"
@@ -52,7 +52,7 @@ const Footer = () => (
                     Submit your work
                   </a>
                 </li>*/}
-                <li class="menu-item">
+                <li className="menu-item">
                   <a
                     title="Enjoy the repo"
                     target="_blank"
@@ -61,7 +61,7 @@ const Footer = () => (
                     Enjoy the repo
                   </a>
                 </li>
-                <li class="menu-item">
+                <li className="menu-item">
                   <a
                     title="User survey"
                     target="_blank"
@@ -70,7 +70,7 @@ const Footer = () => (
                     User survey
                   </a>
                 </li>
-                <li class="menu-item">
+                <li className="menu-item">
                   <a
                     title="Subscribe to our newsletter"
                     href="http://eepurl.com/c9eFWH"
