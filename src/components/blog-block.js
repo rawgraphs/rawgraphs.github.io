@@ -1,47 +1,134 @@
-import { navigate } from "gatsby"
-// import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import React from "react"
+import styles from "./blog-block.module.scss"
 
-const BlogBlock = ({ node }) => {
-
-  const { html, excerpt, frontmatter} = node
-  const { image } = frontmatter
-
-  
-  
-
-  return (<div className="col-md-12 p-3 border mb-3 bg-white">
-    {/* <Link to={node.frontmatter.path} className="no-link-color"> */}
-      <div className="row" onClick={() => navigate(node.frontmatter.path)}>
-        { image && <div className="col-md-6">
-          <div style={{
-            minHeight: 300,
-            backgroundImage: `url(${ image.publicURL})`, backgroundSize:'cover', backgroundPosition:'center'}} className="h-100">
+const BlogBlockBig = ({ node }) => {
+  const { excerpt, frontmatter } = node
+  const { image } = frontmatter
+  return (
+    <div className={`col-md-12 mb-4`}>
+      <div className={styles.blogPost}>
+        <div className="row">
+          {image && (
+            <div className="d-none d-sm-block col-md-8 col-sm-12">
+              <div
+                className={styles.thumbnail}
+                style={{
+                  backgroundImage: `url(${image.publicURL})`,
+                }}
+              ></div>
+            </div>
+          )}
+          <div className={`col-md-4 col-sm-12 ${styles.content}`}>
+            <div className={styles.inner}>
+              <p className="text-uppercase green-text">
+                {node.frontmatter.categories[0]}
+              </p>
+              <Link to={node.frontmatter.path}>
+                <h1>{node.frontmatter.title}</h1>
+              </Link>
+              <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+            </div>
+            <div className="mt-auto">
+              <hr />
+              <p className="small mb-0">
+                {node.frontmatter.date}, by {node.frontmatter.author}
+              </p>
+            </div>
           </div>
-        </div>}
-        <div className="col-md-6 d-flex flex-column justify-space-between">
-          <div>
-            <b className="text-uppercase text-primary">{node.frontmatter.category}</b>
-            <h1>{node.frontmatter.title}</h1>
-            <div
-              // className={styles.blogPostContent}
-              dangerouslySetInnerHTML={{ __html: excerpt }}
-            />
-          </div>
-          <div>
-            <hr/>
-            <p className="small">{node.frontmatter.date}, by {node.frontmatter.author}</p>
-          </div>
-          
         </div>
-
       </div>
-      
-    {/* </Link> */}
-
-  </div>)
+    </div>
+  )
+}
+const BlogBlockMedium = ({ node }) => {
+  const { excerpt, frontmatter } = node
+  const { image } = frontmatter
+  return (
+    <div className={`col-md-8 mb-4`}>
+      <div className={styles.blogPost}>
+        <div className="row">
+          <div className={`col-md-6 col-sm-12 ${styles.content}`}>
+            <div className={styles.inner}>
+              <p className="text-uppercase green-text">
+                {node.frontmatter.categories[0]}
+              </p>
+              <Link to={node.frontmatter.path}>
+                <h2>{node.frontmatter.title}</h2>
+              </Link>
+              <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+            </div>
+            <div className="mt-auto">
+              <hr />
+              <p className="small mb-0">
+                {node.frontmatter.date}, by {node.frontmatter.author}
+              </p>
+            </div>
+          </div>
+          {image && (
+            <div className="d-none d-md-block col-md-6">
+              <div
+                className={styles.thumbnail}
+                style={{
+                  backgroundImage: `url(${image.publicURL})`,
+                }}
+              ></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+const BlogBlockNormal = ({ node }) => {
+  const { excerpt, frontmatter } = node
+  const { image } = frontmatter
+  return (
+    <div className={`col-sm-6 col-md-4 mb-4`}>
+      <div className={styles.blogPost}>
+        <div className="row h-100">
+          <div className={`col-12 ${styles.content}`}>
+            <div className={styles.inner}>
+              <p className="text-uppercase green-text">
+                {node.frontmatter.categories[0]}
+              </p>
+              <Link to={node.frontmatter.path}>
+                <h2>{node.frontmatter.title}</h2>
+              </Link>
+            </div>
+            <div className="mt-auto">
+              {image && (
+                <div
+                  className={styles.thumbnailNormal}
+                  style={{
+                    backgroundImage: `url(${image.publicURL})`,
+                  }}
+                ></div>
+              )}
+              <hr />
+              <p className="small mb-0">
+                {node.frontmatter.date}, by {node.frontmatter.author}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
- 
+const BlogBlock = ({ node, size }) => {
+  if (size === "big") {
+    return <BlogBlockBig node={node}></BlogBlockBig>
+  } else if (size === "medium") {
+    return <BlogBlockMedium node={node}></BlogBlockMedium>
+  } else {
+    return <BlogBlockNormal node={node}></BlogBlockNormal>
+  }
+}
+
+BlogBlock.defaultProps = {
+  size: "normal",
+}
 
 export default BlogBlock

@@ -1,0 +1,49 @@
+.blog-post {
+  background-color: white;
+  padding: 15px;
+  box-sizing: content-box;
+  box-shadow: 0 0 0 0 rgba(163, 162, 162, 0.5);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ececec;
+  border-radius: 2px;
+  opacity: 0.9;
+  overflow: hidden;
+  height: 400px;
+}
+
+.blog-post:hover {
+  box-shadow: 0 4px 31px 0 rgba(163, 162, 162, 0.7);
+}
+
+.thumbnail {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+}
+
+.thumbnailNormal {
+  height: 187px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  color: #333333;
+  transition: color 0.3s ease-in-out;
+  padding-bottom: 0px;
+}
+
+h1:hover,
+h2:hover {
+  color: var(--green-raw);
+}

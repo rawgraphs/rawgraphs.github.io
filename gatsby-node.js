@@ -4,38 +4,33 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require(`path`);
-const get = require('lodash/get');
+const path = require(`path`)
+const get = require("lodash/get")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
   const learningTemplate = path.resolve(`src/templates/learningTemplate.js`)
   const galleryTemplate = path.resolve(`src/templates/galleryTemplate.js`)
 
-  const getTemplate = (frontmatter) => {
-    
+  const getTemplate = frontmatter => {
     // If path starts with /learning it's a learning article
     // If it has a "submitted_by" attribute it's gallery
     // Otherwise it's a blog post
-    const path = get(frontmatter, 'path')
-    if (path.indexOf('/learning') === 0){
+    const path = get(frontmatter, "path")
+    if (path.indexOf("/learning") === 0) {
       return learningTemplate
-    } else if (frontmatter.layout === 'gallery_project'){
+    } else if (frontmatter.layout === "gallery_project") {
       return galleryTemplate
     } else {
-      return blogPostTemplate  
+      return blogPostTemplate
     }
   }
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        
-      ) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             frontmatter {
@@ -60,11 +55,12 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     // Create blog-list pages
-    const posts = result.data.allMarkdownRemark.edges.filter(x => get(x, 'node.frontmatter.layout') !== 'gallery_project')
-    const postsPerPage = 10
+    const posts = result.data.allMarkdownRemark.edges.filter(
+      x => get(x, "node.frontmatter.layout") !== "gallery_project"
+    )
+    const postsPerPage = 9
     const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
-      
       createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
         component: path.resolve("./src/templates/blogListTemplate.js"),
@@ -79,5 +75,4 @@ exports.createPages = ({ actions, graphql }) => {
 
     return pages
   })
-  
 }
