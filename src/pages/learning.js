@@ -3,7 +3,7 @@ import { FaRegClock } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import get from "lodash/get"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styles from "./learning.module.scss"
 
 const LearningPage = ({ data }) => {
@@ -84,7 +84,6 @@ const LearningPage = ({ data }) => {
 
 export default LearningPage
 
-// eslint-disable-next-line
 export const query = graphql`
   query {
     site {
