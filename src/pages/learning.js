@@ -49,7 +49,9 @@ const LearningPage = ({ data }) => {
           {siteMetadata.learningCategories.map(k => (
             <div className="row" key={k}>
               <div className="col-md-3">
-                <h1>{k}</h1>
+                <h1 id={k} className="text-capitalize">
+                  {k}
+                </h1>
               </div>
               <div className="col-md-9">
                 {get(bySubCategory, k, []).map((edge, i) => (

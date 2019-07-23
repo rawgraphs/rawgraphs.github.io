@@ -1,79 +1,105 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BlogBlock from "../components/blog-block"
-import groupBy from 'lodash/groupBy'
-import get from 'lodash/get'
-import { Link } from 'gatsby'
+import AskInfo from "../components/AskInfo"
+import styles from "./gallery.module.scss"
 
-const GalleryPage = ({data}) => {
-  const { site , allMarkdownRemark} = data
+const GalleryPage = ({ data }) => {
+  const { allMarkdownRemark } = data
   const edges = allMarkdownRemark.edges
-  const { siteMetadata} = site
-  const bySubCategory = groupBy(edges, 'node.frontmatter.subCategory')
-  // const subcats = Object.keys(bySubCategory).map(k => )
 
-  
-
-  return <Layout>
-    <SEO title="Gallery" />
-    
-    <div className="container py-5">
-      <h1>Gallery</h1>
-      <p className="lead">A place to showcase the best examples of RAWGraphs in use.</p>
-    </div>
-    <div className="bg-light py-4">
+  return (
+    <Layout>
+      <SEO title="Gallery" />
       <div className="container">
-        <div className="row">
-        {edges.map(edge => <div className="col-md-3" key={edge.node.frontmatter.path} ><Link to={edge.node.frontmatter.path} as="div">
-          <h4>{edge.node.frontmatter.title}</h4>
-          <h6>{edge.node.frontmatter.submitted_by}</h6>
-          <img className="img-thumbnail" src={edge.node.frontmatter.image.publicURL}></img>
-        </Link></div>)}
+        <div className="row main-header">
+          <div className="col-12 col-sm-8">
+            <div>
+              <h1 className="big">Gallery</h1>
+              <h2 className="light">
+                <p>A place to showcase the best examples of RAWGraphs in use</p>
+              </h2>
+            </div>
+          </div>
         </div>
-        
       </div>
-      
-    </div>
-    
-    
-  </Layout>
+
+      <AskInfo
+        question="Have you done something interesting with RAWGraphs?"
+        button="submit!"
+        link="/tobedone"
+        bgLight
+      ></AskInfo>
+
+      <div className="grey-bg container-fluid">
+        <div className="container">
+          <div className="row">
+            {edges.map(edge => (
+              <div
+                className="col-6 col-sm-4 col-md-3 mb-5"
+                key={edge.node.frontmatter.path}
+              >
+                <Link to={edge.node.frontmatter.path} as="div">
+                  <div className={styles.project}>
+                    <img
+                      alt={edge.node.frontmatter.title}
+                      className="img-fluid"
+                      src={edge.node.frontmatter.image.publicURL}
+                    ></img>
+                    <div className={styles.info}>
+                      <h2>{edge.node.frontmatter.title}</h2>
+                      <p className="small">
+                        {edge.node.frontmatter.submitted_by}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <AskInfo
+        question="Do you want to contribute to the project? Any general question or feedback?"
+        button="contact us"
+        link="mailto:hello@rawgraphs.io"
+      ></AskInfo>
+    </Layout>
+  )
 }
 
 export default GalleryPage
 
 export const query = graphql`
-query {
-  site {
-    siteMetadata {
-      learningCategories
+  query {
+    site {
+      siteMetadata {
+        learningCategories
+      }
     }
-  }
-  allMarkdownRemark(
-    filter : {
-      frontmatter: { layout: { eq: "gallery_project" } }
-    }
-    sort: { order: DESC, fields: [frontmatter___date] }
-    limit: 1000
-  ) {
-    edges {
-      node {
-        frontmatter {
-          title
-          path
-          date
-          categories
-          submitted_by
-          image {
-            publicURL
+    allMarkdownRemark(
+      filter: { frontmatter: { layout: { eq: "gallery_project" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+            categories
+            submitted_by
+            image {
+              publicURL
+            }
+            tags
           }
-          tags
+          html
+          snippet
         }
-        html
-        snippet
       }
     }
   }
-}
-
 `

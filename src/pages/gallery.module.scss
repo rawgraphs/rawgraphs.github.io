@@ -1,0 +1,41 @@
+.project {
+  display: block;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  border-radius: 3px;
+  position: relative;
+}
+
+.project:hover img {
+  opacity: 0.35;
+}
+
+.project:hover .info {
+  opacity: 1;
+}
+
+.info,
+.project img {
+  transition: opacity 0.35s;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.info h2 {
+  color: #333333;
+  font-size: 26px;
+  letter-spacing: -1px;
+}
