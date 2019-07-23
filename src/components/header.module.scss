@@ -12,6 +12,10 @@
   font-size: 1.43rem;
 }
 
+.brand:hover {
+  border-bottom: none;
+}
+
 .brand-green {
   font-weight: 300;
   color: #2dd8b1;
@@ -26,13 +30,13 @@
 
 .item:focus,
 .item:hover {
-  border-bottom: 2px solid rgba(45, 217, 176, 0.3);
+  border-bottom: none;
   background-color: transparent;
 }
 
 .item.active {
   background-color: transparent;
-  border-bottom: 2px solid #2dd8b1;
+  border-bottom: none;
 }
 
 .item.active:hover {
