@@ -36,23 +36,19 @@ This allowed us to add two new visual models: &#8220;bee swarm plot&#8221; and &
 
 - **Bee swarm plot** are useful to show distributions of item avoiding overlappings. If you want to learn how to create one with RAWGraphs, check this post: [How to make a beeswarm plot](https://rawgraphs.io/learning/how-to-make-a-beeswarm-plot/).
 
-<div id="attachment_1070" style="width: 610px" class="wp-caption aligncenter">
-  <a href="https://rawgraphs.io/wp-content/uploads/2018/05/beeswarm-cover.png">![](./beeswarm-cover-783x400.png)</a>
+![](./beeswarm-cover-783x400.png)
 
-  <p id="caption-attachment-1070" class="wp-caption-text">
+<p id="caption-attachment-1070" class="wp-caption-text">
     A bee swarm plot representing Kickstarted campaigns. <a href="https://rawgraphs.io/learning/how-to-make-a-beeswarm-plot/">See how to create it here</a>.
-  </p>
-</div>
+</p>
 
 - **Contour plot** show the estimated density of point clouds, which is especially useful to avoid overlappings in large datasets. If you want to learn how to create one with RAWGraphs, check this post: [How to make a beeswarm plot](https://rawgraphs.io/learning/how-to-make-a-contour-plot/).
 
-<div id="attachment_1076" style="width: 610px" class="wp-caption aligncenter">
-  <a href="https://rawgraphs.io/wp-content/uploads/2018/05/contourplot-cover.png">![](./contourplot-cover-778x400.png)</a>
+![](./contourplot-cover-778x400.png)
 
   <p id="caption-attachment-1076" class="wp-caption-text">
     A contour plot showing the distribution of temperature during the second world war. <a href="https://rawgraphs.io/learning/how-to-make-a-contour-plot/">See how to create it here</a>.
   </p>
-</div>
 
 Since all the charts have been updated, you could experience bugs/errors.
 

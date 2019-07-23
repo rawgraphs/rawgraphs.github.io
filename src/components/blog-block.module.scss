@@ -9,6 +9,18 @@
   opacity: 0.9;
   overflow: hidden;
   height: 400px;
+
+  h1,
+  h2 {
+    color: #333333;
+    transition: color 0.3s ease-in-out;
+    padding-bottom: 0px;
+  }
+
+  h1:hover,
+  h2:hover {
+    color: var(--green-raw);
+  }
 }
 
 .blog-post:hover {
@@ -34,16 +46,4 @@
 .content {
   display: flex;
   flex-direction: column;
-}
-
-h1,
-h2 {
-  color: #333333;
-  transition: color 0.3s ease-in-out;
-  padding-bottom: 0px;
-}
-
-h1:hover,
-h2:hover {
-  color: var(--green-raw);
 }

@@ -1,40 +1,50 @@
 import React from "react"
-// import { graphql } from "gatsby"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
- 
+import styles from "./blogTemplate.module.scss"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  const { image } = frontmatter
+  const { image } = frontmatter
   return (
-    
     <Layout>
-    <SEO title={frontmatter.title} />
-    <div className="container">
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <div className="text-center">
-            <h6 className="text-primary text-uppercase">{frontmatter.category}</h6>
+      <SEO title={frontmatter.title} />
+      <div className={`container ${styles.post}`}>
+        <div className="row my-5">
+          <div className="col-sm-8 offset-sm-2 text-center">
+            <h3 className="text-uppercase green-text">
+              {frontmatter.categories[0]}
+            </h3>
             <h1>{frontmatter.title}</h1>
-            <p className="small">{frontmatter.date}, by {frontmatter.author}</p>
-            { image && <div className="p-3 border shadow mb-5">
-              <img className="img-responsive" style={{maxWidth: '100%'}} alt="" src={image.publicURL}></img>
-            </div>}
+            <p className="small">
+              {frontmatter.date}, by {frontmatter.author}
+            </p>
           </div>
-          <div
-            className={"blog-post-content"}
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+        </div>
+        <div className="row">
+          {image && (
+            <div className="col-sm-10 offset-sm-1">
+              <img
+                className="img-fluid img-thumbnail"
+                alt={frontmatter.title}
+                src={image.publicURL}
+              ></img>
+            </div>
+          )}
+          <div className="col-sm-10 offset-sm-1">
+            <div
+              className={styles.contentBox}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </Layout>)
-    
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
@@ -42,7 +52,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM Do, YYYY")
         path
         title
         author
@@ -52,4 +62,5 @@ export const pageQuery = graphql`
         }
       }
     }
-  }`
+  }
+`
