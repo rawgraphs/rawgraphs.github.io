@@ -60,7 +60,7 @@ export default function Template({ data, location }) {
   const defaultWidgets = [
     {
       title: "RAWgraphs is open",
-      subtitle: "do you want to hack raw or install it locally?",
+      subtitle: "do you want to hack RAWGraphs or install it locally?",
       link: "https://github.com/densitydesign/raw/",
     },
     {

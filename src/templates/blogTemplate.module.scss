@@ -3,10 +3,14 @@
   margin-top: 40px;
 }
 
-.content-box {
+.share {
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
 }
 
-.content-box > * {
+.content-box > *,
+hr {
   margin-left: 15%;
   margin-right: 15%;
 }
@@ -40,6 +44,22 @@
   width: 100%;
   border: 5px solid #ffffff;
   box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tags {
+  margin: 27px 15% 27px !important;
+}
+
+.tags a {
+  background-color: #f3f3f3;
+  margin-right: 3px;
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 0;
+}
+.tags a:hover {
+  border-bottom: 0;
 }
 
 .content-box table {

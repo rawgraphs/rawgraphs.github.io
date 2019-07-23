@@ -1,15 +1,36 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+} from "react-share"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import DiscoverMoreWidgetPost from "../components/DiscoverMoreWidgetPost"
 import styles from "./blogTemplate.module.scss"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
+export default function Template({ data, location }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { image } = frontmatter
+
+  const defaultWidgets = [
+    {
+      title: "RAWgraphs is open",
+      subtitle: "do you want to hack RAWGraphs or install it locally?",
+      link: "https://github.com/densitydesign/raw/",
+    },
+    {
+      title: "About RAWGraphs",
+      subtitle: "Everything you need to know about the project.",
+      link: "/about",
+    },
+  ]
+
+  const widgets = frontmatter.widgets ? frontmatter.widgets : defaultWidgets
+
   return (
     <Layout>
       <SEO title={frontmatter.title} />
@@ -40,6 +61,40 @@ export default function Template({
               className={styles.contentBox}
               dangerouslySetInnerHTML={{ __html: html }}
             />
+            <hr />
+            <p className={styles.tags}>
+              Tags:{" "}
+              {frontmatter.tags.map(tag => (
+                <Link key={tag} to="/tobedone">
+                  {tag}
+                </Link>
+              ))}
+            </p>
+            <hr />
+            <div className={styles.share}>
+              <FacebookShareButton url={location.href} className="mr-2">
+                <FacebookIcon size={32} round={false} />
+              </FacebookShareButton>
+              <TwitterShareButton
+                url={location.href}
+                title={frontmatter.title}
+                hashtags={["rawgraphs"]}
+              >
+                <TwitterIcon size={32} round={false} />
+              </TwitterShareButton>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid grey-bg">
+        <div className="container">
+          <div className="row">
+            {widgets.map((widget, index) => (
+              <DiscoverMoreWidgetPost
+                key={index}
+                {...widget}
+              ></DiscoverMoreWidgetPost>
+            ))}
           </div>
         </div>
       </div>
@@ -57,6 +112,12 @@ export const pageQuery = graphql`
         title
         author
         categories
+        tags
+        widgets {
+          title
+          subtitle
+          link
+        }
         image {
           publicURL
         }
