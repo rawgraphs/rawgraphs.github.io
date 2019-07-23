@@ -22,6 +22,9 @@ reading_time:
   - "3"
 resources:
   - "1060"
+files:
+  - title: ciao
+    href: ./RAW_temperature_WWII_dispersion.csv.zip
 image: ./contourplot-cover.png
 categories:
   - Learning

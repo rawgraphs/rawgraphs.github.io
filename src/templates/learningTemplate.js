@@ -1,11 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
-import { FaRegClock, FaTags } from "react-icons/fa"
+import { Link, graphql } from "gatsby"
+import { FaRegClock, FaTags, FaCloudDownloadAlt } from "react-icons/fa"
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  TwitterIcon,
+} from "react-share"
 import YoutubeEmbed from "../components/youtubeEmbed"
 import GuideCitation from "../components/guideCitation"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import get from "lodash/get"
 import styles from "./learningTemplate.module.scss"
 
 export default function Template({ data, location }) {
@@ -70,16 +75,37 @@ export default function Template({ data, location }) {
                 )}
                 {files && (
                   <div>
-                    <b className="text-primary">RESOURCES</b>
+                    <h4 className="text-uppercase">resources</h4>
                     <div>
                       {files.map((file, i) => (
-                        <div key={i}>
-                          <a href={`${file.href.publicURL}`}>{file.title}</a>
+                        <div className={styles.navElement} key={i}>
+                          <a
+                            href={`${file.href.publicURL}`}
+                            className="d-flex align-items-center"
+                          >
+                            <FaCloudDownloadAlt></FaCloudDownloadAlt>
+                            <span className="ml-1">Download the resources</span>
+                          </a>
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
+                <div>
+                  <h4 className="text-uppercase">share</h4>
+                  <div className="d-flex">
+                    <FacebookShareButton url={location.href} className="mr-2">
+                      <FacebookIcon size={32} round={false} />
+                    </FacebookShareButton>
+                    <TwitterShareButton
+                      url={location.href}
+                      title={frontmatter.title}
+                      hashtags={["rawgraphs"]}
+                    >
+                      <TwitterIcon size={32} round={false} />
+                    </TwitterShareButton>
+                  </div>
+                </div>
               </div>
             </div>
           )}
@@ -145,7 +171,6 @@ export default function Template({ data, location }) {
   )
 }
 
-// eslint-disable-next-line
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {

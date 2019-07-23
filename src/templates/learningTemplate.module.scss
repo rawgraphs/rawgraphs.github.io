@@ -75,6 +75,21 @@
   /* 	margin: 0 0 27px; */
 }
 
+.learning-content strong {
+  font-weight: bold;
+}
+
+.learning-content ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.learning-content ul li::before {
+  content: "• ";
+  color: rgb(45, 216, 177);
+  padding-right: 5px;
+}
+
 .learning-content table {
   width: 100%;
   max-width: 100%;
