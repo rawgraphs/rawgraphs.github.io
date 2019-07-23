@@ -1,0 +1,39 @@
+.about {
+  background-image: url(../images/cover_about.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.factsheet {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0 4px 11px 0 rgba(163, 162, 162, 0.5);
+  border-radius: 6px;
+  padding: 20px 20px 0px;
+}
+
+.factsheet p {
+  font-family: "Karla", sans-serif;
+  font-size: 14px;
+  color: #6f6f6f;
+  line-height: 20px;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 10px;
+}

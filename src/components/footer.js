@@ -1,5 +1,3 @@
-// import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import { Link } from "gatsby"
 import { FaTwitterSquare, FaGithubSquare } from "react-icons/fa"
@@ -94,7 +92,7 @@ const Footer = () => (
         <div className="col-sm-2 offset-sm-1 col-xs-6">
           <h4>Supported by</h4>
           <p className="small">
-            <a href="mailto:hello@rawgraphs.io" target="_blank">
+            <a href="mailto:hello@rawgraphs.io">
               Contact us if you want to become our new supporter!
             </a>
           </p>
