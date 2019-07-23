@@ -11,6 +11,8 @@ import YoutubeEmbed from "../components/youtubeEmbed"
 import GuideCitation from "../components/guideCitation"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import AskInfo from "../components/AskInfo"
+import DiscoverMoreWidgetPost from "../components/DiscoverMoreWidgetPost"
 import styles from "./learningTemplate.module.scss"
 
 export default function Template({ data, location }) {
@@ -54,6 +56,21 @@ export default function Template({ data, location }) {
     }
     return elm
   })
+
+  const defaultWidgets = [
+    {
+      title: "RAWgraphs is open",
+      subtitle: "do you want to hack raw or install it locally?",
+      link: "https://github.com/densitydesign/raw/",
+    },
+    {
+      title: "About RAWGraphs",
+      subtitle: "Everything you need to know about the project.",
+      link: "/about",
+    },
+  ]
+
+  const widgets = frontmatter.widgets ? frontmatter.widgets : defaultWidgets
 
   return (
     <Layout>
@@ -167,6 +184,23 @@ export default function Template({ data, location }) {
           </div>
         </div>
       </div>
+      <AskInfo
+        question="Have you bumped into any issue while using the app?"
+        button="ask on google group"
+        link="https://groups.google.com/forum/?hl=en#!forum/densitydesign-raw"
+      ></AskInfo>
+      <div className="container-fluid grey-bg">
+        <div className="container">
+          <div className="row">
+            {widgets.map((widget, index) => (
+              <DiscoverMoreWidgetPost
+                key={index}
+                {...widget}
+              ></DiscoverMoreWidgetPost>
+            ))}
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -184,6 +218,11 @@ export const pageQuery = graphql`
         reading_time
         featured_video
         discover_more_description
+        widgets {
+          title
+          subtitle
+          link
+        }
         image {
           publicURL
         }

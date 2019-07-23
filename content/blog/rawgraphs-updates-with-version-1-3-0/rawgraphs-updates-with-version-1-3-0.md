@@ -13,8 +13,6 @@ background_image:
   - "0"
 page_background_image:
   - ""
-featured_video:
-  - ""
 discover_more_left:
   - "null"
 discover_more_right:

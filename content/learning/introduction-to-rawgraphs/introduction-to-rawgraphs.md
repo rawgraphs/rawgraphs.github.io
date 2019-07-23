@@ -17,10 +17,10 @@ background_image:
 page_background_image:
   - ""
 featured_video: https://www.youtube.com/embed/2TtYlty-M5g
-discover_more_left:
-  - "43"
-discover_more_right:
-  - "565"
+widgets:
+  - title: show us your best viz!
+    subtitle: you might want to know
+    link: /showcase/share-your-work-on-the-rawgraphs-website
 reading_time:
   - "2"
 resources:

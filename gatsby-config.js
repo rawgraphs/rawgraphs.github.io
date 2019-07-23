@@ -54,6 +54,20 @@ module.exports = {
         plugins: [
           // `gatsby-remark-images`,
           // `gatsby-remark-copy-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 900,
+              linkImagesToOriginal: false, // point!
+            },
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`, // point!
+            options: {
+              margin: 15,
+              zIndex: 1021,
+            },
+          },
           "gatsby-remark-attr",
           {
             resolve: "gatsby-remark-embed-youtube",
