@@ -131,7 +131,7 @@ const askInfos = [
 ]
 
 const HomePage = () => (
-  <Layout headerBg={"transparent"}>
+  <Layout headerBg={"transparent"} useIt={false}>
     <SEO title="Home" />
     <div
       className="container-fluid d-flex align-items-center justify-content-around flex-column"

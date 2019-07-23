@@ -6,7 +6,7 @@ import Footer from "./footer"
 import "../styles/index.scss"
 import styles from "./layout.module.scss"
 
-const Layout = ({ children, headerBg }) => {
+const Layout = ({ children, headerBg, useIt }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -18,11 +18,11 @@ const Layout = ({ children, headerBg }) => {
   `)
 
   return (
-    <>
-      <Header headerBg={headerBg} />
+    <React.Fragment>
+      <Header headerBg={headerBg} useIt={useIt} />
       <div>{children}</div>
       <Footer siteTitle={data.site.siteMetadata.title} />
-    </>
+    </React.Fragment>
   )
 }
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styles from "./header.module.scss"
 
-const Header = ({ siteTitle, headerBg }) => (
+const Header = ({ siteTitle, headerBg, useIt }) => (
   <nav
     className={`navbar navbar-expand-lg navbar-light bg-white sticky-top ${styles.navbar}`}
   >
@@ -23,7 +23,7 @@ const Header = ({ siteTitle, headerBg }) => (
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav ml-auto">
+        <div className="navbar-nav ml-auto align-items-center">
           <Link
             className={`nav-item nav-link ${styles.item}`}
             activeClassName="active"
@@ -72,6 +72,17 @@ const Header = ({ siteTitle, headerBg }) => (
           >
             User survey
           </a>
+          {useIt && (
+            <a
+              id={styles.use}
+              className={`nav-item nav-link ${styles.item}`}
+              href="https://app.rawgraphs.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Use it now!
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -85,6 +96,7 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
   headerBg: "white",
+  useIt: true,
 }
 
 export default Header
