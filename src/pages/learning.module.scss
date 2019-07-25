@@ -10,11 +10,9 @@ h1 {
 }
 .guide:last-child {
   border-bottom: 1px solid #dedede;
-  margin-bottom: 90px;
+  margin-bottom: 45px;
 }
 .guide > div {
-  float: left;
-  box-sizing: border-box;
   padding: 0 10px;
 }
 
@@ -23,10 +21,34 @@ h1 {
 }
 .guide h2 {
   margin-top: 18px;
+  font-size: 18px;
 }
 .guide a {
   color: #6f6f6f;
 }
 .guide a:hover {
   color: #2dd8b1;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .guide h2 {
+    font-size: 22px;
+  }
+
+  .guide:last-child {
+    margin-bottom: 90px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }
