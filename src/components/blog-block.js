@@ -27,9 +27,20 @@ const BlogBlockBig = ({ node }) => {
               <Link to={node.frontmatter.path}>
                 <h1>{node.frontmatter.title}</h1>
               </Link>
-              <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+              <div
+                className="d-none d-md-block"
+                dangerouslySetInnerHTML={{ __html: excerpt }}
+              />
             </div>
             <div className="mt-auto">
+              {image && (
+                <div
+                  className={`${styles.thumbnailNormal} d-block d-md-none`}
+                  style={{
+                    backgroundImage: `url(${image.publicURL})`,
+                  }}
+                ></div>
+              )}
               <hr />
               <p className="small mb-0">
                 {node.frontmatter.date}, by {node.frontmatter.author}
@@ -56,9 +67,20 @@ const BlogBlockMedium = ({ node }) => {
               <Link to={node.frontmatter.path}>
                 <h2>{node.frontmatter.title}</h2>
               </Link>
-              <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+              <div
+                className="d-none d-md-block"
+                dangerouslySetInnerHTML={{ __html: excerpt }}
+              />
             </div>
             <div className="mt-auto">
+              {image && (
+                <div
+                  className={`${styles.thumbnailNormal} d-block d-md-none`}
+                  style={{
+                    backgroundImage: `url(${image.publicURL})`,
+                  }}
+                ></div>
+              )}
               <hr />
               <p className="small mb-0">
                 {node.frontmatter.date}, by {node.frontmatter.author}
@@ -81,7 +103,7 @@ const BlogBlockMedium = ({ node }) => {
   )
 }
 const BlogBlockNormal = ({ node }) => {
-  const { excerpt, frontmatter } = node
+  const { frontmatter } = node
   const { image } = frontmatter
   return (
     <div className={`col-sm-6 col-md-4 mb-4`}>
