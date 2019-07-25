@@ -2,13 +2,14 @@ import React from "react"
 import styles from "./homeStep.module.scss"
 
 const HomeStep = ({ index, image, title, subSteps }) => (
-  <div id={`step${index + 1}`} className={`constainer-fluid step`}>
+  <div id={`step${index + 1}`} className={`container-fluid step`}>
     <div className="container">
       <div className="row">
         <div className="col-sm-6 order-1">
           <img
             className={`img-fluid ${styles.imgShadowed} ${styles.smoothCorners}`}
             src={image}
+            alt={title}
           />
         </div>
         <div
@@ -22,7 +23,9 @@ const HomeStep = ({ index, image, title, subSteps }) => (
             return (
               <div key={index} className={styles.subStep}>
                 <h3>
-                  {subStep.icon}
+                  <span className="d-none d-md-inline-block">
+                    {subStep.icon}
+                  </span>
                   {subStep.title}
                 </h3>
                 <p className="small">{subStep.text}</p>

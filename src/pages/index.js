@@ -217,7 +217,7 @@ const HomePage = () => (
           </div>
         </div>
         <div className="row mt-5 justify-content-center">
-          <div className="col-md-4 col-xs-6">
+          <div className="col-md-4 col-6">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -231,7 +231,7 @@ const HomePage = () => (
               />
             </a>
           </div>
-          <div className="col-md-4 col-xs-6">
+          <div className="col-md-4 col-6">
             <a
               target="_blank"
               rel="noopener noreferrer"

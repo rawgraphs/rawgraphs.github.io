@@ -1,5 +1,13 @@
+h2 {
+  margin-top: 27px;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
 .rounded-number {
-  display: inline-block;
+  display: none;
   background-color: #2dd8b1;
   width: 26px;
   height: 26px;
@@ -14,7 +22,7 @@
 }
 
 .sub-step {
-  padding-left: 36px;
+  padding-left: 0px;
 }
 
 .img-shadowed {
@@ -23,4 +31,31 @@
 
 .smooth-corners {
   border-radius: 3px;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .rounded-number {
+    display: inline-block;
+  }
+
+  h2 {
+    margin-top: 10px;
+  }
+
+  .sub-step {
+    padding-left: 36px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

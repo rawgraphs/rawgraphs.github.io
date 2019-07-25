@@ -9,10 +9,9 @@
   padding-right: 15px;
   opacity: 0.9;
   transition: all 0.3s ease-in-out;
-  height: 140px;
+  height: auto;
   margin-bottom: 10px;
   flex-direction: column;
-  min-height: 220px;
   margin-top: 3vh;
   justify-content: space-between;
 }
@@ -27,4 +26,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .item {
+    height: 140px;
+    min-height: 220px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }
