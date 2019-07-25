@@ -141,7 +141,7 @@ const Footer = () => (
               href="https://github.com/densitydesign/raw"
               rel="noopener noreferrer"
             >
-              <FaGithubSquare color="white" size="2rem"></FaGithubSquare>
+              <FaGithubSquare color="white" size="2em"></FaGithubSquare>
             </a>
             <a
               target="_blank"
@@ -149,7 +149,7 @@ const Footer = () => (
               rel="noopener noreferrer"
               className="ml-2"
             >
-              <FaTwitterSquare color="white" size="2rem"></FaTwitterSquare>
+              <FaTwitterSquare color="white" size="2em"></FaTwitterSquare>
             </a>
           </div>
         </div>

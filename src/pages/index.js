@@ -185,7 +185,7 @@ const HomePage = () => (
       <div className="row d-none d-sm-flex">
         <div className="col-12 text-center">
           <a className={styles.exploreDown} href="#step1">
-            <FaChevronDown color="#3E3E41" size="3.25rem"></FaChevronDown>
+            <FaChevronDown color="#3E3E41" size="3.25em"></FaChevronDown>
           </a>
         </div>
       </div>
