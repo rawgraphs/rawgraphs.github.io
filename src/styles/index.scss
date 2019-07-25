@@ -57,9 +57,9 @@ h4 {
 
 p {
   font-family: "Karla", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0;
-  line-height: 27px;
+  line-height: 22px;
   font-weight: 300;
   hyphens: none;
   margin: 0 0 18px;
@@ -246,3 +246,23 @@ code {
 }
 
 /* End Post */
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

@@ -5,7 +5,7 @@ import styles from "./partner.module.scss"
 const Partner = ({ name, description, link, linkLabel, logo }) => {
   return (
     <div className={`col-md-6`}>
-      <div className={`${styles.partner}`}>
+      <div className={`${styles.partner} mb-4`}>
         <div className={`row`}>
           <div className="col-6 offset-3 col-sm-3 offset-sm-0">
             <img className="img-fluid" alt={name} src={logo} />
