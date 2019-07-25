@@ -229,10 +229,7 @@ const AboutPage = () => (
                   rel="noopener noreferrer"
                   className="ml-2"
                 >
-                  <FaGithubSquare
-                    color="#3E3E41"
-                    size="2.5rem"
-                  ></FaGithubSquare>
+                  <FaGithubSquare color="#3E3E41" size="2.5em"></FaGithubSquare>
                 </a>
                 <a
                   target="_blank"
@@ -242,7 +239,7 @@ const AboutPage = () => (
                 >
                   <FaTwitterSquare
                     color="#3E3E41"
-                    size="2.5rem"
+                    size="2.5em"
                   ></FaTwitterSquare>
                 </a>
               </div>
