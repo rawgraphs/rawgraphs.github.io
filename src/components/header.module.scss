@@ -22,7 +22,7 @@
 }
 
 .item {
-  font-size: 0.875rem;
+  font-size: 20px;
   font-weight: 600;
   color: #3e3e41;
   border-bottom: none;
@@ -56,3 +56,22 @@
 }
 
 /* END Navigation */
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .item {
+    font-size: 0.875rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

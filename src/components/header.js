@@ -23,19 +23,7 @@ class Header extends React.Component {
           <Link className={`navbar-brand ${styles.brand}`} to="/">
             RAW<span className={styles.brandGreen}>Graphs</span>
           </Link>
-          {/*      <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>*/}
           <NavbarToggler onClick={this.toggle} />
-          {/*<div className="collapse navbar-collapse" id="navbarNavAltMarkup">*/}
           <Collapse isOpen={isOpen} navbar>
             <div className="navbar-nav ml-auto align-items-center">
               <Link
