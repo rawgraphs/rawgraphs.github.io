@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import GithubSlugger from "github-slugger"
 import { FaRegClock, FaTags, FaCloudDownloadAlt } from "react-icons/fa"
 import {
   FacebookShareButton,
@@ -20,18 +21,14 @@ export default function Template({ data, location }) {
   const { frontmatter, html } = markdownRemark
   const { files } = frontmatter
 
-  const domparser = new DOMParser()
-  var doc = domparser.parseFromString(html, "text/html")
-  const headings = doc.querySelectorAll("h1, h2, h3, h4, h5")
+  const slugger = new GithubSlugger()
 
-  let headingsSteps = []
-  headings.forEach(heading => {
-    const s = {
-      href: `#${heading.id}`,
-      title: heading.innerText,
-    }
-    headingsSteps.push(s)
-  })
+  let headingsSteps = markdownRemark.headings
+    .filter(d => d.depth === 3)
+    .map(d => {
+      return { title: d.value, href: "#" + slugger.slug(d.value) }
+    })
+
   const steps = [
     {
       href: "#article-start",
@@ -209,6 +206,10 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      headings {
+        depth
+        value
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path
