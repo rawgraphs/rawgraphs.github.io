@@ -65,7 +65,7 @@ export default function Template({ data, location }) {
             <p className={styles.tags}>
               Tags:{" "}
               {frontmatter.tags.map(tag => (
-                <Link key={tag} to="/tobedone">
+                <Link key={tag} to="/">
                   {tag}
                 </Link>
               ))}

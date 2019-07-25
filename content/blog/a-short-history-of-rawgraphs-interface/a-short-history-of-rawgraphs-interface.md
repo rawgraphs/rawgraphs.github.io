@@ -43,4 +43,8 @@ The very first version of the interface that you can see above and thas was neve
 
 <span style="font-weight: 400;">This interface has been the foundation of the <a href="http://www.densitydesign.org/2013/10/raw-the-missing-link-between-spreadsheets-and-vector-graphics/" target="_blank" rel="noopener">first version we released in 2013</a>. From that moment on we worked on improving the UI elements and adding new charts as you can see from the old video tutorials below.</span>
 
+<iframe src="https://player.vimeo.com/video/75866661" allowfullscreen="allowfullscreen" width="640" height="400" frameborder="0"></iframe>
+
+<iframe src="https://player.vimeo.com/video/91605650" allowfullscreen="allowfullscreen" width="640" height="400" frameborder="0"></iframe>
+
 We believe that one of the reasons many people use RAWGraphs (more than 10.000 users monthly) is because of its easy to use interface and we will keep on working on its improvement.If you have suggestions or feedbacks that can help us in the design process feel free to <a href="https://github.com/densitydesign/raw/issues" target="_blank" rel="noopener">open new issues on our Github repository</a>.

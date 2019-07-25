@@ -36,13 +36,11 @@ We have been invited by the Visualized team to organize an intensive one day wo
 
 The participants explored different open datasets and decided how to design a visualization for 3 different breakpoints (desktop, tablet and smartphone).Here you can see an example of a responsive visualization done during the workshop.
 
-<div id="attachment_778" style="width: 650px" class="wp-caption alignnone">
-  ![](./small.gif)
+![](./small.gif)
 
   <p id="caption-attachment-778" class="wp-caption-text">
     Work done by <a href="http://www.tizianaalocci.com/" target="_blank">Tiziana Alocci</a>. See it live at this <a href="https://rawgraphs.github.io/misc/visualized2016/tiziana_alocci/" target="_blank">link</a> (remember to resize the window).
   </p>
-</div>
 
 If you are interested in organizing a workshop about RAWGraphs feel free to contact us at <hello@rawgraphs.io>. They are important moments for us to understand how people use the tool and understand how to improve the project.
 

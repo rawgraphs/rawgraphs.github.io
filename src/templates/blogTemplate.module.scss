@@ -36,14 +36,27 @@
   padding-right: 5px;
 }
 
-.content-box img,
-.content-box iframe {
+.content-box img {
   box-sizing: border-box;
   padding: 5px;
   background-color: white;
   width: 100%;
   border: 5px solid #ffffff;
   box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-box img {
+  margin-left: 0;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  max-width: none;
+}
+
+.content-box iframe {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .tags {
@@ -144,6 +157,14 @@
 
   .tags {
     margin: 27px 15% 27px !important;
+  }
+
+  .content-box img {
+    margin-left: -15%;
+    width: 130%;
+    margin-top: 54px;
+    margin-bottom: 54px;
+    max-width: none;
   }
 }
 

@@ -38,7 +38,7 @@ This allowed us to add two new visual models: &#8220;bee swarm plot&#8221; and &
 
 ![](./beeswarm-cover-783x400.png)
 
-<p id="caption-attachment-1070" class="wp-caption-text">
+<p class="wp-caption-text">
     A bee swarm plot representing Kickstarted campaigns. <a href="https://rawgraphs.io/learning/how-to-make-a-beeswarm-plot/">See how to create it here</a>.
 </p>
 
@@ -46,9 +46,7 @@ This allowed us to add two new visual models: &#8220;bee swarm plot&#8221; and &
 
 ![](./contourplot-cover-778x400.png)
 
-  <p id="caption-attachment-1076" class="wp-caption-text">
-    A contour plot showing the distribution of temperature during the second world war. <a href="https://rawgraphs.io/learning/how-to-make-a-contour-plot/">See how to create it here</a>.
-  </p>
+A contour plot showing the distribution of temperature during the second world war. [See how to create it here](https://rawgraphs.io/learning/how-to-make-a-contour-plot/).
 
 Since all the charts have been updated, you could experience bugs/errors.
 

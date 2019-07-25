@@ -43,7 +43,7 @@ We wanted to start from here for mainly two reasons:
 
 &nbsp;
 
-So if you have used the tool in the past and you want to showcase the results please use [this form](https://rawgraphs.io/submit-your-work/).
+So if you have used the tool in the past and you want to showcase the results please use [this form](/submit-your-work).
 
 &nbsp;
 
