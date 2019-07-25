@@ -23,8 +23,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "2"
-resources:
-  - "727"
+files:
+  - title: RAW-GDP-Growth-filtered
+    href: ./RAW-GDP-Growth-filtered.zip
 featured_video: ""
 image: ./stakc_unstack-1.png
 categories:

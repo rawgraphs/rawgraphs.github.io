@@ -22,8 +22,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "4"
-resources:
-  - "839"
+files:
+  - title: Countries-GDP
+    href: ./Countries-GDP.csv.zip
 featured_video: ""
 image: ./piecharts-cover.png
 categories:

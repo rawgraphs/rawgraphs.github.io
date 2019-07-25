@@ -25,8 +25,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "4"
-resources:
-  - "809"
+files:
+  - title: alluvial_sample
+    href: ./alluvial_sample.zip
 image: ./alluvial_cover.png
 categories:
   - Learning

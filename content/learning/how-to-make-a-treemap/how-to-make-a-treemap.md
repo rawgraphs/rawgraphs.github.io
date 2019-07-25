@@ -22,8 +22,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "3"
-resources:
-  - "891"
+files:
+  - title: Treemap_Sample
+    href: ./Treemap_Sample.zip
 image: ./treemap-cover.png
 categories:
   - Learning

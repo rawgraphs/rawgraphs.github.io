@@ -23,8 +23,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "3"
-resources:
-  - "926"
+files:
+  - title: hexagonalbinning sample
+    href: ./hexagonalbinning_sample.zip
 image: ./hexbins-cover.png
 categories:
   - Learning

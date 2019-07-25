@@ -23,8 +23,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "3"
-resources:
-  - "909"
+files:
+  - title: Movies-dispersions-data
+    href: ./Movies-dispersions-data.csv.zip
 image: ./scatterplot-cover-1.png
 categories:
   - Learning

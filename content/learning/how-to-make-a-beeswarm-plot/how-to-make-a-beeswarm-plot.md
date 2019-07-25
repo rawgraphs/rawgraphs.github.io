@@ -20,8 +20,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "3"
-resources:
-  - "1069"
+files:
+  - title: Beeswarm-plot-RAWTutorial-Kickstarter-campaigns
+    href: ./Beeswarm-plot-RAWTutorial-Kickstarter-campaigns.csv.zip
 image: ./beeswarm-cover.png
 categories:
   - Learning

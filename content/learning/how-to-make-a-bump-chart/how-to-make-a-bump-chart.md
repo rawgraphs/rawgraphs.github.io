@@ -22,8 +22,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "3"
-resources:
-  - "876"
+files:
+  - title: bumpchart_sample
+    href: ./bumpchart_sample.zip
 image: ./bumpchart-cover.png
 categories:
   - Learning

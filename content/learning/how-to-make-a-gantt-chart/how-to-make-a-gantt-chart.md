@@ -23,8 +23,9 @@ discover_more_right:
   - "null"
 reading_time:
   - "4"
-resources:
-  - "868"
+files:
+  - title: gantt_sample
+    href: ./gantt_sample.zip
 image: ./gantt-cover.png
 categories:
   - Learning
