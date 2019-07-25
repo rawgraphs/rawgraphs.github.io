@@ -47,6 +47,8 @@ The data must contain at least two columns: one containing the name of the categ
 
 Here you can see the dataset we are going to use:
 
+<iframe src="https://docs.google.com/spreadsheets/d/1nGIn-zmUcgLd0BtB2BXCJZhDKnyRz0TeeiAiGjc51Io/pubhtml?widget=true&amp;headers=false" width="100%" height="300"></iframe>
+
 You can also download it through the link on the left or select it directly in the app through the sample datasets. In few second you should see the green bar saying “78 records in your data have been successfully parsed!”
 
 **Note**: The described dataset structure is often referred as ‘stacked’ or ‘narrow’. If you have data as wide/unstacked form, you can use the “stack/unstack” button.

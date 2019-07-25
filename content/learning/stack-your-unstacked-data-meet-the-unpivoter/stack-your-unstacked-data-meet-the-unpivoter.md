@@ -42,180 +42,72 @@ path: /learning/stack-your-unstacked-data-meet-the-unpivoter/
 
 **Wide (or unstacked) table**:
 
-<table class="wikitable">
-  <tr>
-    <th>
-      Person
-    </th>
-
-    <th>
-      Age
-    </th>
-
-    <th>
-      Weight
-    </th>
-
-  </tr>
-
-  <tr>
-    <td>
-      Bob
-    </td>
-
-    <td>
-      32
-    </td>
-
-    <td>
-      128
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      Alice
-    </td>
-
-    <td>
-      24
-    </td>
-
-    <td>
-      86
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      Steve
-    </td>
-
-    <td>
-      64
-    </td>
-
-    <td>
-      95
-    </td>
-
-  </tr>
+<table>
+<tbody>
+<tr>
+<th>Person</th>
+<th>Age</th>
+<th>Weight</th>
+</tr>
+<tr>
+<td>Bob</td>
+<td>32</td>
+<td>128</td>
+</tr>
+<tr>
+<td>Alice</td>
+<td>24</td>
+<td>86</td>
+</tr>
+<tr>
+<td>Steve</td>
+<td>64</td>
+<td>95</td>
+</tr>
+</tbody>
 </table>
-
-&nbsp;
 
 The same data in a **narrow (stacked) table**:
 
 <table>
-  <tr>
-    <td>
-      <b>Person</b>
-    </td>
-
-    <td>
-      <b>Variable</b>
-    </td>
-
-    <td>
-      <b>Value</b>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Bob</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Age</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">32</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Bob</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Weight</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">128</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Alice</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Age</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">24</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Alice</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Weight</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">86</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Steve</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Age</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">64</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Steve</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Weight</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">95</span>
-    </td>
-
-  </tr>
+<tbody>
+<tr>
+<td><b>Person</b></td>
+<td><b>Variable</b></td>
+<td><b>Value</b></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Bob</span></td>
+<td><span style="font-weight: 400;">Age</span></td>
+<td><span style="font-weight: 400;">32</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Bob</span></td>
+<td><span style="font-weight: 400;">Weight</span></td>
+<td><span style="font-weight: 400;">128</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Alice</span></td>
+<td><span style="font-weight: 400;">Age</span></td>
+<td><span style="font-weight: 400;">24</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Alice</span></td>
+<td><span style="font-weight: 400;">Weight</span></td>
+<td><span style="font-weight: 400;">86</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Steve</span></td>
+<td><span style="font-weight: 400;">Age</span></td>
+<td><span style="font-weight: 400;">64</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Steve</span></td>
+<td><span style="font-weight: 400;">Weight</span></td>
+<td><span style="font-weight: 400;">95</span></td>
+</tr>
+</tbody>
 </table>
-
-&nbsp;
 
 <span style="font-weight: 400;">RAWGraphs requires in most of the cases data in the narrow format.</span>
 
@@ -229,6 +121,8 @@ The same data in a **narrow (stacked) table**:
 
 We prepared a simplified version of the dataset for this tutorial, you can see it here:
 
+<iframe src="https://docs.google.com/spreadsheets/d/1IycXVpuiqQQtYL1pwTJwR_nBQYqxzSYOllO0WWlbAVA/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;amp" width="100%" height="300"></iframe>
+
 You can also download it through the link on the left. Once your data is loaded, you should see this:
 
 ![](./01-unstacked-data.png)
@@ -237,7 +131,7 @@ You can also download it through the link on the left. Once your data is loaded,
 
 <span style="font-weight: 400;">In the bottom-right corner of the data field, you should see the sentence “Your data seems unstacked. Click here to stack it”, as in the image below. </span><span style="font-weight: 400;">Click on it.</span>
 
-<img class="alignnone wp-image-822 size-full" src="https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack.png" alt="" width="1920" height="1080" srcset="https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack.png 1920w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-332x187.png 332w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-400x225.png 400w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-768x432.png 768w, https://rawgraphs.io/wp-content/uploads/2017/03/stakc_unstack-711x400.png 711w" sizes="(max-width: 1920px) 100vw, 1920px" />
+![](./stakc_unstack.png)
 
 <span style="font-weight: 400;">A new menu (select a dimension to stack on) will appear. Open it, and select “Country Name”.</span>
 

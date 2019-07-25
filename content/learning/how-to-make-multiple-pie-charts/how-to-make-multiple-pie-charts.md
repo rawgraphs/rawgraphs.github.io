@@ -47,90 +47,47 @@ The first step is to load your data into RAWGraphs.
 
 Here you can see the dataset we are going to use:
 
+<iframe src="https://docs.google.com/spreadsheets/d/1OXEWd1sG_QhFbWRE_VbKlLfJTI0Hs4mdzo-qZexqJD0/pubhtml?widget=true&amp;headers=false" width="100%" height="300"></iframe>
+
 You can also load from the sample dataset directly in RAWGraphs: simply click &#8216;try our samples&#8217; > &#8216;Countries GDP&#8217;.
 
-**Note: **The described dataset structure is often referred as ‘unstacked’ or ‘wide’. If you have data as narrow/stacked form, you can use the “stack/unstack” button: see the [tutorial](https://rawgraphs.io/learning/stack-your-unstacked-data-meet-the-unpivoter) here.
+**Note:** The described dataset structure is often referred as ‘unstacked’ or ‘wide’. If you have data as narrow/stacked form, you can use the “stack/unstack” button: see the [tutorial](/learning/stack-your-unstacked-data-meet-the-unpivoter) here.
 
-### 02. Choose the pie chart layout {#02-Choose-the-bar-chart-layout}
+### 02. Choose the pie chart layout
 
 After pasting your data, scroll down and select the “pie chart” visual model.
 
 ![](./piechart-selection.png)
 
-### 03. Map your dimensions {#03-Map-your-dimensions}
+### 03. Map your dimensions
 
 The pie chart layout has two dimensions:
 
 <table>
-  <tr>
-    <td>
-      <b>FIELDS</b>
-    </td>
-
-    <td>
-      <b>TYPE</b>
-    </td>
-
-    <td>
-      <b>REQUIRED?</b>
-    </td>
-
-    <td>
-      <b>MULTIPLE?</b>
-    </td>
-
-    <td>
-      <b>DESCRIPTION</b>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Label</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">String, numbers</span>
-    </td>
-
-    <td>
-    </td>
-
-    <td>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">The values in the dimension will be used as labels.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Arcs</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">numbers</span>
-    </td>
-
-    <td>
-       [fa class=&#8221;fa-asterisk&#8221;]
-    </td>
-
-    <td>
-      [fa class=&#8221;fa-tags&#8221;]
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">The field accept multiple dimensions. Each dimension added to this field will generate an arc for each pie chart.</span>
-    </td>
-
-  </tr>
+<tbody>
+<tr>
+<td><b>FIELDS</b></td>
+<td><b>TYPE</b></td>
+<td><b>REQUIRED?</b></td>
+<td><b>MULTIPLE?</b></td>
+<td><b>DESCRIPTION</b></td>
+</tr>
+<tr>
+<td><b>Label</b></td>
+<td><span style="font-weight: 400;">String, numbers</span></td>
+<td></td>
+<td></td>
+<td><span style="font-weight: 400;">The values in the dimension will be used as labels.</span></td>
+</tr>
+<tr>
+<td><b>Arcs</b></td>
+<td><span style="font-weight: 400;">numbers</span></td>
+<td>&nbsp;[fa class=”fa-asterisk”]</td>
+<td>[fa class=”fa-tags”]</td>
+<td><span style="font-weight: 400;">The field accept multiple dimensions. Each dimension added to this field will generate an arc for each pie chart.</span></td>
+</tr>
+</tbody>
 </table>
-
-&nbsp;
 
 It’s time to map your data and create the visualization. On the left you have the list of dimensions in your dataset, on the right the available visual variable of the pie chart layout.
 
@@ -145,138 +102,61 @@ Drag and drop the dimensions as following:
 
 <span style="font-weight: 400;">In this way we created a pie chart for each country (each row in the dataset). For each one, we defined three arcs (dimension dragged in the </span><span class="layout-dimension" style="background-color: #e6e6e6;">Arcs</span> <span style="font-weight: 400;">field). We then added a </span><span class="layout-dimension" style="background-color: #e6e6e6;">Label</span> <span style="font-weight: 400;">to each chart showing the country name.</span>
 
-### 04. Refine and export {#04Refine-and-export}
+### 04. Refine and export
 
 To reach the final results we can customize the visualization with some parameters you can find next to the visualization.  
 For the pie chart the options available are the following:
 
-&nbsp;
-
 <table>
-  <tr>
-    <td>
-      <span style="font-weight: 400;">OPTION</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">DESCRIPTION</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Width</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">width in pixels.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Columns</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">pie chart will be disposed on a grid. This option allows to define how many pie charts must be drawn for each line. The number of lines is calculated according to this option.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Padding</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">the vertical and horizontal padding between pie charts, in pixels.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Donut chart</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">if selected, pie charts will be drawn ad donut chart. The size is defined by the </span><i><span style="font-weight: 400;">Thickness</span></i><span style="font-weight: 400;"> option (see below)</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Thickness</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">if </span><i><span style="font-weight: 400;">Donut chart</span></i><span style="font-weight: 400;"> option is selects, this value will be used to defines its thickness.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Show Values</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">if selected, the absolute value of each value will be displayed with a label.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Sort charts by</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">order of the pie chart. Can be ‘size’ (from the biggest to the smallest), ‘name’ (alphabetical order).</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Sort arcs by</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">order of the arcs inside each pie chart. Can be ‘automatic’ (same order in each pie chart), ‘size’ (from biggest to smallest in each pie chart) or ‘name’ (alphabetical order).</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <b>Color scale</b>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">list of dimensions headers dragged as ‘Arcs’. If set to ordinal, you can set a color for each value. If set to linear, the app will try to find the minimum and maximum value contained in the dimension, and then creating a gradient among those two values.</span>
-    </td>
-
-  </tr>
+<tbody>
+<tr>
+<td><span style="font-weight: 400;">OPTION</span></td>
+<td><span style="font-weight: 400;">DESCRIPTION</span></td>
+</tr>
+<tr>
+<td><b>Width</b></td>
+<td><span style="font-weight: 400;">width in pixels.</span></td>
+</tr>
+<tr>
+<td><b>Columns</b></td>
+<td><span style="font-weight: 400;">pie chart will be disposed on a grid. This option allows to define how many pie charts must be drawn for each line. The number of lines is calculated according to this option.</span></td>
+</tr>
+<tr>
+<td><b>Padding</b></td>
+<td><span style="font-weight: 400;">the vertical and horizontal padding between pie charts, in pixels.</span></td>
+</tr>
+<tr>
+<td><b>Donut chart</b></td>
+<td><span style="font-weight: 400;">if selected, pie charts will be drawn ad donut chart. The size is defined by the </span><i><span style="font-weight: 400;">Thickness</span></i><span style="font-weight: 400;"> option (see below)</span></td>
+</tr>
+<tr>
+<td><b>Thickness</b></td>
+<td><span style="font-weight: 400;">if </span><i><span style="font-weight: 400;">Donut chart</span></i><span style="font-weight: 400;"> option is selects, this value will be used to defines its thickness.</span></td>
+</tr>
+<tr>
+<td><b>Show Values</b></td>
+<td><span style="font-weight: 400;">if selected, the absolute value of each value will be displayed with a label.</span></td>
+</tr>
+<tr>
+<td><b>Sort charts by</b></td>
+<td><span style="font-weight: 400;">order of the pie chart. Can be ‘size’ (from the biggest to the smallest), ‘name’ (alphabetical order).</span></td>
+</tr>
+<tr>
+<td><b>Sort arcs by</b></td>
+<td><span style="font-weight: 400;">order of the arcs inside each pie chart. Can be ‘automatic’ (same order in each pie chart), ‘size’ (from biggest to smallest in each pie chart) or ‘name’ (alphabetical order).</span></td>
+</tr>
+<tr>
+<td><b>Color scale</b></td>
+<td><span style="font-weight: 400;">list of dimensions headers dragged as ‘Arcs’. If set to ordinal, you can set a color for each value. If set to linear, the app will try to find the minimum and maximum value contained in the dimension, and then creating a gradient among those two values.</span></td>
+</tr>
+</tbody>
 </table>
-
-&nbsp;
 
 For the final results we have set the options as following:
 
-<li style="font-weight: 400;">
-  <span style="font-weight: 400;">Set “columns” to 8.</span>
-</li>
-<li style="font-weight: 400;">
-  <span style="font-weight: 400;">Select “Donut chart” option.</span>
-</li>
-<li style="font-weight: 400;">
-  Change the colors according to <a href="https://coolors.co/1c7989-0496ff-ffbc42-d81159-8f2d56"><span style="font-weight: 400;">this scale</span></a><span style="font-weight: 400;">. Copy and paste the hex codes as following: for “Agricolture” #FFBC42. For “industry” #D81159. For “Services”: #0496FF</span>
-</li>
+- Set “columns” to 8.
+- Select “Donut chart” option.
+- Change the colors according to [this scale](https://coolors.co/1c7989-0496ff-ffbc42-d81159-8f2d56). Copy and paste the hex codes as following: for “Agricolture” #FFBC42. For “industry” #D81159. For “Services”: #0496FF
 
 Here is the finished chart. You can export it in svg or png using the download function at the bottom of the page.
 

@@ -55,85 +55,40 @@ path: /learning/how-to-make-an-alluvial-diagram/
 <span style="font-weight: 400;">To make an example:</span>
 
 <table>
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Name</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Age</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">City</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">John</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">30</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">London</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Richard</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">20</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Berlin</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Frank</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">20</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Berlin</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Gabriele</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">30</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Milan</span>
-    </td>
-
-  </tr>
+<tbody>
+<tr>
+<td><span style="font-weight: 400;">Name</span></td>
+<td><span style="font-weight: 400;">Age</span></td>
+<td><span style="font-weight: 400;">City</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">John</span></td>
+<td><span style="font-weight: 400;">30</span></td>
+<td><span style="font-weight: 400;">London</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Richard</span></td>
+<td><span style="font-weight: 400;">20</span></td>
+<td><span style="font-weight: 400;">Berlin</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Frank</span></td>
+<td><span style="font-weight: 400;">20</span></td>
+<td><span style="font-weight: 400;">Berlin</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Gabriele</span></td>
+<td><span style="font-weight: 400;">30</span></td>
+<td><span style="font-weight: 400;">Milan</span></td>
+</tr>
+</tbody>
 </table>
 
 The data must contain at least two columns defining properties. <span style="font-weight: 400;">Each additional column will define a new step in the alluvial diagram. </span><span style="font-weight: 400;">An additional optional column can be used to define the line weight.</span>
 
 <span style="font-weight: 400;">Here you can see the dataset we are going to use:</span>
+
+<iframe src="https://docs.google.com/spreadsheets/d/13_73kT4Tgi_e2BrbbQTB5C90mgP8l16LFUpSefFAi_M/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="300"></iframe>
 
 <span style="font-weight: 400;">You can also select it directly in the app through clicking on ‘Try our samples’ > ‘Titanic’s Passengers’. </span><span style="font-weight: 400;">In few second you should see the green bar saying</span> <span style="font-weight: 400;">“1309 records in your data have been successfully parsed!”.</span>
 
@@ -148,75 +103,30 @@ The data must contain at least two columns defining properties. <span style="fo
 <span style="font-weight: 400;">The alluvial diagram has two visual variables.</span>
 
 <table>
-  <tr>
-    <td>
-      <span style="font-weight: 400;">VARIABLE</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">TYPE</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">REQUIRED</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">MULTIPLE</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">DESCRIPTION</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span class="layout-dimension" style="font-weight: 400; background-color: #e6e6e6;">Steps</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">String, numbers</span>
-    </td>
-
-    <td>
-      [fa class=&#8221;fa-asterisk&#8221;]
-    </td>
-
-    <td>
-      [fa class=&#8221;fa-tags&#8221;]
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">It accept multiple values, at least two column must be selected. Each dragged column will define a step (a vertical group of nodes). The dragging order is also the visualization order. For each unique value found in each column a node will be created.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span class="layout-dimension" style="font-weight: 400; background-color: #e6e6e6;">Size</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Numbers</span>
-    </td>
-
-    <td>
-    </td>
-
-    <td>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Defines the weight of each line of the dataset. If not defined, all the lines will have the same weight.</span>
-    </td>
-
-  </tr>
+<tbody>
+<tr>
+<td><span style="font-weight: 400;">VARIABLE</span></td>
+<td><span style="font-weight: 400;">TYPE</span></td>
+<td><span style="font-weight: 400;">REQUIRED</span></td>
+<td><span style="font-weight: 400;">MULTIPLE</span></td>
+<td><span style="font-weight: 400;">DESCRIPTION</span></td>
+</tr>
+<tr>
+<td><span class="layout-dimension" style="font-weight: 400; background-color: #e6e6e6;">Steps</span></td>
+<td><span style="font-weight: 400;">String, numbers</span></td>
+<td>[fa class=”fa-asterisk”]</td>
+<td>[fa class=”fa-tags”]</td>
+<td><span style="font-weight: 400;">It accept multiple values, at least two column must be selected. Each dragged column will define a step (a vertical group of nodes). The dragging order is also the visualization order. For each unique value found in each column a node will be created.</span></td>
+</tr>
+<tr>
+<td><span class="layout-dimension" style="font-weight: 400; background-color: #e6e6e6;">Size</span></td>
+<td><span style="font-weight: 400;">Numbers</span></td>
+<td></td>
+<td></td>
+<td><span style="font-weight: 400;">Defines the weight of each line of the dataset. If not defined, all the lines will have the same weight.</span></td>
+</tr>
+</tbody>
 </table>
-
-&nbsp;
 
 <span style="font-weight: 400;">It’s time to map your data and create the visualization. On the left you have the list of dimensions in your dataset, on the right the available visual variable of the bar chart layout. </span>
 
@@ -239,94 +149,42 @@ The data must contain at least two columns defining properties. <span style="fo
 <span style="font-weight: 400;">For the alluvial diagram the options available are the following:</span>
 
 <table>
-  <tr>
-    <td>
-      <span style="font-weight: 400;">OPTION</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">DESCRIPTION</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">width</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">artboard width in pixels</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">height</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">artboard height in pixels</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Nodes width</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Width of black bars representing nodes, in pixels.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Sort by</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">Sorting of nodes inside each step. It can be ‘automatic’ (trying to reduce the number of overlappings among flows), ‘size’ (nodes ordered from the biggest to the smallest), and ‘alphabetical’.</span>
-    </td>
-
-  </tr>
-
-  <tr>
-    <td>
-      <span style="font-weight: 400;">Color scale</span>
-    </td>
-
-    <td>
-      <span style="font-weight: 400;">The color of flows. The color is defined by the source node. For each unique value found in the dimension dragged as ‘steps’ a color is defined.</span>
-    </td>
-
-  </tr>
+<tbody>
+<tr>
+<td><span style="font-weight: 400;">OPTION</span></td>
+<td><span style="font-weight: 400;">DESCRIPTION</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">width</span></td>
+<td><span style="font-weight: 400;">artboard width in pixels</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">height</span></td>
+<td><span style="font-weight: 400;">artboard height in pixels</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Nodes width</span></td>
+<td><span style="font-weight: 400;">Width of black bars representing nodes, in pixels.</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Sort by</span></td>
+<td><span style="font-weight: 400;">Sorting of nodes inside each step. It can be ‘automatic’ (trying to reduce the number of overlappings among flows), ‘size’ (nodes ordered from the biggest to the smallest), and ‘alphabetical’.</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Color scale</span></td>
+<td><span style="font-weight: 400;">The color of flows. The color is defined by the source node. For each unique value found in the dimension dragged as ‘steps’ a color is defined.</span></td>
+</tr>
+</tbody>
 </table>
 
 For the final results we have set the options as following:
 
-<li style="font-weight: 400;">
-  <span style="font-weight: 400;">Width to 945</span>
-</li>
-<li style="font-weight: 400;">
-  <span style="font-weight: 400;">Height to 483</span>
-</li>
-<li style="font-weight: 400;">
-  <span style="font-weight: 400;">Set the colors as following. </span><span style="font-weight: 400;">Copy and paste the hex codes as following:</span> <ul>
-    <li style="font-weight: 400;">
-      <span style="font-weight: 400;">&#8220;1&#8221; to #DD5F12, &#8220;2&#8221; to #E8A264, &#8220;3&#8221; to #D3E1EE;</span>
-    </li>
-    <li style="font-weight: 400;">
-      <span style="font-weight: 400;">&#8220;0 &#8211; 9&#8221; to #c2b49a, &#8220;10 &#8211; 19&#8221; to #b0a28b, &#8220;20 &#8211; 29&#8221; to #a2937f, &#8220;30 &#8211; 39&#8221; to #948573, &#8220;40 &#8211; 49&#8221; to #877768, &#8220;50 &#8211; 59&#8221; to #7b6b5d, &#8220;60 &#8211; 69&#8221; to #6f5f54, &#8220;70 &#8211; 79&#8221; to #64544a, &#8220;80 &#8211; 89&#8221; to #594a41, &#8220;unknown&#8221; to #cccccc;</span>
-    </li>
-    <li style="font-weight: 400;">
-      <span style="font-weight: 400;">&#8220;female&#8221; to #ec008b, &#8220;male&#8221; to #00adef.</span>
-    </li>
-  </ul>
-</li>
+- Width to 945
+- Height to 483
+- Set the colors as following. Copy and paste the hex codes as following:
+- &#8220;1&#8221; to #DD5F12, &#8220;2&#8221; to #E8A264, &#8220;3&#8221; to #D3E1EE;
+- &#8220;0 &#8211; 9&#8221; to #c2b49a, &#8220;10 &#8211; 19&#8221; to #b0a28b, &#8220;20 &#8211; 29&#8221; to #a2937f, &#8220;30 &#8211; 39&#8221; to #948573, &#8220;40 &#8211; 49&#8221; to #877768, &#8220;50 &#8211; 59&#8221; to #7b6b5d, &#8220;60 &#8211; 69&#8221; to #6f5f54, &#8220;70 &#8211; 79&#8221; to #64544a, &#8220;80 &#8211; 89&#8221; to #594a41, &#8220;unknown&#8221; to #cccccc;
+- &#8220;female&#8221; to #ec008b, &#8220;male&#8221; to #00adef.
 
 Here is the finished chart. You can export it in svg or png using the download function at the bottom of the page.
 
