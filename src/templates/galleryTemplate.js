@@ -51,13 +51,17 @@ export default function Template({
               <div className={styles.gallery}>
                 <h4 className="text-uppercase green-text">submitted by</h4>
                 <p>
-                  <a
-                    href={frontmatter.author_personal_page}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {frontmatter.submitted_by}
-                  </a>
+                  {frontmatter.author_personal_page[0] ? (
+                    <a
+                      href={frontmatter.author_personal_page}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {frontmatter.submitted_by}
+                    </a>
+                  ) : (
+                    <span>{frontmatter.submitted_by}</span>
+                  )}
                 </p>
               </div>
               <div className={`${styles.gallery} ${styles.description}`}>
@@ -70,18 +74,21 @@ export default function Template({
                   {frontmatter.visual_models_used.join(", ")}
                 </p>
               </div>
-              <div className={`${styles.gallery}`}>
-                <h4 className="text-uppercase green-text">external link</h4>
-                <p className="small">
-                  <a
-                    href={frontmatter.external_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Project page
-                  </a>
-                </p>
-              </div>
+              {frontmatter.external_link[0] && (
+                <div className={`${styles.gallery}`}>
+                  <h4 className="text-uppercase green-text">external link</h4>
+                  <p className="small">
+                    <a
+                      href={frontmatter.external_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Project page
+                    </a>
+                  </p>
+                </div>
+              )}
+
               <div className={styles.navigation}>
                 <div>back to the gallery</div>
               </div>
