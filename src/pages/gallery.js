@@ -47,7 +47,7 @@ const GalleryPage = ({ data }) => {
                       className="img-fluid"
                       src={edge.node.frontmatter.image.publicURL}
                     ></img>
-                    <div className={`${styles.info} d-none d-md-block`}>
+                    <div className={`${styles.info} d-none d-md-flex`}>
                       <h2>{edge.node.frontmatter.title}</h2>
                       <p className="small">
                         {edge.node.frontmatter.submitted_by}
