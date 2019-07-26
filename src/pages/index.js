@@ -14,6 +14,7 @@ import SEO from "../components/seo"
 import HomeStep from "../components/homeStep"
 import DiscoverMoreWidget from "../components/DiscoverMoreWidget"
 import AskInfo from "../components/AskInfo"
+import ModalCampain from "../components/ModalCampain"
 import logo from "../images/logo@2x.png"
 import bg1 from "../images/cover-bg-1@2x.png"
 import bg2 from "../images/cover-bg-2@2x.png"
@@ -247,6 +248,7 @@ const HomePage = () => (
     {askInfos.map((askInfo, index) => {
       return <AskInfo key={index} {...askInfo}></AskInfo>
     })}
+    <ModalCampain></ModalCampain>
   </Layout>
 )
 
