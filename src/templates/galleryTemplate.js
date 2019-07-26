@@ -33,7 +33,7 @@ export default function Template({
       <AskInfo
         question="Have you done something interesting with RAWGraphs?"
         button="submit!"
-        link="/tobedone"
+        link="https://forms.gle/WnqxUfwnE3nVt58RA"
         bgLight
       ></AskInfo>
       <div className="container-fluid grey-bg">

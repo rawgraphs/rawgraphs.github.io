@@ -43,14 +43,15 @@ const Footer = () => (
                 <li className="menu-item">
                   <Link to="/gallery">Gallery</Link>
                 </li>
-                {/*                <li className="menu-item">
+                <li className="menu-item">
                   <a
-                    title="Submit your work"
-                    href="https://rawgraphs.io/submit-your-work/"
+                    href="https://forms.gle/WnqxUfwnE3nVt58RA"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     Submit your work
                   </a>
-                </li>*/}
+                </li>
                 <li className="menu-item">
                   <a
                     title="Enjoy the repo"
