@@ -14,8 +14,6 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   const { prevPage, nextPage } = pageContext
 
-  console.log("hey prev and next:", prevPage, nextPage)
-
   return (
     <Layout>
       <SEO title={frontmatter.title} />
@@ -50,51 +48,63 @@ export default function Template({
                 ></img>
               </div>
             </div>
-            <div className="col-sm-6 col-md-4">
-              <h2>{frontmatter.title}</h2>
-              <div className={styles.gallery}>
-                <h4 className="text-uppercase green-text">submitted by</h4>
-                <p>
-                  {frontmatter.author_personal_page[0] ? (
-                    <a
-                      href={frontmatter.author_personal_page}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {frontmatter.submitted_by}
-                    </a>
-                  ) : (
-                    <span>{frontmatter.submitted_by}</span>
-                  )}
-                </p>
-              </div>
-              <div className={`${styles.gallery} ${styles.description}`}>
-                <h4 className="text-uppercase green-text">description</h4>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-              </div>
-              <div className={`${styles.gallery}`}>
-                <h4 className="text-uppercase green-text">charts used</h4>
-                <p className="small">
-                  {frontmatter.visual_models_used.join(", ")}
-                </p>
-              </div>
-              {frontmatter.external_link[0] && (
-                <div className={`${styles.gallery}`}>
-                  <h4 className="text-uppercase green-text">external link</h4>
-                  <p className="small">
-                    <a
-                      href={frontmatter.external_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Project page
-                    </a>
+            <div className="col-sm-6 col-md-4 d-flex flex-column">
+              <div>
+                <h2>{frontmatter.title}</h2>
+                <div className={styles.gallery}>
+                  <h4 className="text-uppercase green-text">submitted by</h4>
+                  <p>
+                    {frontmatter.author_personal_page[0] ? (
+                      <a
+                        href={frontmatter.author_personal_page}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {frontmatter.submitted_by}
+                      </a>
+                    ) : (
+                      <span>{frontmatter.submitted_by}</span>
+                    )}
                   </p>
                 </div>
-              )}
+                <div className={`${styles.gallery} ${styles.description}`}>
+                  <h4 className="text-uppercase green-text">description</h4>
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
+                </div>
+                <div className={`${styles.gallery}`}>
+                  <h4 className="text-uppercase green-text">charts used</h4>
+                  <p className="small">
+                    {frontmatter.visual_models_used.join(", ")}
+                  </p>
+                </div>
+                {frontmatter.external_link[0] && (
+                  <div className={`${styles.gallery}`}>
+                    <h4 className="text-uppercase green-text">external link</h4>
+                    <p className="small">
+                      <a
+                        href={frontmatter.external_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Project page
+                      </a>
+                    </p>
+                  </div>
+                )}
+              </div>
 
               <div className={styles.navigation}>
-                <div>back to the gallery</div>
+                {prevPage && (
+                  <Link to={prevPage.path}>
+                    <FaArrowCircleLeft></FaArrowCircleLeft>
+                  </Link>
+                )}
+                <Link to="/gallery">Back to the gallery</Link>
+                {nextPage && (
+                  <Link to={nextPage.path}>
+                    <FaArrowCircleRight></FaArrowCircleRight>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
