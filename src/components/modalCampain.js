@@ -22,7 +22,10 @@ class ModalCampain extends React.Component {
         }}
         size="lg"
       >
-        <ModalHeader toggle={this.toggle} className="border-0"></ModalHeader>
+        <ModalHeader
+          toggle={this.toggle}
+          className="border-0 mb-auto mb-md-0"
+        ></ModalHeader>
         <ModalBody
           cssModule={{
             "modal-body": styles.modalBody,

@@ -11,11 +11,39 @@
   outline: 0;
   background-image: url(../images/modalBackground.jpg);
   background-position: center center;
-  background-size: 200%;
+  background-size: 400%;
+  height: calc(100vh - 1rem);
 }
 
 .modal-body {
   position: relative;
-  flex: 1 1 auto;
-  padding: 1rem 8rem 5rem;
+  padding: 1rem;
+  margin-bottom: auto;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .modal-body {
+    padding: 1rem 8rem 5rem;
+    position: relative;
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+
+  .modal-content {
+    background-size: 200%;
+    height: auto;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }
