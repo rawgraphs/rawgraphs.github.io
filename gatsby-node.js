@@ -6,6 +6,7 @@
 
 const path = require(`path`)
 const get = require("lodash/get")
+const groupBy = require("lodash/groupBy")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -28,6 +29,20 @@ exports.createPages = ({ actions, graphql }) => {
     }
   }
 
+  const getPostType = frontmatter => {
+    // If path starts with /learning it's a learning article
+    // If it has a "submitted_by" attribute it's gallery
+    // Otherwise it's a blog post
+    const path = get(frontmatter, "path")
+    if (path.indexOf("/learning") === 0) {
+      return 'learning'
+    } else if (frontmatter.layout === "gallery_project") {
+      return 'gallery'
+    } else {
+      return 'blog'
+    }
+  }
+
   return graphql(`
     {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -36,6 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               path
               layout
+              title
             }
           }
         }
@@ -46,10 +62,33 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    let pages = result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
+    const nodesByType = groupBy(result.data.allMarkdownRemark.edges, edge => getPostType(edge.node.frontmatter))
+  
+    let blogPages = get(nodesByType, 'blog', []).map(({ node }) => {
+      return createPage({
         path: node.frontmatter.path,
-        component: getTemplate(node.frontmatter),
+        component: blogPostTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    })
+
+    const galleryNodes= get(nodesByType, 'gallery', [])
+    
+    let galleryPages = galleryNodes.map(({ node }, i) => {
+      return createPage({
+        path: node.frontmatter.path,
+        component: galleryTemplate,
+        context: {
+          nextPage: i < galleryNodes.length - 1 ? {path: galleryNodes[i+1].node.frontmatter.path, title:  galleryNodes[i+1].node.frontmatter.title} : undefined, 
+          prevPage: i > 0 ? {path: galleryNodes[i-1].node.frontmatter.path, title: galleryNodes[i-1].node.frontmatter.title} : undefined
+        }, // additional data can be passed via context
+      })
+    })
+
+    let learningPages = get(nodesByType, 'learning', []).map(({ node }) => {
+      return createPage({
+        path: node.frontmatter.path,
+        component: learningTemplate,
         context: {}, // additional data can be passed via context
       })
     })
@@ -73,6 +112,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    return pages
+
+    return {blogPages, galleryPages,  learningPages}
   })
 }

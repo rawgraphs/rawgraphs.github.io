@@ -8,9 +8,13 @@ import styles from "./galleryTemplate.module.scss"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
+  pageContext,
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  const { prevPage, nextPage } = pageContext
+
+  console.log("hey prev and next:", prevPage, nextPage)
 
   return (
     <Layout>
