@@ -62,7 +62,7 @@ const Footer = () => (
                     Enjoy the repo
                   </a>
                 </li>
-                <li className="menu-item">
+                {/*                <li className="menu-item">
                   <a
                     title="User survey"
                     target="_blank"
@@ -71,7 +71,7 @@ const Footer = () => (
                   >
                     User survey
                   </a>
-                </li>
+                </li>*/}
                 <li className="menu-item">
                   <a
                     title="Subscribe to our newsletter"
