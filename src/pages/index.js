@@ -63,7 +63,7 @@ const steps = [
         title: "Conventional and unconventional layouts.",
         icon: <FaChartBar className={styles.substepIcon} />,
         text:
-          "We designed and developed RAWGraphs with designers and vis geeks in mind. That’s why we focused on providing charts that are not easy to produce with other tools. But don’t worry, you can also find bar charts and pies! Something missing? See how easy is to build your own model.",
+          'We designed and developed RAWGraphs with designers and vis geeks in mind. That’s why we focused on providing charts that are not easy to produce with other tools. But don’t worry, you can also find bar charts and pies! Something missing? See how easy is to <a href="https://github.com/densitydesign/raw/wiki/Adding-New-Charts" target="_blank" rel="noopener noreferrer">build your own model</a>.',
       },
     ],
   },
@@ -93,7 +93,7 @@ const steps = [
         title: " Semifinished vectors and data structures.",
         icon: <FaPencilAlt className={styles.substepIcon} />,
         text:
-          "Do you want to know more about your data? Do you want to explore patterns and trends? Just map the dimensions of your dataset with the visual variables of the selected layout.",
+          "RAWGraphs allows you to export visualizations as vector (SVG) or raster (PNG) images and embed them into your web page. Since RAWGraphs produces semifinished visualizations, you can even open them in your favorite vector graphics editor and improve them.",
       },
     ],
   },

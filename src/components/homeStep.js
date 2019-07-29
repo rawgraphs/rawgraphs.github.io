@@ -28,7 +28,10 @@ const HomeStep = ({ index, image, title, subSteps }) => (
                   </span>
                   {subStep.title}
                 </h3>
-                <p className="small">{subStep.text}</p>
+                <p
+                  className="small"
+                  dangerouslySetInnerHTML={{ __html: subStep.text }}
+                ></p>
               </div>
             )
           })}
