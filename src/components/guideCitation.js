@@ -18,7 +18,7 @@ class GuideCitation extends React.PureComponent {
       <div>
         <p className={`${copied ? styles.copied : ""}`}>{text}</p>
         <CopyToClipboard
-          text={title}
+          text={text}
           onCopy={() => this.setState({ copied: true })}
         >
           <p className={styles.copyPaste}>
