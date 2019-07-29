@@ -38,9 +38,7 @@ This allowed us to add two new visual models: &#8220;bee swarm plot&#8221; and &
 
 ![](./beeswarm-cover-783x400.png)
 
-<p class="wp-caption-text">
-    A bee swarm plot representing Kickstarted campaigns. <a href="https://rawgraphs.io/learning/how-to-make-a-beeswarm-plot/">See how to create it here</a>.
-</p>
+A bee swarm plot representing Kickstarted campaigns. [See how to create it here](https://rawgraphs.io/learning/how-to-make-a-beeswarm-plot/).
 
 - **Contour plot** show the estimated density of point clouds, which is especially useful to avoid overlappings in large datasets. If you want to learn how to create one with RAWGraphs, check this post: [How to make a beeswarm plot](https://rawgraphs.io/learning/how-to-make-a-contour-plot/).
 
