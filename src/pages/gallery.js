@@ -30,6 +30,7 @@ const GalleryPage = ({ data }) => {
         button="submit!"
         link="https://forms.gle/WnqxUfwnE3nVt58RA"
         bgLight
+        btGreen
       ></AskInfo>
 
       <div className="grey-bg container-fluid">
