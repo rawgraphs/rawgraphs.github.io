@@ -40,10 +40,10 @@ class ModalCampain extends React.Component {
             Do you like RAWGraphs?
           </h1>
           <p className="pb-2">
-            We are soon launching a{" "}
+            Soon we will be launching a{" "}
             <span className="font-weight-bold">crowdfunding campaign</span> on
-            Indiegogo, help us improving RawGraphs and keeping it open to
-            anyone.
+            Indiegogo to continue to improve RawGraphs and to keep it open and
+            free to everyone.
           </p>
           <p>
             <span className="mr-2" role="img" aria-label="go">
