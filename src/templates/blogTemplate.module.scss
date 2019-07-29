@@ -139,6 +139,10 @@
 .content-box table tr:nth-child(2) {
 }
 
+.tags a {
+  pointer-events: none;
+}
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 }
