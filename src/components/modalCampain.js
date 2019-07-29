@@ -50,7 +50,7 @@ class ModalCampain extends React.Component {
               👉
             </span>
             <a
-              href="https://www.indiegogo.com/project/coming_soon/preview/acd21b31"
+              href="https://www.indiegogo.com/projects/rawgraphs-2-0/coming_soon/x/20662697"
               target="_blank"
               rel="noopener noreferrer"
             >
