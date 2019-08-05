@@ -8,6 +8,7 @@ import styles from "./about.module.scss"
 import logoCalibro from "../images/Logo-Calibro.png"
 import logoDD from "../images/Logo-DD-1.png"
 import logoNova from "../images/Logo-nova.png"
+import logoContact from "../images/Logo-contactlab.png"
 
 const partners = [
   {
@@ -74,23 +75,15 @@ const AboutPage = () => (
               field of data visualization.
             </p>
             <p>
-              After a couple of years, the involvement of{" "}
-              <a
-                href="http://contactlab.com/en/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contactlab
-              </a>{" "}
-              as a funding partner brought the project to a new stage.{" "}
-              <a
+              The team responsable for the design, development and mantainance of the project is composed by  
+              {" "}<a
                 href="http://www.densitydesign.org/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 DensityDesign
               </a>{" "}
-              and{" "}
+              ,{" "}
               <a
                 href="http://calib.ro/"
                 target="_blank"
@@ -98,8 +91,16 @@ const AboutPage = () => (
               >
                 Calibro
               </a>{" "}
-              can now plan new releases and ways to involve the community.
-            </p>
+              and 
+              {" "}
+              <a
+                href="https://inmagik.com/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Inmagik 
+              </a>{" "} , who joined the team in 2019.
+              </p>
             <h1 id="how-to-cite">How to cite RAWGraphs?</h1>
             <p>
               If you have found RAWGraphs useful in your research, or if you
@@ -256,22 +257,11 @@ const AboutPage = () => (
             <Partner key={partner.name} {...partner}></Partner>
           ))}
         </div>
-        <h2 className="mt-4">Main Supporter</h2>
+        <h2 className="mt-4">Former Supporters</h2>
         <div className="row">
           <div className="col-6 col-sm-3">
-            <p className="small">
-              <a
-                href="mailto:hello@rawgraphs.io"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contact us if you want to become our new supporter!
-              </a>
-            </p>
+            <img alt="Contactlab" className="img-fluid" src={logoContact} />
           </div>
-        </div>
-        <h2 className="mt-4">Other Supporters</h2>
-        <div className="row">
           <div className="col-6 col-sm-3">
             <img alt="La vita nova" className="img-fluid" src={logoNova} />
           </div>
@@ -279,7 +269,7 @@ const AboutPage = () => (
       </div>
     </div>
     <AskInfo
-      question="Do you want to contribute to the project? Any general question or feedback?"
+      question="Do you want to sponsor or support the project?"
       button="contact us"
       link="mailto:hello@rawgraphs.io"
     ></AskInfo>

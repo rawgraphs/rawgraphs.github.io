@@ -126,7 +126,7 @@ const askInfos = [
   {
     question:
       "Do you want to contribute to the project? Any general question or feedback?",
-    button: "contatc us",
+    button: "contact us",
     link: "mailto:hello@rawgraphs.io",
   },
 ]
