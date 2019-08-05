@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { FaTwitterSquare, FaGithubSquare } from "react-icons/fa"
 import logoCalibro from "../images/logo-calibro-white@2x.png"
 import logoDD from "../images/logo-dd-white@2x.png"
+import logoInmagik from "../images/logo-Inmagik-white@2x.png"
 import styles from "./footer.module.scss"
 
 const Footer = () => (
@@ -104,14 +105,13 @@ const Footer = () => (
               src={logoCalibro}
             />
           </a>
-        </div>
-        <div className="col-sm-2 offset-sm-1 col-6">
-          <h4>Supported by</h4>
-          <p className="small">
-            <a href="mailto:hello@rawgraphs.io">
-              Contact us if you want to become our new supporter!
-            </a>
-          </p>
+          <a href="https://inmagik.com/en/" target="_blank" rel="noopener noreferrer">
+            <img
+              className={`${styles.logo} img-fluid`}
+              alt="logo inmagik"
+              src={logoInmagik}
+            />
+          </a>
         </div>
 
         <div
@@ -130,12 +130,16 @@ const Footer = () => (
           </a>
           <br />
           <br />
-          <p className="small">Any feedback or general question?</p>
+          <p className="small">Questions? Do you want to support the project?</p>
           <a href="mailto:hello@rawgraphs.io">
             <button className="btn btn-default" type="submit">
               Drop us a message
             </button>
           </a>
+        </div>
+
+        <div className="col-sm-2 offset-sm-1 col-6">
+        <h4>Follow us:</h4>
           <div className={styles.socialIcons}>
             <a
               target="_blank"
@@ -154,6 +158,7 @@ const Footer = () => (
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </div>
