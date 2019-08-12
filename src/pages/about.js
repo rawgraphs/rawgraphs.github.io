@@ -31,7 +31,7 @@ const partners = [
     {
     name: "Inmagik",
     description:
-      "Inmagik is a studio based in Bergamo (Italy), focused on the development of web applications, mobile apps, data management systems and interactive user experiences. We love open source open source components, languages and frameworks and have a lot of experience in the field of data visualization.",
+      "Inmagik is a studio based in Bergamo (Italy), focused on the development of web applications, mobile apps, data management systems and interactive user experiences. We love open source components, languages and frameworks and have a lot of experience in the field of data visualization.",
     link: "https://inmagik.com/en/",
     linkLabel: "inmagik.com",
     logo: logoInmagik,
