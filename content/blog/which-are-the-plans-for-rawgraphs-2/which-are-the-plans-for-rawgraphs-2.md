@@ -18,7 +18,7 @@ discover_more_left:
   - "null"
 discover_more_right:
   - "null"
-image: ./inmagik_rawgraphs.png
+image: ./which-are-the-plans-for-rawgraphs-2.png
 categories:
   - Crowdfunding campaign
 tags:
@@ -55,9 +55,9 @@ Building the new core **will also allow us to add some long-awaited features**, 
 
 The development of the new core will also allow us to improve a couple of things that we think are valuable:
 
-**Confidentiality of your data**. The data will never be sent to other computers, it will be used locally on your computer.
+- **Confidentiality of your data**. The data will never be sent to other computers, it will be used locally on your computer.
 
-**Open visualizations**. We want to keep visualization open not only from the technological point of view but also from the practical one: we want to avoid intended or unintended lock-ins and produce artefacts that can be exported, modified and reused with any other software.
+- **Open visualizations**. We want to keep visualization open not only from the technological point of view but also from the practical one: we want to avoid intended or unintended lock-ins and produce artefacts that can be exported, modified and reused with any other software.
 
 ##What if we overpass the 33K?
 
