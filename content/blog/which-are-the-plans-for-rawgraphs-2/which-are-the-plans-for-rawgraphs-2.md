@@ -76,3 +76,6 @@ Only after that, we planned some stretch goals that we will cover according to t
 **Interactive charts**: When it is possible to export bundles, why not to add some interactivity? The new core will enable the creation and the export of interactive charts. Tooltips, filters, highlights... and many other ✨ details.
 
 **Export to online platform (e.g. Github pages, gist…)**: another step will be the ability to export directly on online repositories to make even more simple their embedding and sharing online.
+
+**Help us make it possible by spreading the word about the campaign through social media and within your network.**
+Visit our [pre-launch campaign page on Indiegogo](https://www.indiegogo.com/projects/rawgraphs-2-0/coming_soon/x/20662697) and subscribe.
