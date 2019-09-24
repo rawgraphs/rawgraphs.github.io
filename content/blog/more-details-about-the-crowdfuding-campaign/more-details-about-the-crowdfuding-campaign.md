@@ -60,7 +60,7 @@ The following list is what we have in mind so far, but it could be slightly chan
 
 * **750 €: Silver sponsorship.** Same as bronze, but your logo will be bigger!
 
-* **1000 €: Gold Sponsorship.** Same as silver, even bigger and with a sponsored post on the blog abut your support.
+* **1000 €: Gold Sponsorship.** Same as silver, even bigger and with a sponsored post on the blog about your support.
 
 * **5000 €: Custom version (max 5).** Have you ever dreamt about having a custom version of RAWGraphs for your enterprise? Custom logo, colors, fonts and templates to create beautiful visualizations with the same style of your company.
 
