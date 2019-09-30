@@ -37,25 +37,13 @@ class ModalCampain extends React.Component {
               👋 👋 👋
             </span>
             <br />
-            Do you like RAWGraphs?
+            It's time to support RAWGraphs!
           </h1>
           <p className="pb-2">
-            Soon we will be launching a{" "}
-            <span className="font-weight-bold">crowdfunding campaign</span> on
-            Indiegogo to continue to improve RawGraphs and to keep it open and
-            free to everyone.
+            We are planning to work on a brand new version of RAWGraphs. We need your help!
           </p>
           <p>
-            <span className="mr-2" role="img" aria-label="go">
-              👉
-            </span>
-            <a
-              href="https://www.indiegogo.com/projects/rawgraphs-2-0/coming_soon/x/20662697"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit the pre-launch page on Indiegogo!
-            </a>
+          <button className={`btn btn-default btn-larger ${styles.btnIndie}`}><a href="https://igg.me/at/rawgraphs2">Donate on Indiegogo!</a></button>
           </p>
         </ModalBody>
       </Modal>

@@ -66,6 +66,14 @@ class Header extends React.Component {
               >
                 Documentation
               </a>
+              <a
+                className={`nav-item nav-link ${styles.item}`}
+                href="https://igg.me/at/rawgraphs2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Support us!
+              </a>
               {/*              <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdfbS0TsyQEXdNfYp9XkiDx5pzwEYfKCmplDJTz1VPAm1R6VA/viewform"

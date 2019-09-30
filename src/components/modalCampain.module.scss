@@ -14,6 +14,17 @@
   height: calc(100vh - 1rem);
 }
 
+.btn-indie, .btn-indie:hover, .btn-indie:focus, .btn-indie:active {
+	color:#fff;
+	background-color: #eb1478;
+}
+
+.btn-indie a, .btn-indie a:hover, .btn-indie a:focus {
+  color:#fff;
+  text-decoration: none!important;
+  border: none;
+}
+
 .modal-body {
   position: relative;
   padding: 1rem;

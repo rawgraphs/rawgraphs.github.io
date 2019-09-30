@@ -75,8 +75,8 @@ const Footer = () => (
                 </li>*/}
                 <li className="menu-item">
                   <a
-                    title="Subscribe to our newsletter"
-                    href="http://eepurl.com/c9eFWH"
+                    title="Indiegogo Sponsorships"
+                    href="https://rawgraphs.io/sponsorship/"
                   >
                     Subscribe to our newsletter
                   </a>
