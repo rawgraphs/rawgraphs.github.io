@@ -35,8 +35,7 @@ Meanwhile, some updates: **in this post, you will find a preview of the perks we
 Before, few works on the campaign. **It will last 60 days (until the 30th of December), starting from the 1st of October**.
 
 **The big effort will be to reach the milestone of 33K euros**: with that, we will be able to develop the core code needed for version 2.0 and the main new features.
-
-The campaign will be anyway flexible, meaning that even if we won't reach that goal, we will work according to the founding we manage to collect.
+The campaign will be anyway **flexible**, meaning that even if we won't reach that goal, we will work according to the founding we manage to collect.
 
 If we will overpass that goal (which we really hope 😊), we defined stretched goals to reach: [read the previous post see them](https://rawgraphs.io/crowdfunding-campaign/which-are-the-plans-for-rawgraphs-2/#what-if-we-overpass-the-33000-euro-goal).
 
