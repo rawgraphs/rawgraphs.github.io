@@ -67,5 +67,5 @@ As always, let us know what do you think about it!
 
 ....
 
-**Note (30/09/2019)**: *we have received some feedbacks about our perks and we decided to give away "Thanks and early access" for 50€ instead of 30€ and "Be part of the decision process" for 100€ instead of 50€.
+**Note (30/09/2019)**: *we have received some feedback about our perks and we decided to give away "Thanks and early access" for 50€ instead of 30€ and "Be part of the decision process" for 100€ instead of 50€.
 Do you have questions about the perks? Contact us at [hello@rawgraphs.io](mailto:hello@rawgraphs.io)*
