@@ -15,7 +15,7 @@ const SponsorshipPage = () => (
           <div>
             <h1 className="big">Sponsorship</h1>
             <h2 className="light">
-              <p>Everything you need to know about the <a href="https://igg.me/at/rawgraphs2">Indigogo</a> sponsorship.</p>
+              <p>Everything you need to know about the <a href="https://igg.me/at/rawgraphs2">Indiegogo</a> sponsorship.</p>
             </h2>
           </div>
         </div>
