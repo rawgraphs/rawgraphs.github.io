@@ -64,3 +64,8 @@ The following list is what we have in mind so far, but it could be slightly chan
 * **5000 €: Custom version (max 5).** Have you ever dreamt about having a custom version of RAWGraphs for your enterprise? Custom logo, colors, fonts and templates to create beautiful visualizations with the same style of your company.
 
 As always, let us know what do you think about it!
+
+....
+
+**Note (30/09/2019)**: *we have received some feedbacks about our perks and we decided to give away "Thanks and early access" for 50€ instead of 30€ and "Be part of the decision process" for 100€ instead of 50€.
+Do you have questions about the perks? Contact us at [hello@rawgraphs.io](mailto:hello@rawgraphs.io)*
