@@ -6,18 +6,19 @@ const bannerDonate = () => (
     <div className="container">
       <div className="row">
         <div className="col-12 d-flex flex-column flex-md-row">
-          <h1 className="mr-md-5 mr-0 d-flex align-items-center text-center">
+          <h2 className="mr-md-5 mr-0 d-flex align-items-center text-center">
             <span role="img" className={`mr-3 ${styles.blink}`}>
               💸
             </span>
             <span>
-              Support the <span className={styles.bg}>new</span> version of{" "}
-              RAWGraphs <span className={styles.bg}>now</span>
+              We need <span className={styles.bg}>you</span> to keep RAWGraphs{" "}
+              <span className={styles.bg}>open</span> and{" "}
+              <span className={styles.bg}>free</span>, support the new version.
             </span>
             <span role="img" className={`ml-3 ${styles.blink}`}>
               💸
             </span>
-          </h1>
+          </h2>
           <div className="d-flex align-items-center flex-fill mb-3 mb-md-0">
             <a
               href="https://igg.me/at/rawgraphs2"
