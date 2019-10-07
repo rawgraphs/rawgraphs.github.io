@@ -1,0 +1,44 @@
+.bannerContainer {
+  position: sticky;
+  top: 60px;
+  background: #9538ef;
+  z-index: 999;
+
+  h1 {
+    color: white;
+  }
+}
+
+.btnIndie,
+.btnIndie:hover,
+.btnIndie:focus,
+.btnIndie:active {
+  color: #fff !important;
+  background-color: #eb1478 !important;
+  text-transform: uppercase;
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+.green {
+  font-weight: 300;
+  color: #2dd8b1;
+}
+
+.bg {
+  background-color: #eb1478;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

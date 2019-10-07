@@ -248,7 +248,6 @@ const HomePage = () => (
     {askInfos.map((askInfo, index) => {
       return <AskInfo key={index} {...askInfo}></AskInfo>
     })}
-    <ModalCampain></ModalCampain>
   </Layout>
 )
 

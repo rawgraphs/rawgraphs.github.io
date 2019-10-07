@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
+import BannerDonate from "./bannerDonate"
 import "../styles/index.scss"
 import CookieConsent from "react-cookie-consent"
 import styles from "./layout.module.scss"
@@ -21,6 +22,7 @@ const Layout = ({ children, headerBg, useIt }) => {
   return (
     <React.Fragment>
       <Header headerBg={headerBg} useIt={useIt} />
+      <BannerDonate></BannerDonate>
       <div>{children}</div>
       <Footer siteTitle={data.site.siteMetadata.title} />
       <CookieConsent
