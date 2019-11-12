@@ -24,7 +24,7 @@ categories:
 tags:
   - crowdfunding
   - support
-path: /crowdfunding-campaign/6-reasons-why-to-keep-RAWGraphs-open-and-free
+path: /crowdfunding-campaign/6-reasons-why-to-keep-RAWGraphs-open-and-free/
 ---
 
 As you may know, we have launched a [crowdfunding campaign for RAWGraphs 2.0](https://igg.me/at/rawgraphs2), an improved version of the tool we initially developed in 2013. With “improved version” we mean a totally new software, rebuilt and redesigned starting from the feedback we received during all these years.
