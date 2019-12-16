@@ -28,14 +28,12 @@ path: /crowdfunding-campaign/thank-you/
 ---
 On October 1st we launched a campaign to raise funds to develop and design a brand new version of RAWGraphs. We didn't know what to expect from it and to be honest. After more than 60 days of campaigning, we can finally say that we made it!
 
-
-
 ![](./thank-you-chart2.jpg)
 <p id="caption-attachment-778" class="wp-caption-text">
 Total amount raised from October 1st until today.
 </p>
 
-We received more than 350 donations from 40 countries and, since we reached the goal, our campaign is still active on Indiegogo as "In Demand". You can still contribute and share the campaign within your network.
+We received more than 350 donations from 40 countries and, since we reached the goal, our campaign is still active on [Indiegogo](https://igg.me/at/rawgraphs2/x/20662697#/) as "In Demand". You can still contribute and share the campaign within your network.
 
 A special thanks go to our sponsor that generously supported our campaign:
 
