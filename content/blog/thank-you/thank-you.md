@@ -30,7 +30,7 @@ On October 1st we launched a campaign to raise funds to develop and design a bra
 
 
 
-![](./thank-you-chart.jpg)
+![](./thank-you-chart2.jpg)
 <p id="caption-attachment-778" class="wp-caption-text">
 Total amount raised from October 1st until today.
 </p>
