@@ -26,7 +26,7 @@ tags:
   - support
 path: /crowdfunding-campaign/thank-you/
 ---
-On October 1st we launched a campaign to raise funds to develop and design a brand new version of RAWGraphs. We didn't know what to expect from it and to be honest. After more than 60 days of campaigning, we can finally say that we made it!
+On October 1st we launched a campaign to raise funds to develop and design a brand new version of RAWGraphs. We didn't know what to expect from it to be honest. After more than 60 days of campaigning, we can finally say that we made it!
 
 ![](./thank-you-chart2.jpg)
 <p id="caption-attachment-778" class="wp-caption-text">
