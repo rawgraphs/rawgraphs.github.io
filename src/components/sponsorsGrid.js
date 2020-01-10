@@ -88,14 +88,16 @@ const bronzeSponsors  = [
 
 
 
-export default function SponsorsGrid({}){
+export default function SponsorsGrid({showBronze=true}){
 
   return <div className="text-center">
 
     <h1>Special sponsors</h1>
     <div className="row">
       {specialSponsors.map((sponsor, i) => <div className="col-sm-4 text-center">
+        <a href={sponsor.link} className={styles.link} target="_blank" rel="noopener noreferrer">
         {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo}></img>}
+        </a>
       </div>)}
 
     </div>
@@ -103,18 +105,22 @@ export default function SponsorsGrid({}){
     <h1>Gold sponsors</h1>
     <div className="row">
       {goldSponsors.map((sponsor, i) => <div className="col-sm-3 text-center">
+        <a href={sponsor.link} className={styles.link} target="_blank" rel="noopener noreferrer">
         {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo}></img>}
+        </a>
       </div>)}
     
     </div>
 
-    <h1>Bronze sponsors</h1>
+    {showBronze && <><h1>Bronze sponsors</h1>
     <div className="row">
 
       {bronzeSponsors.map((sponsor, i) => <div className="col-sm-4 text-center">
+        <a href={sponsor.link} className={styles.link} target="_blank" rel="noopener noreferrer">
         {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name}  src={sponsor.logo}></img>}
+        </a>
       </div>)}
-    </div>
+    </div></>}
 
   </div>
 }
