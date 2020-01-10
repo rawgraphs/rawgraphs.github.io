@@ -24,8 +24,9 @@ import step1 from "../images/step1.gif"
 import step2 from "../images/step2.gif"
 import step3 from "../images/step3.gif"
 import step4 from "../images/step4.gif"
-import logoCalibro from "../images/logo-calibro-black@2x.png"
-import logoDD from "../images/logo-DD-black@2x.png"
+import logoCalibro from "../images/logo-calibro-home.png"
+import logoDD from "../images/logo-dd-home.png"
+import logoInmagik from "../images/logo-inmagik-home.png"
 import styles from "./index.module.scss"
 
 const style = {
@@ -118,12 +119,6 @@ const discoverMoreWidgets = [
 ]
 
 const askInfos = [
-  {
-    question: "Have you bumped into any issue while using the app?",
-    button: "ask on google group",
-    link: "https://groups.google.com/forum/?hl=en#!forum/densitydesign-raw",
-    bgLight: true,
-  },
   {
     question:
       "Do you want to contribute to the project? Any general question or feedback?",
@@ -219,7 +214,7 @@ const HomePage = () => (
           </div>
         </div>
         <div className="row mt-5 justify-content-center">
-          <div className="col-md-4 col-6">
+          <div className="col-md-4 col-12">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -241,6 +236,16 @@ const HomePage = () => (
               href="https://calib.ro/"
             >
               <img className="img-fluid" src={logoCalibro} alt="Logo Calibro" />
+            </a>
+          </div>
+          <div className="col-md-4 col-6">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.withImg}
+              href="https://inmagik.com/"
+            >
+              <img className="img-fluid" src={logoInmagik} alt="Logo Inmagik" />
             </a>
           </div>
         </div>

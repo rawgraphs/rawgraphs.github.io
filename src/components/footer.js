@@ -118,18 +118,6 @@ const Footer = () => (
           className={`${styles.contactUs} col-sm-3 offset-sm-1 col-12 mt-3 mt-md-0`}
         >
           <h4>Contact Us:</h4>
-          <p className="small">Bumped into issues?</p>
-          <a
-            href="https://groups.google.com/forum/?hl=en#!forum/densitydesign-raw"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="btn btn-default" type="submit">
-              Ask on Google Group
-            </button>
-          </a>
-          <br />
-          <br />
           <p className="small">Questions? Do you want to support the project?</p>
           <a href="mailto:hello@rawgraphs.io">
             <button className="btn btn-default" type="submit">

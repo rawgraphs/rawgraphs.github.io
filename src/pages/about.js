@@ -84,7 +84,7 @@ const AboutPage = () => (
               field of data visualization.
             </p>
             <p>
-              The team responsable for the design, development and mantainance of the project is composed by  
+              The team responsable for the design, development and mantainance of the project is composed by
               {" "}<a
                 href="http://www.densitydesign.org/"
                 target="_blank"
@@ -100,14 +100,14 @@ const AboutPage = () => (
               >
                 Calibro
               </a>{" "}
-              and 
+              and
               {" "}
               <a
                 href="https://inmagik.com/en/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Inmagik 
+                Inmagik
               </a>{" "} , who joined the team in 2019.
               </p>
             <h1 id="how-to-cite">How to cite RAWGraphs?</h1>
@@ -212,18 +212,6 @@ const AboutPage = () => (
               <div className="col-12">
                 <h2>Contacts</h2>
                 <p>
-                  Have you bumped into any issue while using the app? Please ask
-                  on{" "}
-                  <a
-                    href="https://groups.google.com/forum/?hl=en#!forum/densitydesign-raw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Google Groups
-                  </a>
-                  .
-                </p>
-                <p>
                   Do you have questions about RAW Graphs?
                   <br />
                   Interested into collaborations?
@@ -265,15 +253,6 @@ const AboutPage = () => (
           {partners.map(partner => (
             <Partner key={partner.name} {...partner}></Partner>
           ))}
-        </div>
-        <h2 className="mt-4">Former Supporters</h2>
-        <div className="row">
-          <div className="col-6 col-sm-3">
-            <img alt="Contactlab" className="img-fluid" src={logoContact} />
-          </div>
-          <div className="col-6 col-sm-3">
-            <img alt="La vita nova" className="img-fluid" src={logoNova} />
-          </div>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ const SponsorsPage = () => (
           <div>
             <h1 className="big">Sponsors</h1>
             <h2 className="light">
-              <p>RAW Graphs is an open source project ...</p>
+              <p>RAWGraphs is an open source project that relies on donations and the generous support of organizations and companies. During the <a href="https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization/x/20662697#/">Indiegogo Campaign</a> we launched in the fall of 2019 to develop a new version of RAWGraphs, we received more than 350 donations from 40 countries and, since we reached the goal, our campaign is still active on Indiegogo as "In Demand".</p>
             </h2>
           </div>
         </div>
@@ -34,14 +34,14 @@ const SponsorsPage = () => (
       <div className="container">
         <h1 className="text-center">Contributors</h1>
         <p style={{textTransform: 'capitalize'}}>
-          { contributors.join(", ").toLowerCase()}
+          { contributors.join(", ").toLowerCase()}.
         </p>
       </div>
     </div>
     <AskInfo
       question="Do you want to sponsor or support the project?"
-      button="contact us"
-      link="mailto:hello@rawgraphs.io"
+      button="Support us on Indiegogo"
+      link="https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization#/"
     ></AskInfo>
   </Layout>
 )

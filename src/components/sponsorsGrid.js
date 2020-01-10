@@ -4,17 +4,17 @@ import styles from './sponsorsGrid.module.scss'
 const specialSponsors  = [
   {
     logo: '/sponsors-logo/zazuko.png',
-    link: '',
+    link: 'https://zazuko.com/',
     name: 'Zazuko'
   },
   {
     logo: '/sponsors-logo/fastweb.png',
-    link: '',
+    link: 'https://www.fastweb.it/',
     name: 'Fastweb'
   },
   {
     logo: '/sponsors-logo/wyman.png',
-    link: '',
+    link: 'https://www.oliverwyman.com/index.html',
     name: 'Oliver Wyman'
   }
 
@@ -24,45 +24,45 @@ const specialSponsors  = [
 const goldSponsors  = [
   {
     logo: '/sponsors-logo/accurat.png',
-    link: '',
+    link: 'https://www.accurat.it/',
     name: 'Accurat'
   },
   {
     logo: '/sponsors-logo/data4change.png',
-    link: '',
+    link: 'https://data4chan.ge/',
     name: 'Data for Change'
   },
   {
     logo: '/sponsors-logo/code4africa.png',
-    link: '',
+    link: 'https://twitter.com/code4africa',
     name: 'Code for Africa'
   },
   {
     logo: '/sponsors-logo/tva.png',
-    link: '',
+    link: 'https://thevisualagency.com',
     name: 'The Visual Agency'
   },
   {
     logo: '/sponsors-logo/sciencepo.png',
-    link: '',
+    link: 'https://medialab.sciencespo.fr/',
     name: 'Science Po'
   },
   {
     logo: '/sponsors-logo/dataliteracy.png',
-    link: '',
+    link: 'https://dataliteracy.com/',
     name: 'Data Literacy'
   },
   {
     logo: '/sponsors-logo/tantlab.png',
-    link: '',
+    link: 'https://blogs.kcl.ac.uk/ddh/',
     name: 'TantLab'
   },
   {
     logo: '/sponsors-logo/klc.png',
-    link: '',
+    link: 'https://www.tantlab.aau.dk/',
     name: "Digital Humanitites Department of King's London College"
   },
-  
+
 
 ]
 
@@ -70,17 +70,17 @@ const goldSponsors  = [
 const bronzeSponsors  = [
   {
     logo: '/sponsors-logo/visualizingimpact.png',
-    link: '',
+    link: 'https://visualizingimpact.org/',
     name: "Visualizing Impact"
   },
   {
     logo: '/sponsors-logo/dataninja.png',
-    link: '',
+    link: 'https://www.dataninja.it/en/',
     name: 'Data Ninja'
   },
   {
     logo: '/sponsors-logo/trescientosmil.png',
-    link: '',
+    link: 'http://300000kms.net/',
     name: 'Trecientosmil'
   }
 
@@ -109,7 +109,7 @@ export default function SponsorsGrid({showBronze=true}){
         {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo}></img>}
         </a>
       </div>)}
-    
+
     </div>
 
     {showBronze && <><h1>Bronze sponsors</h1>

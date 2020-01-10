@@ -4,8 +4,23 @@
 
 .link {
     text-decoration: none !important;
+    opacity: 0.8;
+    filter: none;
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+    cursor: pointer;
 }
 
 .link:hover {
     text-decoration: none !important;
+    border: none;
+    opacity: 1;
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%);
+    cursor: pointer;
 }
