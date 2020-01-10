@@ -19,7 +19,9 @@ const SponsorsPage = () => (
           <div>
             <h1 className="big">Sponsors</h1>
             <h2 className="light">
-              <p>RAWGraphs is an open source project that relies on donations and the generous support of organizations and companies. During the <a href="https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization/x/20662697#/">Indiegogo Campaign</a> we launched in the fall of 2019 to develop a new version of RAWGraphs, we received more than 350 donations from 40 countries and, since we reached the goal, our campaign is still active on Indiegogo as "In Demand".</p>
+              <p>
+              RAWGraphs is an open-source project that relies on donations and the generous support of organizations and companies. Through the <a href="https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization/x/20662697#/">Indiegogo Campaign</a> we launched in the fall of 2019, we have received more than 350 donations from 40 countries. Keep on supporting us!
+              </p>
             </h2>
           </div>
         </div>
