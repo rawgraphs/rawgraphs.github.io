@@ -11,9 +11,9 @@ const bannerDonate = () => (
               💸
             </span>
             <span>
-              We need <span className={styles.bg}>you</span> to keep RAWGraphs{" "}
-              <span className={styles.bg}>open</span> and{" "}
-              <span className={styles.bg}>free</span>, support the new version.
+              We are <span className={styles.bg}>developing</span> a new version
+              of RAWGraphs, <span className={styles.bg}>continue</span> to
+              support us.
             </span>
             <span role="img" className={`ml-3 ${styles.blink}`}>
               💸
