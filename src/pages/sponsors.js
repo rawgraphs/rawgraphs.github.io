@@ -27,7 +27,6 @@ const SponsorsPage = () => (
     </div>
     <div className={`${styles.about} container-fluid`}>
       <div className="container">
-        <h1 className="text-center">Sponsors</h1>
         <SponsorsGrid/>
       </div>
     </div>
