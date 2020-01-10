@@ -58,6 +58,14 @@ class Header extends React.Component {
               >
                 Gallery
               </Link>
+              <Link
+                className={`nav-item nav-link ${styles.item}`}
+                activeClassName="active"
+                to="/sponsors"
+                partiallyActive={true}
+              >
+                Sponsors
+              </Link>
               <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://github.com/densitydesign/raw/wiki/"
@@ -66,6 +74,7 @@ class Header extends React.Component {
               >
                 Documentation
               </a>
+              
               <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://igg.me/at/rawgraphs2"
