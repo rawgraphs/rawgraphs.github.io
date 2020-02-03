@@ -54,12 +54,12 @@ const goldSponsors  = [
   },
   {
     logo: '/sponsors-logo/tantlab.png',
-    link: 'https://blogs.kcl.ac.uk/ddh/',
+    link: 'https://www.tantlab.aau.dk/',
     name: 'TantLab'
   },
   {
     logo: '/sponsors-logo/klc.png',
-    link: 'https://www.tantlab.aau.dk/',
+    link: 'https://blogs.kcl.ac.uk/ddh/',
     name: "Digital Humanitites Department of King's London College"
   },
 
