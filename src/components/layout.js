@@ -41,7 +41,7 @@ const Layout = ({ children, headerBg, useIt }) => {
       >
         This website uses cookies.{" "}
         <a
-          href="http://cookiesandyou.com/"
+          href="/privacy"
           target="_blank"
           rel="noopener noreferrer"
           className="ml-2 text-body border-bottom border-dark"
