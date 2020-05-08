@@ -31,7 +31,7 @@ const PrivacyPage = () => (
           <div className="ol-12 col-sm-8">
             <h2>In short</h2>
             <p>
-                This website uses Google Analytic to anonymously collect data about 
+                This website uses Google Analytics to anonymously collect data about 
                 visitors, sessions, and site usage. It helps us to understand how 
                 the tool is used, and how to improve it.<br/>None of this data will be sold 
                 to third-party ad servers.

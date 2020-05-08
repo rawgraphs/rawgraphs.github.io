@@ -39,7 +39,7 @@ const Layout = ({ children, headerBg, useIt }) => {
         buttonClasses="btn btn-default btn-grey"
         acceptOnScroll={true}
       >
-        This website uses cookies.{" "}
+        This website uses Google Analytics to anonymously collect browsing data.{" "}
         <a
           href="/privacy"
           target="_blank"
