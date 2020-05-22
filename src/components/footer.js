@@ -75,11 +75,14 @@ const Footer = () => (
                 </li>*/}
                 <li className="menu-item">
                   <a
-                    title="Indiegogo Sponsorships"
-                    href="https://rawgraphs.io/sponsorship/"
+                    title="RAWGraphs Newsletter"
+                    href="http://eepurl.com/c9eFWH"
                   >
                     Subscribe to our newsletter
                   </a>
+                </li>
+                <li className="menu-item">
+                  <Link to="/privacy">Privacy</Link>
                 </li>
               </ul>
             </div>
