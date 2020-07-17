@@ -62,8 +62,11 @@ const goldSponsors  = [
     link: 'https://blogs.kcl.ac.uk/ddh/',
     name: "Digital Humanitites Department of King's London College"
   },
-
-
+  {
+    logo: '/sponsors-logo/faraday.png',
+    link: 'https://www.faradaysec.com/?utm_source=RAWG&utm_medium=rawglogo&utm_campaign=raw1',
+    name: "Faradaysec"
+  }
 ]
 
 
@@ -103,10 +106,19 @@ export default function SponsorsGrid({showBronze=true}){
     </div>
 
     <h1>Gold sponsors</h1>
+    {/*
+      The introduction of the FARADAYSEC sponsorship caused the gold sponsor grid to look bad (a single sponsor on the last row).
+      
+      made these changes to improve it:
+      * col-sm-4 instead of col-sm-3
+      * added padding:0 25%; to the images of the sponsorship (to make them smaller)
+      
+      In case of a new gold sponsorship, restore the previous version.
+    */}
     <div className="row">
-      {goldSponsors.map((sponsor, i) => <div className="col-sm-3 text-center">
+      {goldSponsors.map((sponsor, i) => <div className="col-sm-4 text-center">
         <a href={sponsor.link} className={styles.link} target="_blank" rel="noopener noreferrer">
-        {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo}></img>}
+        {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo} style={{padding:'0 20%'}}></img>}
         </a>
       </div>)}
 
