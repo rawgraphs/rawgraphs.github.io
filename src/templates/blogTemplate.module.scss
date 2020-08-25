@@ -16,7 +16,7 @@
 }
 
 .content-box h3 {
-  margin-top: 81px;
+  margin-top: 21px;
   /* 	margin-bottom: 27px; */
   font-size: 26px;
 }
@@ -42,7 +42,13 @@
   background-color: white;
   width: 100%;
   border: 5px solid #ffffff;
-  box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.2)!important;
+  margin: 20px 0;
+  transition: all 0.5s;
+}
+
+.content-box img:hover {
+  transform: scale(1.1);
 }
 
 // .content-box img {

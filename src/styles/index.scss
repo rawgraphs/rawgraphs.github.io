@@ -57,7 +57,7 @@ h4 {
 
 p {
   font-family: "Karla", sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   letter-spacing: 0;
   line-height: 22px;
   font-weight: 300;
@@ -256,6 +256,11 @@ code {
   p {
     font-size: 18px;
     line-height: 27px;
+  }
+  li {
+    font-size: 18px;
+    line-height: 27px;
+    padding-left: 10px;
   }
 }
 

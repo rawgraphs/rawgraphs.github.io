@@ -48,7 +48,7 @@ export default function Template({ data, location }) {
         </div>
         <div className="row">
           {image && (
-            <div className="col-sm-10 offset-sm-1">
+            <div className="col-sm-12">
               <img
                 className="img-fluid img-thumbnail"
                 alt={frontmatter.title}
@@ -56,7 +56,7 @@ export default function Template({ data, location }) {
               ></img>
             </div>
           )}
-          <div className="col-sm-10 offset-sm-1">
+          <div className="col-sm-12">
             <div
               className={styles.contentBox}
               dangerouslySetInnerHTML={{ __html: html }}
