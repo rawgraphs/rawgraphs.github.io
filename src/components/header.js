@@ -83,6 +83,14 @@ class Header extends React.Component {
               >
                 Support us!
               </a>
+              <a
+                className={`nav-item nav-link ${styles.item}`}
+                href="https://dev.rawgraphs.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                  Early access
+              </a>
               {/*              <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdfbS0TsyQEXdNfYp9XkiDx5pzwEYfKCmplDJTz1VPAm1R6VA/viewform"
