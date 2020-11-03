@@ -17,7 +17,7 @@ featured_video: ""
 discover_more_left:
   - "null"
 discover_more_right:
-  - "null"
+  - "null" 
 image: ./rawgraphs_schools.jpg
 categories:
   - RAWGraphs 2.0
