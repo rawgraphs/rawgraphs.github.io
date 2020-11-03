@@ -30,6 +30,7 @@ path: /crowdfunding-campaign/rawgraphs2-for-schools/
 ---
 
 Do you use RAWGraphs for your teaching activities? Do you want to give us more feedback for the development or RAWGraphs 2.0?
+
 We are very glad to announce that today we launch a special program for educators who want to have early access to the new version of RAWGraphs for their courses. We think that teachers and students can provide very useful insights about the tool and we want to include them in the process as early as possible.
 
 ## Who can participate?
