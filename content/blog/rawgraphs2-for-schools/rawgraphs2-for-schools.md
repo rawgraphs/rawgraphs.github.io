@@ -17,7 +17,7 @@ featured_video: ""
 discover_more_left:
   - "null"
 discover_more_right:
-  - "null" 
+  - "null"
 image: ./rawgraphs_schools.jpg
 categories:
   - RAWGraphs 2.0
@@ -39,7 +39,8 @@ RAWGraphs was born inside a public university (Politecnico di Milano) and we lik
 
 ## How to participate?
 To take part in the program is very easy. You have to contact us at [hello@rawgraphs.io](mailto:hello@rawgraphs.io) and provide the following information:
-- A link or document that proves you are a teacher or instructor of a **public** school or university.
-- A brief description of the course and how you use RAWGraphs in your courses.
+- A link or a document that proves you are a teacher or instructor of a **public** school or university.
+- A brief description and duration of the course.
+- A description of how you use RAWGraphs in your teaching activities.
 
 Once you will receive the credentials for you class, we will ask you to share feedback about this new version of RAWGraphs. An ad hoc form will be shared with you to collect information and insights from you and your students.
