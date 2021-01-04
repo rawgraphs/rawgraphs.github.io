@@ -45,7 +45,7 @@ We are currently working on adding more charts and control over labels and chart
 ## Can I still contribute to the crowdfunding campaign?
 After we reached the goal of our [campaign](https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization#/), we decided to keep the Indiegogo page open to donations. You have been very generous and we can't thank you enough for it.
 
-But everything comes to an end and we will close the [Indiegogo campaign](https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization#/) on the 7th of January. We will use every cent to improve the app and dedicate time to the project. **So don't be shy, if you use RAWGraphs for your work consider donating, even with a small amount. You still have time**.
+But everything comes to an end and we will close the [Indiegogo campaign](https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization#/) on the 15th of January. We will use every cent to improve the app and dedicate time to the project. **So don't be shy, if you use RAWGraphs for your work consider donating, even with a small amount. You still have time**.
 
 From the next year, we will consider other ways to financially support the project and keep it sustainable. If you are a company and you would like to sponsor us, feel free to contact us at [hello@rawgraphs.io](mailto:hello@rawgraphs.io).
 *****
