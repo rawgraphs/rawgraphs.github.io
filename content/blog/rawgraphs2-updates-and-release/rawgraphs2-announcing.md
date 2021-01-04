@@ -31,14 +31,14 @@ path: /crowdfunding-campaign/rawgraphs2-updates-and-release/
 
 2020 is finally over and we would like to start this year by answering some of the most common questions we are receiving about RAWGraphs 2.0 and make some important announcements.
 *****
-## When will you release the new version of RAWGraphs it to everyone?
+## When will you release the new version of RAWGraphs to everyone?
 Our roadmap is not complete yet but we can announce that **RAWGraphs 2.0 will be available for everyone in February 2021**.
 
-The app will be released with the code and the documentation to help developers and designer to create and share custom charts and help us improving the project.
+The app will be released with the code and the documentation to help developers and designers to create and share custom charts and help us improve the project.
 *****
 ## How is the development of RAWGraphs 2.0 going?
 We have been working hard in the last months to redesign and develop a brand new version of RAWGraphs that is already available in beta version to our dear sponsors and supporters. We have completely refactored the software from the core to the front end.
-A lot of effort has been put in how the data is parsed and on how the charts are built. Another important feature that has been added is the possibility to export projects (data, mapping and options) to improve the way you use RAWGraphs.
+A lot of effort has been put into how the data is parsed and how the charts are built. Another important feature that has been added is the possibility to export projects (data, mapping, and options) to improve the way you use RAWGraphs.
 
 We are currently working on adding more charts and control over labels and charts options. Follow us on [Twitter](https://twitter.com/rawgraphs) for sneak peeks of the new features.
 *****
@@ -49,5 +49,5 @@ But everything comes to an end and we will close the [Indiegogo campaign](https:
 
 From the next year, we will consider other ways to financially support the project and keep it sustainable. If you are a company and you would like to sponsor us, feel free to contact us at [hello@rawgraphs.io](mailto:hello@rawgraphs.io).
 *****
-## I contributed to the campaign with the perk "A one-day workshop in Milan". When will the workshop will be?
-Unlucky it's very difficult to organise public events in the coming weeks and months, as you can imagine. For this reasons we have decided to offer remote sessions and we will contact all the participants in the coming weeks to accommodate everyone's needs. We are planning more sessions to have smaller groups to ease the participation and the support.
+## I contributed to the campaign with the perk "A one-day workshop in Milan". When will the workshop be?
+Unlucky it's very difficult to organize public events in the coming weeks and months, as you can imagine. For these reasons we have decided to offer remote sessions and we will contact all the participants in the coming weeks to accommodate everyone's needs. We are planning more sessions to have smaller groups to ease participation and support.
