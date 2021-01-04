@@ -40,9 +40,9 @@ const BlogPage = ({ data, pageContext }) => {
                 size={
                   currentPage === 1
                     ? i === 0
-                      ? "big"
+                      ? "normal"
                       : i === 1
-                      ? "medium"
+                      ? "normal"
                       : "normal"
                     : "normal"
                 }

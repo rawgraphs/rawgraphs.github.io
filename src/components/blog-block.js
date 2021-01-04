@@ -111,9 +111,6 @@ const BlogBlockNormal = ({ node }) => {
         <div className="row h-100">
           <div className={`col-12 ${styles.content}`}>
             <div className={styles.inner}>
-              <p className="text-uppercase green-text">
-                {node.frontmatter.categories[0]}
-              </p>
               <Link to={node.frontmatter.path}>
                 <h2>{node.frontmatter.title}</h2>
               </Link>
