@@ -16,8 +16,12 @@ const specialSponsors  = [
     logo: '/sponsors-logo/wyman.png',
     link: 'https://www.oliverwyman.com/index.html',
     name: 'Oliver Wyman'
+  },
+  {
+    logo: '/sponsors-logo/inova.png',
+    link: 'http://inovamedialab.org/',
+    name: 'iNOVA Media Lab'
   }
-
 ]
 
 
@@ -97,7 +101,7 @@ export default function SponsorsGrid({showBronze=true}){
 
     <h1>Special sponsors</h1>
     <div className="row">
-      {specialSponsors.map((sponsor, i) => <div className="col-sm-4 text-center">
+      {specialSponsors.map((sponsor, i) => <div className="col-sm-3 text-center">
         <a href={sponsor.link} className={styles.link} target="_blank" rel="noopener noreferrer">
         {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo}></img>}
         </a>
