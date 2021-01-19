@@ -34,7 +34,7 @@ const SponsorsPage = () => (
     </div>
     <div className="container-fluid grey-bg">
       <div className="container">
-        <h1 className="text-center">Contributors</h1>
+        <h1 className="text-center">Contributors (ordered by contribution amount and date)</h1>
         <p style={{textTransform: 'capitalize'}}>
           { contributors.join(", ").toLowerCase()}.
         </p>
