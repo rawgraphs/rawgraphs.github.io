@@ -35,7 +35,7 @@ const Footer = () => (
                 <li className="menu-item">
                   <a
                     target="_blank"
-                    href="https://github.com/densitydesign/raw/wiki"
+                    href="https://github.com/rawgraphs/rawgraphs-app"
                     rel="noopener noreferrer"
                   >
                     Documentation

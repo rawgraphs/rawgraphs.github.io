@@ -1,5 +1,5 @@
 ---
-title: How to make a contour plot
+title: How to make a contour plot (RAWGraphs 1.0)
 date: 2018-06-08T13:18:55.000Z
 author: RAW Graphs Team
 layout: post

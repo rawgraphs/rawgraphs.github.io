@@ -1,5 +1,5 @@
 ---
-title: How to make a Gantt chart
+title: How to make a Gantt chart (RAWGraphs 1.0)
 date: 2017-05-08T09:08:35.000Z
 author: RAW Graphs Team
 layout: post

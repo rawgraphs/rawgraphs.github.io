@@ -1,5 +1,5 @@
 ---
-title: How to make an alluvial diagram
+title: How to make an alluvial diagram (RAWGraphs 1.0)
 date: 2017-03-27T10:43:20.000Z
 author: RAW Graphs Team
 layout: post

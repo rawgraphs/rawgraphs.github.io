@@ -1,5 +1,5 @@
 ---
-title: How to make a barchart
+title: How to make a barchart (RAWGraphs 1.0)
 date: 2017-03-22T16:36:44.000Z
 author: RAW Graphs Team
 layout: post

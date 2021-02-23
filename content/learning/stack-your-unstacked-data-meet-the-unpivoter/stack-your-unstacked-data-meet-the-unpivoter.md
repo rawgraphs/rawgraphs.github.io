@@ -1,5 +1,5 @@
 ---
-title: Stack your unstacked data (meet the unpivoter)
+title: Stack your unstacked data (meet the unpivoter) (RAWGraphs 1.0)
 date: 2017-03-29T11:07:52.000Z
 author: RAW Graphs Team
 layout: post

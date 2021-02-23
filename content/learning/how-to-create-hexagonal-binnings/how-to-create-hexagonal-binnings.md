@@ -1,5 +1,5 @@
 ---
-title: How to create hexagonal binnings
+title: How to create hexagonal binnings (RAWGraphs 1.0)
 date: 2017-06-22T09:51:35.000Z
 author: RAW Graphs Team
 layout: post

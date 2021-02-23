@@ -1,5 +1,5 @@
 ---
-title: Introduction to RAWGraphs
+title: Introduction to RAWGraphs (RAWGraphs 1.0)
 date: 2017-03-02T16:48:44.000Z
 author: RAW Graphs Team
 layout: post

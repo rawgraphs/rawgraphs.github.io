@@ -1,5 +1,5 @@
 ---
-title: How to make multiple pie charts
+title: How to make multiple pie charts (RAWGraphs 1.0)
 date: 2017-03-31T11:00:31.000Z
 author: RAW Graphs Team
 layout: post

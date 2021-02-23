@@ -35,8 +35,8 @@ const LearningPage = ({ data }) => {
               <h1 className="big">Learning</h1>
               <h2 className="light">
                 <p>
-                  Quick reference guides for learning how to use and how to hack
-                  RAW Graphs.
+                  Quick reference guides for learning how to use <a href="https://old.rawgraphs.io/">RAW Graphs 1.0</a>.</p>
+                  <p>Tutorials and guides for the new version of RAWGraphs will be soon uploaded here.
                 </p>
               </h2>
             </div>

@@ -1,5 +1,5 @@
 ---
-title: How to make a bump chart
+title: How to make a bump chart (RAWGraphs 1.0)
 date: 2017-05-08T10:52:56.000Z
 author: RAW Graphs Team
 layout: post

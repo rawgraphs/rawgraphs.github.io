@@ -1,5 +1,5 @@
 ---
-title: How to make a beeswarm plot
+title: How to make a beeswarm plot (RAWGraphs 1.0)
 date: 2018-06-08T13:07:16.000Z
 author: RAW Graphs Team
 layout: post

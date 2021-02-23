@@ -42,8 +42,8 @@ const SponsorsPage = () => (
     </div>
     <AskInfo
       question="Do you want to sponsor or support the project?"
-      button="Support us on Indiegogo"
-      link="https://www.indiegogo.com/projects/rawgraphs-2-0-a-web-app-for-data-visualization#/"
+      button="Contact us"
+      link="mailto:hello@rawgraphs.io"
     ></AskInfo>
   </Layout>
 )

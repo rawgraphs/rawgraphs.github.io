@@ -1,5 +1,5 @@
 ---
-title: How to make a scatterplot
+title: How to make a scatterplot (RAWGraphs 1.0)
 date: 2017-05-22T10:55:27.000Z
 author: RAW Graphs Team
 layout: post

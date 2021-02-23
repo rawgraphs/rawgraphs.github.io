@@ -68,21 +68,13 @@ class Header extends React.Component {
               </Link>
               <a
                 className={`nav-item nav-link ${styles.item}`}
-                href="https://github.com/densitydesign/raw/wiki/"
+                href="https://github.com/rawgraphs/rawgraphs-app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Documentation
               </a>
-              
-              <a
-                className={`nav-item nav-link ${styles.item}`}
-                href="https://igg.me/at/rawgraphs2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Support us!
-              </a>
+
               <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://dev.rawgraphs.io/"

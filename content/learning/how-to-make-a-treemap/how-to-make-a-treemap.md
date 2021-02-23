@@ -1,5 +1,5 @@
 ---
-title: How to make a treemap
+title: How to make a treemap (RAWGraphs 1.0)
 date: 2017-05-11T15:03:29.000Z
 author: RAW Graphs Team
 layout: post
