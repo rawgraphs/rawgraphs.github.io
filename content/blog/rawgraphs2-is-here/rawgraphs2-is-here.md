@@ -18,7 +18,7 @@ discover_more_left:
   - "null"
 discover_more_right:
   - "null"
-image: ./rawgraps-2.jpg
+image: ./rawgraps-2-new.jpg
 categories:
   - RAWGraphs 2.0
   - Early Access
