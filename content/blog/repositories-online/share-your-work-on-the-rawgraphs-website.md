@@ -40,7 +40,7 @@ As the name says, it’s the core library of the project. You can use it to defi
 It adopts the latest Javascript standards, and even if it is mainly conceived to be used through the RAWGraphs interface, you can nonetheless use it directly in your code.
 This means that you can import it in any web project and use it to define and render your custom chart - or, use it to render a pre-build chart like to ones in our rawgraphs-charts repository.
 
-You can find the documentation at this link: https://rawgraphs.io/rawgraphs-core
+You can find the documentation at this link: https://rawgraphs.io/rawgraphs-core/docs/
 
 ##RAWGraphs-app
 This repository contains all the code needed to build the RAWGraphs interface. It actually provides the GUI to rawgraphs-core library and to the charts defined with it.
