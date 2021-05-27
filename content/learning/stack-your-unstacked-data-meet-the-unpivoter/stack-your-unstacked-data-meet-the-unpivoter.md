@@ -30,7 +30,7 @@ featured_video: ""
 image: ./stakc_unstack-1.png
 categories:
   - Learning
-  - Data
+  - Rawgraphs 1.0
 tags:
   - unpivoter
 path: /learning/stack-your-unstacked-data-meet-the-unpivoter/

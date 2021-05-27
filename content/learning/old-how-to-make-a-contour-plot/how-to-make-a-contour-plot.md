@@ -28,10 +28,10 @@ files:
 image: ./contourplot-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - dispersion
-path: /learning/how-to-make-a-contour-plot/
+path: /learning/old-how-to-make-a-contour-plot/
 ---
 
 <span style="font-weight: 400;">A contour plot shows the estimated density of point clouds, which is especially useful to avoid overplotting in large datasets.</span>

@@ -28,11 +28,11 @@ files:
 image: ./bumpchart-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - bump chart
   - time series
-path: /learning/how-to-make-a-bump-chart/
+path: /learning/old-how-to-make-a-bump-chart/
 ---
 
 Bump charts are useful to see the amount of different categories over time and their ranking. They are similar to area graphs or to stream graphs, the difference is that areas are sorted according their ranking.

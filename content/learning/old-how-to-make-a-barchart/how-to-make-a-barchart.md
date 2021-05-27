@@ -29,10 +29,10 @@ featured_video: ""
 image: ./barchart-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - bar charts
-path: /learning/how-to-make-a-barchart/
+path: /learning/old-how-to-make-a-barchart/
 ---
 
 RAWGraphs is meant to quickly produce visualizations that are difficult to produce with other softwares. Bar chart are quite common in any visualization software: what we added is the ability to quickly create multiple bar charts sharing the same categories, and use colors to highlight part of them according to the data.

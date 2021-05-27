@@ -26,12 +26,12 @@ files:
 image: ./beeswarm-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - beeswarm plot
   - dispersion
   - distribution
-path: /learning/how-to-make-a-beeswarm-plot/
+path: /learning/old-how-to-make-a-beeswarm-plot/
 ---
 
 <span style="font-weight: 400;">In RAWGraphs, a beeswarm plot allows you to distribute single weighted elements (like circles) on a linear scale, and to divide it also in different categories. This is a useful and easy way to map linear values and to visualize distribution.</span>

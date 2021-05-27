@@ -28,11 +28,11 @@ files:
 image: ./treemap-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - treemap
   - Weighted Hierarchy
-path: /learning/how-to-make-a-treemap/
+path: /learning/old-how-to-make-a-treemap/
 ---
 
 <span style="font-weight: 400;">Treemap are useful to see the weight of categories belonging to a hierarchical structure. In this example, we will create such structure dividing the instruments by orchestra type, then type, and then single instrument.</span>

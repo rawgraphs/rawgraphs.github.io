@@ -29,10 +29,10 @@ featured_video: ""
 image: ./piecharts-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - pie charts
-path: /learning/how-to-make-multiple-pie-charts/
+path: /learning/old-how-to-make-multiple-pie-charts/
 ---
 
 <span style="font-weight: 400;">RAWGraphs is meant to quickly produce visualizations that are difficult to produce with other softwares. Pie charts are an available option in many softwares: what we’ve added is the ability to quickly create multiple pie charts starting from the same dataset.</span>

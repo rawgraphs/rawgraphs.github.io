@@ -29,11 +29,11 @@ files:
 image: ./hexbins-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - binning
   - dispersion
-path: /learning/how-to-create-hexagonal-binnings/
+path: /learning/old-how-to-create-hexagonal-binnings/
 ---
 
 Hexbins layout is a variation of the scatterplot, grouping points in hexagonal areas. The color of each hexagon represents the number of points in it. We will use it to see how cars distribute according to their power and their cosumption.

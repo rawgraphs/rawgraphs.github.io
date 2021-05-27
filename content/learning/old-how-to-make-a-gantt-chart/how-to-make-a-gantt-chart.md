@@ -29,12 +29,12 @@ files:
 image: ./gantt-cover.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - gantt chart
   - project schedule
   - time chunks
-path: /learning/how-to-make-a-gantt-chart/
+path: /learning/old-how-to-make-a-gantt-chart/
 ---
 
 Gantt charts are horizontal bar charts defining time spans. They are useful when you want to show events in time defined by a starting and an ending date.

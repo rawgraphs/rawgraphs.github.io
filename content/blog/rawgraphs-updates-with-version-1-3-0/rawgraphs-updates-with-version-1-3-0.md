@@ -34,17 +34,17 @@ The main improvement is the adoption of the [d3.js 5.x](https://github.com/d3/d3
 
 This allowed us to add two new visual models: &#8220;bee swarm plot&#8221; and &#8220;contour plot&#8221;.
 
-- **Bee swarm plot** are useful to show distributions of item avoiding overlappings. If you want to learn how to create one with RAWGraphs, check this post: [How to make a beeswarm plot](https://rawgraphs.io/learning/how-to-make-a-beeswarm-plot/).
+- **Bee swarm plot** are useful to show distributions of item avoiding overlappings. If you want to learn how to create one with RAWGraphs, check this post: [How to make a beeswarm plot](https://rawgraphs.io/learning/old-how-to-make-a-beeswarm-plot/).
 
 ![](./beeswarm-cover-783x400.png)
 
-A bee swarm plot representing Kickstarted campaigns. [See how to create it here](https://rawgraphs.io/learning/how-to-make-a-beeswarm-plot/).
+A bee swarm plot representing Kickstarted campaigns. [See how to create it here](https://rawgraphs.io/learning/old-how-to-make-a-beeswarm-plot/).
 
-- **Contour plot** show the estimated density of point clouds, which is especially useful to avoid overlappings in large datasets. If you want to learn how to create one with RAWGraphs, check this post: [How to make a beeswarm plot](https://rawgraphs.io/learning/how-to-make-a-contour-plot/).
+- **Contour plot** show the estimated density of point clouds, which is especially useful to avoid overlappings in large datasets. If you want to learn how to create one with RAWGraphs, check this post: [How to make a beeswarm plot](https://rawgraphs.io/learning/old-how-to-make-a-contour-plot/).
 
 ![](./contourplot-cover-778x400.png)
 
-A contour plot showing the distribution of temperature during the second world war. [See how to create it here](https://rawgraphs.io/learning/how-to-make-a-contour-plot/).
+A contour plot showing the distribution of temperature during the second world war. [See how to create it here](https://rawgraphs.io/learning/old-how-to-make-a-contour-plot/).
 
 Since all the charts have been updated, you could experience bugs/errors.
 

@@ -29,11 +29,11 @@ files:
 image: ./scatterplot-cover-1.png
 categories:
   - Learning
-  - Charts
+  - Rawgraphs 1.0
 tags:
   - dispersion
   - scatterplot
-path: /learning/how-to-make-a-scatterplot/
+path: /learning/old-how-to-make-a-scatterplot/
 ---
 
 <span style="font-weight: 400;">In RAWGraphs, scatterplot and bubble graph are presented as variants of the same layout. This layout is useful to see correlations among dimensions. In this example, we will use it to visualize some data related to a list of movies.</span>
