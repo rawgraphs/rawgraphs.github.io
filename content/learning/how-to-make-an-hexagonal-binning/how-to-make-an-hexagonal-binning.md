@@ -30,7 +30,7 @@ tags:
   - correlations
   - distributions
   - dispersions
-path: /learning/how-to-make-a-/
+path: /learning/how-to-make-an-hexagonal-binning/
 ---
 
 You can download the project file from the panel on the left.
