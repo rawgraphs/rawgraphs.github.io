@@ -1,5 +1,5 @@
 ---
-title: How to make a circular dendrogram
+title: How to make a treemap
 date: 2021-05-27
 author: RAW Graphs Team
 layout: post
@@ -9,19 +9,19 @@ secondary_title:
   - ""
 discover_more_description:
   - >-
-    In this guide you’ll learn how to create a circular dendrogram.
-    The goal is to visualize the branches of the feline species in the wild and their risk of extinction
+    In this guide you’ll learn how to create a treemap.
+    The goal is to visualize the structure of five different types of orchestras.
 background_image:
   - "0"
 page_background_image:
   - ""
-featured_video: https://www.youtube.com/embed/xqjutgnoKpA
+featured_video: https://www.youtube.com/embed/W_MuNYWjhfc
 
 reading_time:
   - "2"
 files:
   - title: Project file
-    href: ./TutorialCircularDendogram.rawgraphs.zip
+    href: ./TutorialTreemap.rawgraphs.zip
 image: ""
 categories:
   - Learning
@@ -29,7 +29,7 @@ categories:
 tags:
   - hierarchies
   - proportions
-path: /learning/how-to-make-a-circular-dendrogram/
+path: /learning/how-to-make-a-treemap/
 ---
 
 You can download the project file from the panel on the left.

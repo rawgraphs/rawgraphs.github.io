@@ -9,7 +9,7 @@ secondary_title:
   - ""
 discover_more_description:
   - >-
-    In this guide you’ll learn how to create a bubble chart (or scatterplot).
+    In this guide you’ll learn how to create a circle packing.
     The goal is to visualize most populated cities per continent.
 background_image:
   - "0"

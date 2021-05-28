@@ -9,7 +9,7 @@ secondary_title:
   - ""
 discover_more_description:
   - >-
-    In this guide you’ll learn how to create a bubble chart (or scatterplot).
+    In this guide you’ll learn how to create a contour plot.
     The goal is to compare wheater condition (mean temperature) in Paris during the World War II, from 1944 to 1945.
 background_image:
   - "0"

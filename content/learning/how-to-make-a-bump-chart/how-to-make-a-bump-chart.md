@@ -9,7 +9,7 @@ secondary_title:
   - ""
 discover_more_description:
   - >-
-    In this guide you’ll learn how to create a bubble chart (or scatterplot).
+    In this guide you’ll learn how to create a bump chart.
     The goal is to visualize foreign residents in Milan from 1979 to 2015.
 background_image:
   - "0"

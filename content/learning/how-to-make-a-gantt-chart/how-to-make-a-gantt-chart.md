@@ -9,7 +9,7 @@ secondary_title:
   - ""
 discover_more_description:
   - >-
-    In this guide you’ll learn how to create a bubble chart (or scatterplot).
+    In this guide you’ll learn how to create a Gantt chart.
     The goal is to visualize the terms of office of Italian presidents and prime ministers from 1946 to 2017.
 background_image:
   - "0"
