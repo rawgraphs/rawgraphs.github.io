@@ -6,6 +6,7 @@ import Footer from "./footer"
 import "../styles/index.scss"
 import CookieConsent from "react-cookie-consent"
 import styles from "./layout.module.scss"
+import "@fontsource/karla"
 
 const Layout = ({ children, headerBg, useIt }) => {
   const data = useStaticQuery(graphql`

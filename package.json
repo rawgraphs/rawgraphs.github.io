@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "RAWGraphs Team",
   "dependencies": {
+    "@fontsource/karla": "^4.4.0",
     "bootstrap": "^4.3.1",
     "d3-time-format": "^2.1.3",
     "gatsby": "^2.13.34",
@@ -15,7 +16,6 @@
     "gatsby-plugin-google-analytics": "^2.1.4",
     "gatsby-plugin-manifest": "^2.2.0",
     "gatsby-plugin-offline": "^2.2.0",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "^2.2.8",
