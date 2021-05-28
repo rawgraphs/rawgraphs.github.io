@@ -30,6 +30,7 @@ tags:
   - correlations
   - distributions
   - dispersions
+  - heatmap
 path: /learning/how-to-make-a-contour-plot/
 ---
 
