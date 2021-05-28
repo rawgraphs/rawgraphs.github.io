@@ -5,7 +5,7 @@ module.exports = {
       "The missing link between spreadsheets and data visualization.",
     author: "@rawgraphs",
 
-    learningCategories: ["Introduction", "Charts", "Rawgraphs 1.0"],
+    learningCategories: ["Charts", "Rawgraphs 1.0"],
   },
 
   plugins: [

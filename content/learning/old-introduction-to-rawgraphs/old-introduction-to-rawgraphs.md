@@ -28,10 +28,10 @@ resources:
 image: ./Screen-Shot-2017-03-02-at-16.53.30.png
 categories:
   - Learning
-  - Introduction
+  - Rawgraphs 1.0
 tags:
   - Welcome
 path: /learning/introduction-to-rawgraphs/
 ---
 
-This is the first tutorial we created in order to explain how to use RAWGraphs and its features. In the future we will publish more detailed tutorials on how to prepare you data for RAWGraphs, how to work with the different layouts with some hands-on guides and some tricks.
+This video refers to the old version of RAWGraphs 1.0 and its features.

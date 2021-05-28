@@ -13,10 +13,12 @@ const LearningPage = ({ data }) => {
 
   const bySubCategory = siteMetadata.learningCategories.reduce(
     (bySubCategory, item) => {
-      bySubCategory[item] = edges.filter(edge => {
-        const categories = get(edge, "node.frontmatter.categories", []).map(x =>
-          x.toLowerCase()
-        )
+      bySubCategory[item] = edges.filter((edge) => {
+        const categories = get(
+          edge,
+          "node.frontmatter.categories",
+          []
+        ).map((x) => x.toLowerCase())
         return categories.indexOf(item.toLowerCase()) !== -1
       })
       return bySubCategory
@@ -33,12 +35,6 @@ const LearningPage = ({ data }) => {
           <div className="col-12 col-sm-8">
             <div>
               <h1 className="big">Learning</h1>
-              <h2 className="light">
-                <p>
-                  Quick reference guides for learning how to use <a href="https://old.rawgraphs.io/">RAW Graphs 1.0</a>.</p>
-                  <p>Tutorials and guides for the new version of RAWGraphs will be soon uploaded here.
-                </p>
-              </h2>
             </div>
           </div>
         </div>
@@ -46,7 +42,7 @@ const LearningPage = ({ data }) => {
 
       <div className="grey-bg">
         <div className="container">
-          {siteMetadata.learningCategories.map(k => (
+          {siteMetadata.learningCategories.map((k) => (
             <div className="row" key={k}>
               <div className="col-md-3">
                 <h1 id={k} className="text-capitalize">

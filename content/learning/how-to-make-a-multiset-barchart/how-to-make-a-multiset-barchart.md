@@ -1,5 +1,5 @@
 ---
-title: How to make a AAA
+title: How to make a multiset barchart
 date: 2021-05-27
 author: RAW Graphs Team
 layout: post
@@ -9,30 +9,27 @@ secondary_title:
   - ""
 discover_more_description:
   - >-
-    In this guide you’ll learn how to create a bubble chart (or scatterplot).
-    The goal is to visualize foreign residents in Milan from 1979 to 2015.
+    In this guide you’ll learn how to create a multiset barchart.
+    The goal is to visualize the affectivity and perceptions of corruption in G20 countries.
 background_image:
   - "0"
 page_background_image:
   - ""
-featured_video: https://www.youtube.com/embed/Q03sVDj32l4
+featured_video: https://www.youtube.com/embed/NgEffkJvWik
 
 reading_time:
   - "2"
 files:
   - title: Project file
-    href: ./TutorialBumpChart.rawgraphs.zip
+    href: ./TutorialMultisetBarchart.rawgraphs.zip
 image: ""
 categories:
   - Learning
   - Charts
 tags:
-  - time series
   - proportions
   - correlations
-  - streams
-  - stacked area chart
-path: /learning/how-to-make-a-/
+path: /learning/how-to-make-a-multiset-barchart/
 ---
 
 You can download the project file from the panel on the left.
