@@ -134,7 +134,7 @@ const Footer = () => (
           <div className={styles.socialIcons}>
             <a
               target="_blank"
-              href="https://github.com/densitydesign/raw"
+              href="https://github.com/rawgraphs/raw/"
               rel="noopener noreferrer"
             >
               <FaGithubSquare color="white" size="2em"></FaGithubSquare>
