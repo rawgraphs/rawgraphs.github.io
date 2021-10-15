@@ -27,6 +27,7 @@ h3 {
 
 .img-shadowed {
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  filter:grayscale(.95);
 }
 
 .smooth-corners {

@@ -5,7 +5,7 @@ const HomeStep = ({ index, image, title, subSteps }) => (
   <div id={`step${index + 1}`} className={`container-fluid step`}>
     <div className="container">
       <div className="row">
-        <div className="col-sm-6 order-1">
+        <div className={`col-sm-6 order-1  ${styles.correctColorStepImg}`}>
           <img
             className={`img-fluid ${styles.imgShadowed} ${styles.smoothCorners}`}
             src={image}

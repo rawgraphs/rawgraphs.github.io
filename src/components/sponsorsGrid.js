@@ -106,7 +106,7 @@ export default function SponsorsGrid({showBronze=true}){
 
     <h1>Special sponsors</h1>
     <div className="row">
-      {specialSponsors.map((sponsor, i) => <div className="col-sm-3 text-center">
+      {specialSponsors.map((sponsor, i) => <div className="col-sm-3 text-center" key={i}>
         <a href={sponsor.link} className={styles.link} target="_blank" rel="noopener noreferrer">
         {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo}></img>}
         </a>
@@ -125,7 +125,7 @@ export default function SponsorsGrid({showBronze=true}){
       In case of a new gold sponsorship, restore the previous version.
     */}
     <div className="row">
-      {goldSponsors.map((sponsor, i) => <div className={"col-sm-4 text-center" + (sponsor.name==="Guido Pizzini" ? " offset-sm-4" : "")}>
+      {goldSponsors.map((sponsor, i) => <div key={i} className={"col-sm-4 text-center" + (sponsor.name==="Guido Pizzini" ? " offset-sm-4" : "")}>
         <a href={sponsor.link} className={styles.link} target="_blank" rel="noopener noreferrer">
         {sponsor.logo && <img className={`img-fluid ${styles.sponsorImage}`} alt={sponsor.name} title={sponsor.name} src={sponsor.logo} style={{padding:'0 20%'}}></img>}
         </a>
