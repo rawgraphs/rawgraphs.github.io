@@ -68,29 +68,30 @@ class Header extends React.Component {
               </Link>
               <a
                 className={`nav-item nav-link ${styles.item}`}
-                href="https://github.com/rawgraphs/rawgraphs-app"
+                href="https://github.com/rawgraphs/rawgraphs-app#readme"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Documentation
               </a>
 
-              <a
+              {/* <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://dev.rawgraphs.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
                   Early access
-              </a>
-              {/*              <a
+              </a> */}
+
+              {/* <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdfbS0TsyQEXdNfYp9XkiDx5pzwEYfKCmplDJTz1VPAm1R6VA/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 User survey
-              </a>*/}
+              </a> */}
               {useIt && (
                 <a
                   id={styles.use}
