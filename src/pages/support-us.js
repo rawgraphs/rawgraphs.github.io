@@ -65,7 +65,7 @@ const SupportUs = () => (
           <p>
             If you are part of a company or organization and you want to
             organize a workshop or a webinar, please contact us at hello [at]
-            rawgraphs.io to get in touch. We will setup an ad-hoc didactical
+            rawgraphs.io to get in touch. We will setup an <span style={{whiteSpace: "nowrap"}}>ad-hoc</span> didactical
             activity for your organization.
           </p>
           <h2 className="mt-4">Request a new chart</h2>
@@ -81,7 +81,7 @@ const SupportUs = () => (
             server. Your version will have a custom logo, colors, fonts,
             visualization presets and other features.
           </p>
-          <p className="my-5">And please, <span style={{fontWeight: 800}}>help us in spreading the word</span> and bringing RAWGraphs to anyone interested in a free, simple and open-source solution for visualizing data!</p>
+          <p className="my-5">And please, help us in spreading the word and bringing RAWGraphs to anyone interested in a free, simple and open-source solution for visualizing data!</p>
         </div>
       </div>
     </div>
