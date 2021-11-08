@@ -81,7 +81,7 @@ const SupportUs = () => (
             server. Your version will have a custom logo, colors, fonts,
             visualization presets and other features.
           </p>
-          <p className="my-5">And please, <span className="font-weight-bold">help us in spreading the world</span> and bringing RAWGraphs to anyone interested in a free, simple and open-source solution for visualizing data!</p>
+          <p className="my-5">And please, <span style={{fontWeight: 800}}>help us in spreading the word</span> and bringing RAWGraphs to anyone interested in a free, simple and open-source solution for visualizing data!</p>
         </div>
       </div>
     </div>
