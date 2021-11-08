@@ -66,14 +66,14 @@ class Header extends React.Component {
               >
                 Sponsors
               </Link>
-              {/* <Link
+              <Link
                 className={`nav-item nav-link ${styles.item}`}
                 activeClassName="active"
                 to="/support-us"
                 partiallyActive={true}
               >
                 Support us
-              </Link> */}
+              </Link>
               <a
                 className={`nav-item nav-link ${styles.item}`}
                 href="https://github.com/rawgraphs/rawgraphs-app#readme"
