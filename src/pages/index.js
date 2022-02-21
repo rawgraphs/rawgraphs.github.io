@@ -65,7 +65,7 @@ const steps = [
         title: "Conventional and unconventional layouts.",
         icon: <FaChartBar className={styles.substepIcon} />,
         text:
-          'We designed and developed RAWGraphs with designers and vis geeks in mind. That’s why we focused on providing charts that are not easy to produce with other tools. But don’t worry, you can also find bar charts and pies! Something missing? See how easy is to <a href="https://github.com/densitydesign/raw/wiki/Adding-New-Charts" target="_blank" rel="noopener noreferrer">build your own model</a>.',
+          'We designed and developed RAWGraphs with designers and vis geeks in mind. That’s why we focused on providing charts that are not easy to produce with other tools. But don’t worry, you can also find bar charts and pies! Something missing? See how easy is to <a href="https://github.com/rawgraphs/rawgraphs-app/wiki/Adding-New-Charts" target="_blank" rel="noopener noreferrer">build your own model</a>.',
       },
     ],
   },
@@ -106,14 +106,14 @@ const discoverMoreWidgets = [
     title: "RAW Graphs is open",
     description:
       "RAW Graphs is built on top of the amazing d3.js library by Mike Bostock. RAW.js is released under Apache 2 licence and it’s open to the community for improvements or for your own projects.",
-    link: "https://github.com/densitydesign/raw/",
+    link: "https://github.com/rawgraphs/rawgraphs-app/",
     linkLabel: "Check our repository on GitHub",
   },
   {
     title: "RAW Graphs is scalable",
     description:
       "Not satisfied with the layouts? Check how to easily add new charts with a basic knowledge of D3.js.",
-    link: "https://github.com/densitydesign/raw/wiki/Adding-New-Charts",
+    link: "https://github.com/rawgraphs/rawgraphs-app/wiki/Adding-New-Charts",
     linkLabel: "Adding new charts",
   },
 ]
