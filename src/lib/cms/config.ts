@@ -60,7 +60,7 @@ export const config: CmsConfig = {
 	backend: {
 		name: 'github',
 		repo: 'rawgraphs/rawgraphs.github.io',
-		branch: 'develop'
+		branch: 'svelte-website'
 	},
 	media_folder: 'static/uploads',
 	public_folder: '/uploads',

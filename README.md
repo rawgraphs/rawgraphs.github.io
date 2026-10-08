@@ -107,7 +107,7 @@ new route in `src/routes/(site)/`.
 - **Local editing:** open `/admin` in a Chromium-based browser, choose "Work with Local
   Repository" and select the project folder. Changes are written straight to your working
   tree, with no authentication.
-- **Editing on the live site:** the GitHub backend commits to the `develop` branch of
+- **Editing on the live site:** the GitHub backend commits to the `svelte-website` branch of
   `rawgraphs/rawgraphs.github.io`. Signing in requires either a GitHub personal access token
   or an OAuth client; see the
   [Sveltia CMS GitHub backend docs](https://sveltiacms.app/en/docs/backends/github). No OAuth
@@ -115,18 +115,17 @@ new route in `src/routes/(site)/`.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` builds the site and publishes `build/` to GitHub Pages:
-
-- on every push to `develop`
-- manually, from the **Actions** tab (**Deploy to GitHub Pages → Run workflow**), on any branch
+`.github/workflows/deploy.yml` builds the site and publishes `build/` to GitHub Pages. It runs
+only manually: in the **Actions** tab choose **Deploy to GitHub Pages → Run workflow** and the
+branch to publish (the site lives in `svelte-website`). Nothing is deployed on push.
 
 One-time repository setup:
 
 1. In **Settings → Pages**, set **Source** to **GitHub Actions**.
 2. In the same page, set the custom domain to `rawgraphs.io`. With Actions-based deploys the
    domain is stored in the repository settings, so no `CNAME` file is needed.
-3. To deploy manually from a branch other than `develop`, allow that branch in
-   **Settings → Environments → github-pages**.
+3. Allow the `svelte-website` branch in **Settings → Environments → github-pages**: by default
+   only the repository's default branch can deploy.
 
 The site is served from the domain root, so no base path is configured. If it ever has to be
 served from a subpath, set `paths.base` in the SvelteKit options in `vite.config.ts`.

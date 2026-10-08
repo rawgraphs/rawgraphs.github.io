@@ -1,8 +1,7 @@
 name: Deploy to GitHub Pages
 
+# Manual only: run it from the Actions tab, choosing the branch to publish.
 on:
-  push:
-    branches: [develop]
   workflow_dispatch:
 
 permissions:
