@@ -1,0 +1,93 @@
+/*
+ * Rich text written in the CMS (Markdown rendered to HTML), styled with the DLS text styles.
+ * Used through the `Prose` component: `.prose` is the Body/Large size, `.prose-sm` Body/Default
+ * and `.prose-lead` Body/Lead.
+ */
+@layer components {
+	.prose {
+		@apply type-body-lg;
+		overflow-wrap: break-word;
+
+		&.prose-sm {
+			@apply type-body;
+		}
+		/* Body/Lead: the serif opening of a page, when it has links or more than one paragraph. */
+		&.prose-lead {
+			@apply type-lead;
+		}
+
+		& > * + * {
+			margin-top: var(--spacing-sm);
+		}
+
+		& :is(h2, h3, h4) {
+			margin-top: var(--spacing-md);
+			color: var(--color-text-heading);
+		}
+		& h2 {
+			@apply type-h3;
+		}
+		& h3 {
+			@apply type-h4;
+		}
+		& h4 {
+			font-weight: 700;
+		}
+		& > :first-child {
+			margin-top: 0;
+		}
+
+		& a {
+			color: var(--color-text-brand);
+			text-decoration: underline;
+
+			&:hover {
+				color: var(--color-text-heading);
+			}
+		}
+
+		& :is(ul, ol) {
+			padding-left: var(--spacing-sm);
+		}
+		& ul {
+			list-style: disc;
+		}
+		& ol {
+			list-style: decimal;
+		}
+		& li + li {
+			margin-top: var(--spacing-2xs);
+		}
+
+		& :is(img, video, iframe) {
+			max-width: 100%;
+		}
+
+		/* A paragraph in italics right after an image is its caption. */
+		& p:has(> img:only-child) + p:has(> em:only-child) {
+			@apply type-caption;
+			margin-top: var(--spacing-xs);
+			font-style: normal;
+			color: var(--color-text-muted);
+
+			& em {
+				font-style: normal;
+			}
+		}
+
+		/* Code block of the DLS (.block-quote on the previous site). */
+		& :is(blockquote, pre) {
+			@apply type-code;
+			border-radius: var(--radius-md);
+			background-color: var(--color-bg-muted);
+			padding: var(--spacing-xs) var(--spacing-sm);
+		}
+		& code {
+			font-family: var(--font-mono);
+		}
+
+		& hr {
+			border-color: var(--color-border-default);
+		}
+	}
+}

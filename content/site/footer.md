@@ -3,7 +3,7 @@ links:
   - label: Privacy info
     url: /privacy
 contacts:
-  - icon: email
+  - icon: mail
     label: hello@rawgraphs.io
     url: mailto:hello@rawgraphs.io
   - icon: github

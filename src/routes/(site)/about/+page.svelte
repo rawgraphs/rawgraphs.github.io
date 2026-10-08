@@ -1,5 +1,13 @@
 <script lang="ts">
-	import Markdown from '#lib/components/Markdown.svelte';
+	import Link from '#lib/components/atoms/Link.svelte';
+	import Prose from '#lib/components/atoms/Prose.svelte';
+	import Section from '#lib/components/atoms/Section.svelte';
+	import CodeBlock from '#lib/components/molecules/CodeBlock.svelte';
+	import ContactNote from '#lib/components/molecules/ContactNote.svelte';
+	import SectionHeading from '#lib/components/molecules/SectionHeading.svelte';
+	import PageHeader from '#lib/components/organisms/PageHeader.svelte';
+	import SectionIntro from '#lib/components/organisms/SectionIntro.svelte';
+	import TeamSection from '#lib/components/organisms/TeamSection.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -10,78 +18,52 @@
 	<title>{page.title} · RAWGraphs</title>
 </svelte:head>
 
-<h1 class="mb-4 font-serif text-4xl font-semibold">{page.title}</h1>
-{#if page.intro}
-	<p class="mb-8 max-w-2xl text-xl text-neutral-600">{page.intro}</p>
-{/if}
+<PageHeader title={page.title} image={page.background_image} />
 
-<Markdown html={page.html} />
+<SectionIntro
+	lead={page.intro}
+	html={page.html}
+	aside={data.contacts.length ? contacts : undefined}
+/>
+{#snippet contacts()}
+	<h2 class="type-h4 text-primary">{data.titles.contacts}</h2>
+	{#each data.contacts as html, index (index)}
+		<ContactNote {html} />
+	{/each}
+{/snippet}
 
-{#if data.team.length}
-	<section class="py-10">
-		<h2 class="mb-4 font-serif text-2xl font-semibold">{data.titles.team}</h2>
-		<ul class="grid gap-8 md:grid-cols-3">
-			{#each data.team as member (member.title)}
-				<li class="flex flex-col items-start gap-3">
-					{#if member.image}
-						<img class="h-12" src={member.image} alt="" />
-					{/if}
-					<h3 class="font-semibold">{member.title}</h3>
-					<Markdown html={member.html} class="prose-sm" />
-					{#if member.url}
-						<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- URL set in the CMS -->
-						<a class="text-sm underline" href={member.url}>
-							{member.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
-						</a>
-					{/if}
-				</li>
-			{/each}
-		</ul>
-	</section>
-{/if}
+<TeamSection title={data.titles.team} members={data.team} />
 
 {#if page.main_contributors?.length}
-	<section class="py-10">
-		<h2 class="mb-4 font-serif text-2xl font-semibold">{data.titles.mainContributors}</h2>
-		<ul class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+	<Section class="flex flex-col gap-sm pt-md pb-lg">
+		<SectionHeading title={data.titles.mainContributors} />
+		<ul class="grid gap-sm sm:grid-cols-2 lg:grid-cols-4">
 			{#each page.main_contributors as person (person.name)}
 				<li>
-					{#if person.url}
-						<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- URL set in the CMS -->
-						<a class="font-medium hover:underline" href={person.url}>{person.name}</a>
-					{:else}
-						<span class="font-medium">{person.name}</span>
-					{/if}
+					<p class="type-h4 text-primary">
+						{#if person.url}
+							<Link href={person.url}>{person.name}</Link>
+						{:else}
+							{person.name}
+						{/if}
+					</p>
 					{#if person.affiliation}
-						<p class="text-sm text-neutral-600">{person.affiliation}</p>
+						<p class="type-body text-muted">{person.affiliation}</p>
 					{/if}
 				</li>
 			{/each}
 		</ul>
-	</section>
-{/if}
-
-{#if data.contacts.length}
-	<section class="py-10">
-		<h2 class="mb-4 font-serif text-2xl font-semibold">{data.titles.contacts}</h2>
-		<div class="grid gap-6 sm:grid-cols-2">
-			{#each data.contacts as html, index (index)}
-				<Markdown {html} />
-			{/each}
-		</div>
-	</section>
+	</Section>
 {/if}
 
 {#if data.cite?.html || data.cite?.reference}
-	<section class="py-10">
-		<h2 class="mb-4 font-serif text-2xl font-semibold">{data.titles.cite}</h2>
-		<Markdown html={data.cite.html} />
-		{#if data.cite.reference}
-			<blockquote
-				class="mt-4 border-l-2 border-neutral-300 pl-4 whitespace-pre-line text-neutral-700"
-			>
-				{data.cite.reference}
-			</blockquote>
-		{/if}
-	</section>
+	<Section class="py-md">
+		<div class="flex max-w-text flex-col gap-sm">
+			<SectionHeading title={data.titles.cite} />
+			<Prose html={data.cite.html} />
+			{#if data.cite.reference}
+				<CodeBlock code={data.cite.reference} />
+			{/if}
+		</div>
+	</Section>
 {/if}

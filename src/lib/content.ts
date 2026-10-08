@@ -23,7 +23,7 @@ export type Link = { label: string; url: string };
 
 export type Ribbon = { title: string; links: Link[] };
 
-export type IconName = 'email' | 'github' | 'twitter' | 'newsletter';
+export type IconName = 'mail' | 'github' | 'twitter' | 'newsletter';
 
 export type Footer = { links?: Link[]; contacts?: (Link & { icon?: IconName })[] };
 
@@ -154,7 +154,7 @@ export type LearningPage = ListPage & {
 export type TextPage = { title: string; background_image?: string; ribbon?: string };
 
 export function formatDate(date: string) {
-	return new Date(date).toLocaleDateString('en-GB', {
+	return new Date(date).toLocaleDateString('en-US', {
 		day: 'numeric',
 		month: 'long',
 		year: 'numeric',

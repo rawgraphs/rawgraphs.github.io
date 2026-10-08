@@ -15,7 +15,8 @@ const files = import.meta.glob<string>('/content/**/*.md', {
  */
 export const renderMarkdown = (markdown = '') =>
 	marked
-		.parse(markdown, { async: false })
+		// A single line break in the text is kept as a line break.
+		.parse(markdown, { async: false, breaks: true })
 		.replace(
 			/<p><a href="https:\/\/www\.youtube\.com\/watch\?v=([\w-]+)">[^<]*<\/a><\/p>/g,
 			'<iframe class="aspect-video w-full" src="https://www.youtube-nocookie.com/embed/$1" title="YouTube video" allowfullscreen loading="lazy"></iframe>'
@@ -50,16 +51,12 @@ export function getEntry<T>(collection: string, slug: string): Entry<T> {
 }
 
 /**
- * What the site layout shows around a page, from the page's "Background Image" and "Ribbon"
- * fields. Spread it in the data returned by the page's `load`. A ribbon deleted from the CMS is
- * ignored.
+ * The ribbon chosen in a page's "Ribbon" field, which the site layout shows before the footer.
+ * Spread it in the data returned by the page's `load`. A ribbon deleted from the CMS is ignored.
  */
-export function getLayoutOptions(page: { background_image?: string; ribbon?: string }) {
+export function getLayoutOptions(page: { ribbon?: string }) {
 	const path = `/content/ribbons/${page.ribbon}.md`;
-	return {
-		backgroundImage: page.background_image,
-		ribbon: path in files ? parse<Ribbon>(path, files[path]) : undefined
-	};
+	return { ribbon: path in files ? parse<Ribbon>(path, files[path]) : undefined };
 }
 
 export const byDateDesc = (a: { date: string }, b: { date: string }) =>

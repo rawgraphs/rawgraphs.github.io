@@ -13,7 +13,7 @@ If you are looking for the app, go to [app.rawgraphs.io](https://app.rawgraphs.i
 - [SvelteKit](https://svelte.dev/docs/kit) with [`adapter-static`](https://svelte.dev/docs/kit/adapter-static): the whole site is prerendered to static files
 - [Tailwind CSS](https://tailwindcss.com) v4, with the typography plugin
 - [Bits UI](https://bits-ui.com) for headless, accessible components
-- [Fontsource](https://fontsource.org) for self-hosted fonts (Inter Variable and Crimson Text)
+- [Fontsource](https://fontsource.org) for self-hosted fonts (Inter, Crimson Text and Inconsolata)
 - [Sveltia CMS](https://sveltiacms.app) for editing content, served at `/admin`
 - GitHub Pages for hosting, deployed by a GitHub Action
 
@@ -54,6 +54,26 @@ static/                  Files copied as-is to the site root
 ```
 
 SvelteKit is configured in `vite.config.ts`; there is no `svelte.config.js`.
+
+## Design system
+
+The interface is built from the Figma DLS ("RAWgraphs website 2026"), in four levels:
+
+| Level      | Where                           | What                                                                |
+| ---------- | ------------------------------- | ------------------------------------------------------------------- |
+| Primitives | `src/lib/styles/tokens.css`     | Raw colors and font families, and the semantic tokens that use them |
+| Atoms      | `src/lib/components/atoms/`     | Button, Link, Icon, Logo, Divider, Media, Section, Prose            |
+| Molecules  | `src/lib/components/molecules/` | Cards, list rows, headings, navigation items                        |
+| Organisms  | `src/lib/components/organisms/` | Sections of a page: Navbar, PageHeader, NewsList, Footer…           |
+
+- `src/lib/styles/theme.css` exposes the semantic tokens as Tailwind utilities (`bg-surface`,
+  `text-heading`, `border-subtle`, `p-sm`, `rounded-md`). No other color, spacing or radius is
+  available: to change a value, change the token.
+- `src/lib/styles/typography.css` has one `type-*` utility per text style of the DLS.
+- `src/lib/styles/prose.css` styles the rich text written in the CMS.
+- Pages in `src/routes/(site)/` only compose organisms and pass them the content.
+- The main menu is defined in `src/lib/navigation.ts`.
+- UI icons are the SVG files in `src/lib/assets/icons/`: add a file and its name to `Icon.svelte`.
 
 ## Content management
 

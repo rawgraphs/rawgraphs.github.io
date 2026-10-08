@@ -5,8 +5,6 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {
-			/** Shown by the site layout behind the content of the page. */
-			backgroundImage?: string;
 			/** Shown by the site layout right before the footer. */
 			ribbon?: import('#lib/content.ts').Entry<import('#lib/content.ts').Ribbon>;
 		}

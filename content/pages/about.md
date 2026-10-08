@@ -14,10 +14,7 @@ team:
     description: Inmagik is a studio based in Bergamo (Italy), focused on the development of web applications, mobile apps, data management systems and interactive user experiences. We love open source components, languages and frameworks and have a lot of experience in the field of data visualization.
     url: https://inmagik.com/
     image: /uploads/team-inmagik.avif
-main_contributors:
-  - name: Lorem Ipsum
-    affiliation: Dolor sit amet
-    url: https://example.com
+main_contributors: []
 contacts:
   - text: For general inquires about the project, collaborations or press [hello@rawgraphs.io](mailto:hello@rawgraphs.io)
   - text: To report bugs, ask for help or request features open an issue on [Github](https://github.com/rawgraphs/rawgraphs-app/issues)

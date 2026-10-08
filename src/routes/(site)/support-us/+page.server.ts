@@ -7,6 +7,10 @@ export function load() {
 	return {
 		page,
 		...getLayoutOptions(page),
-		blocks: (page.blocks ?? []).map((block) => ({ ...block, html: renderMarkdown(block.text) }))
+		boxes: (page.blocks ?? []).map(({ title, text, button_label, button_url }) => ({
+			title,
+			html: renderMarkdown(text),
+			buttons: button_label && button_url ? [{ label: button_label, href: button_url }] : []
+		}))
 	};
 }

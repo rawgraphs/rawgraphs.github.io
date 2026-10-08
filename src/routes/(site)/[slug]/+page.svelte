@@ -1,5 +1,7 @@
 <script lang="ts">
-	import Markdown from '#lib/components/Markdown.svelte';
+	import Prose from '#lib/components/atoms/Prose.svelte';
+	import Section from '#lib/components/atoms/Section.svelte';
+	import PageHeader from '#lib/components/organisms/PageHeader.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -10,7 +12,7 @@
 	<title>{page.title} · RAWGraphs</title>
 </svelte:head>
 
-<article class="mx-auto max-w-2xl">
-	<h1 class="mb-6 font-serif text-4xl font-semibold">{page.title}</h1>
-	<Markdown html={page.html} />
-</article>
+<PageHeader title={page.title} image={page.background_image} />
+<Section class="py-md">
+	<Prose html={page.html} class="max-w-text" />
+</Section>

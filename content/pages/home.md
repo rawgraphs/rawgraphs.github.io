@@ -22,5 +22,6 @@ features:
 sponsor_tiers:
   - 1. Platinum
   - 2. Gold
+background_image: /uploads/cover-3.avif
 ribbon: main
 ---

@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import Markdown from '#lib/components/Markdown.svelte';
+	import Section from '#lib/components/atoms/Section.svelte';
+	import ContentCard from '#lib/components/molecules/ContentCard.svelte';
+	import EmptyState from '#lib/components/molecules/EmptyState.svelte';
+	import SectionHeading from '#lib/components/molecules/SectionHeading.svelte';
+	import PageHeader from '#lib/components/organisms/PageHeader.svelte';
+	import SectionIntro from '#lib/components/organisms/SectionIntro.svelte';
 	import { formatDate } from '#lib/content.ts';
 	import type { PageProps } from './$types';
 
@@ -12,51 +17,30 @@
 	<title>{page.title} · RAWGraphs</title>
 </svelte:head>
 
-<h1 class="mb-4 font-serif text-4xl font-semibold">{page.title}</h1>
-{#if page.intro}
-	<p class="mb-8 max-w-2xl text-xl text-neutral-600">{page.intro}</p>
-{/if}
-<Markdown html={page.html} />
+<PageHeader title={page.title} image={page.background_image} />
+<SectionIntro lead={page.intro} html={page.html} tone="surface" />
 
-<div class="grid gap-10 py-10 md:grid-cols-[2fr_1fr]">
-	<section>
-		<h2 class="mb-4 font-serif text-2xl font-semibold">{page.charts_title}</h2>
-		<ul class="flex flex-col gap-4">
-			{#each data.charts as chart (chart.slug)}
-				<li>
-					<a
-						class="group flex items-center gap-4 rounded border border-neutral-200 p-3"
-						href={resolve(`custom-charts/${chart.slug}`)}
-					>
-						<img class="size-16 shrink-0 object-contain" src={chart.icon} alt="" loading="lazy" />
-						<div>
-							<h3 class="font-semibold group-hover:underline">{chart.title}</h3>
-							<p class="text-sm text-neutral-500">Last update: {formatDate(chart.updated)}</p>
-						</div>
-					</a>
-				</li>
-			{:else}
-				<li class="text-neutral-500">No custom charts yet.</li>
-			{/each}
-		</ul>
+<Section tone="surface" class="grid gap-sm pt-sm pb-2xl lg:grid-cols-[2fr_1fr]">
+	<section class="flex flex-col gap-xs">
+		<SectionHeading title={page.charts_title} />
+		{#each data.charts as chart (chart.slug)}
+			<ContentCard
+				href={resolve(`custom-charts/${chart.slug}`)}
+				title={chart.title}
+				image={chart.icon}
+				meta="Last update: {formatDate(chart.updated)}"
+			/>
+		{:else}
+			<EmptyState>No custom charts yet.</EmptyState>
+		{/each}
 	</section>
 
 	{#if page.resources?.length}
-		<section>
-			<h2 class="mb-4 font-serif text-2xl font-semibold">{page.resources_title}</h2>
-			<ul class="flex flex-col gap-4">
-				{#each page.resources as resource (resource.url)}
-					<li>
-						<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- URL set in the CMS -->
-						<a
-							class="block rounded border border-neutral-200 p-3 font-semibold hover:underline"
-							href={resource.url}
-						>
-							{resource.label}
-						</a>
-					</li>
-				{/each}
-			</ul>
+		<section class="flex flex-col gap-xs">
+			<SectionHeading title={page.resources_title} />
+			{#each page.resources as resource (resource.url)}
+				<ContentCard href={resource.url} title={resource.label} size="sm" thumbnail={false} />
+			{/each}
 		</section>
 	{/if}
-</div>
+</Section>

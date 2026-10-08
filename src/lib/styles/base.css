@@ -1,0 +1,10 @@
+@layer base {
+	body {
+		@apply bg-page type-body text-primary;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-border-brand);
+		outline-offset: 2px;
+	}
+}

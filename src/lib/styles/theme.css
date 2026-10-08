@@ -1,0 +1,69 @@
+/*
+ * Tailwind theme: the only colors, spacings and radii available as utilities are the DLS ones.
+ *
+ *   bg-surface, bg-button-primary      ← color/bg/*, color/button/*
+ *   text-heading, text-icon-brand      ← color/text/*, color/icon/* (icons use the text color)
+ *   border-subtle                      ← color/border/*
+ *   p-sm, gap-md, px-gutter            ← spacing/*
+ *   rounded-md                         ← radius/*
+ */
+@theme {
+	--color-*: initial;
+	--radius-*: initial;
+
+	--background-color-page: var(--color-bg-page);
+	--background-color-surface: var(--color-bg-surface);
+	--background-color-muted: var(--color-bg-muted);
+	--background-color-inverse: var(--color-bg-inverse);
+	--background-color-brand: var(--color-bg-brand);
+	--background-color-disabled: var(--color-bg-disabled);
+	--background-color-button-primary: var(--color-button-primary);
+	--background-color-button-secondary: var(--color-button-secondary);
+	--background-color-button-dark: var(--color-button-dark);
+	--background-color-button-light: var(--color-button-light);
+
+	--text-color-primary: var(--color-text-primary);
+	--text-color-nav: var(--color-text-nav);
+	--text-color-heading: var(--color-text-heading);
+	--text-color-muted: var(--color-text-muted);
+	--text-color-subtle: var(--color-text-subtle);
+	--text-color-inverse: var(--color-text-inverse);
+	--text-color-brand: var(--color-text-brand);
+	--text-color-on-brand: var(--color-text-on-brand);
+	--text-color-icon-brand: var(--color-icon-brand);
+	--text-color-icon-default: var(--color-icon-default);
+	--text-color-icon-inverse: var(--color-icon-inverse);
+	--text-color-icon-muted: var(--color-icon-muted);
+
+	--border-color-default: var(--color-border-default);
+	--border-color-subtle: var(--color-border-subtle);
+	--border-color-light: var(--color-border-light);
+	--border-color-brand: var(--color-border-brand);
+	--border-color-strong: var(--color-border-strong);
+
+	--font-sans: var(--font-family-sans);
+	--font-serif: var(--font-family-serif);
+	--font-mono: var(--font-family-mono);
+
+	--spacing-2xs: 4px;
+	--spacing-xs: 10px;
+	--spacing-sm: 20px;
+	--spacing-md: 40px;
+	--spacing-lg: 60px;
+	--spacing-xl: 80px;
+	--spacing-2xl: 100px;
+	--spacing-gutter: var(--gutter);
+
+	--radius-sm: 4px;
+	--radius-md: 5px;
+	--radius-lg: 8px;
+	--radius-xl: 10px;
+
+	/* Width of the site container, and of the sidebars next to the main column. */
+	--container-site: 1300px;
+	--container-sidebar: 300px;
+	--container-text: 860px;
+
+	--shadow-dropdown: 1px 1px 3px 0 var(--sage-400);
+	--drop-shadow-media: 0 3px 7.5px rgb(0 0 0 / 0.21);
+}

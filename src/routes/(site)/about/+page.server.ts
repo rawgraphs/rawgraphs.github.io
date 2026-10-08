@@ -15,9 +15,11 @@ export function load() {
 			contacts: fieldLabel('pages', 'about', 'contacts'),
 			cite: fieldLabel('pages', 'about', 'cite')
 		},
-		team: (page.team ?? []).map((member) => ({
-			...member,
-			html: renderMarkdown(member.description)
+		team: (page.team ?? []).map(({ title, description, url, image }) => ({
+			title,
+			html: renderMarkdown(description),
+			url,
+			image
 		})),
 		contacts: (page.contacts ?? []).map(({ text }) => renderMarkdown(text)),
 		cite: page.cite && { html: renderMarkdown(page.cite.text), reference: page.cite.reference }

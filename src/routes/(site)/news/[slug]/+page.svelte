@@ -1,5 +1,7 @@
 <script lang="ts">
-	import Markdown from '#lib/components/Markdown.svelte';
+	import { resolve } from '$app/paths';
+	import Prose from '#lib/components/atoms/Prose.svelte';
+	import Article from '#lib/components/organisms/Article.svelte';
 	import { formatDate } from '#lib/content.ts';
 	import type { PageProps } from './$types';
 
@@ -14,11 +16,13 @@
 	{/if}
 </svelte:head>
 
-<article class="mx-auto max-w-2xl">
-	<p class="text-sm text-neutral-500">{formatDate(post.date)}</p>
-	<h1 class="mb-6 font-serif text-4xl font-semibold">{post.title}</h1>
+<Article
+	kicker={{ label: 'News', href: resolve('news') }}
+	meta={formatDate(post.date)}
+	title={post.title}
+>
 	{#if post.cover}
-		<img class="mb-6 w-full rounded" src={post.cover} alt="" />
+		<img class="w-full" src={post.cover} alt="" />
 	{/if}
-	<Markdown html={post.html} />
-</article>
+	<Prose html={post.html} />
+</Article>

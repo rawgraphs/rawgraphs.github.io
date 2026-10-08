@@ -1,15 +1,13 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
 
 @import '@fontsource-variable/inter';
+@import '@fontsource-variable/inconsolata';
 @import '@fontsource/crimson-text/400.css';
 @import '@fontsource/crimson-text/400-italic.css';
-@import '@fontsource/crimson-text/600.css';
-@import '@fontsource/crimson-text/600-italic.css';
-@import '@fontsource/crimson-text/700.css';
-@import '@fontsource/crimson-text/700-italic.css';
 
-@theme {
-	--font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
-	--font-serif: 'Crimson Text', ui-serif, Georgia, serif;
-}
+/* The design system: see `src/lib/styles` and `src/lib/components`. */
+@import '#lib/styles/tokens.css';
+@import '#lib/styles/theme.css';
+@import '#lib/styles/typography.css';
+@import '#lib/styles/base.css';
+@import '#lib/styles/prose.css';

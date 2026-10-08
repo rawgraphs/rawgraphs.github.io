@@ -1,0 +1,74 @@
+/*
+ * Design tokens, mirroring the Figma DLS ("RAWgraphs website 2026").
+ *
+ * 1. Primitives: the raw values. Never use them in components.
+ * 2. Semantic tokens: what components use, each pointing to a primitive.
+ *
+ * `theme.css` exposes the semantic tokens as Tailwind utilities.
+ */
+
+/* 1. Primitives */
+:root {
+	--green-400: #4bc06a;
+	--green-500: #06c26c;
+	--sage-400: #b3c5b5;
+	--slate-900: #2a4036;
+	--neutral-0: #ffffff;
+	--neutral-50: #f5f8fa;
+	--neutral-100: #e5ecec;
+	--neutral-150: #ecedee;
+	--neutral-300: #c2c1c1;
+	--neutral-500: #919191;
+	--neutral-600: #717573;
+	--neutral-700: #444444;
+	--neutral-800: #333333;
+	--neutral-1000: #000000;
+
+	--font-family-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-family-serif: 'Crimson Text', ui-serif, Georgia, serif;
+	--font-family-mono: 'Inconsolata Variable', ui-monospace, monospace;
+}
+
+/* 2. Semantic tokens */
+:root {
+	--color-bg-page: var(--neutral-0);
+	--color-bg-surface: var(--neutral-50);
+	--color-bg-muted: var(--neutral-100);
+	--color-bg-inverse: var(--slate-900);
+	--color-bg-brand: var(--green-500);
+	--color-bg-disabled: var(--neutral-300);
+
+	--color-button-primary: var(--green-500);
+	--color-button-secondary: var(--sage-400);
+	--color-button-dark: var(--slate-900);
+	--color-button-light: var(--neutral-100);
+
+	--color-text-primary: var(--neutral-800);
+	--color-text-nav: var(--neutral-700);
+	--color-text-heading: var(--slate-900);
+	--color-text-muted: var(--neutral-500);
+	--color-text-subtle: var(--sage-400);
+	--color-text-inverse: var(--neutral-0);
+	--color-text-brand: var(--green-500);
+	--color-text-on-brand: var(--slate-900);
+
+	--color-border-default: var(--neutral-300);
+	--color-border-subtle: var(--sage-400);
+	--color-border-light: var(--neutral-150);
+	--color-border-brand: var(--green-500);
+	--color-border-strong: var(--neutral-1000);
+
+	--color-icon-brand: var(--green-500);
+	--color-icon-default: var(--neutral-800);
+	--color-icon-inverse: var(--neutral-0);
+	--color-icon-muted: var(--neutral-500);
+
+	/* Side padding of every section: the 1440px frames of the DLS have 70px gutters. */
+	--gutter: 20px;
+}
+
+@media (min-width: 64rem) {
+	:root {
+		--gutter: 70px;
+	}
+}

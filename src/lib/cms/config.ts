@@ -1,14 +1,15 @@
 import type { CmsConfig } from '@sveltia/cms';
 
 /**
- * Sponsor types, in the order they are shown on the site. The labels are the section titles.
+ * Sponsor types, in the order they are shown on the site. The labels are the section titles,
+ * and `columns` is the number of logos per row on large screens.
  * The CMS sorts the groups of its entry list by the stored value, hence the numbered values.
  */
 export const sponsorTiers = [
-	{ key: 'platinum', label: 'Platinum sponsors', value: '1. Platinum' },
-	{ key: 'gold', label: 'Gold sponsors', value: '2. Gold' },
-	{ key: 'silver', label: 'Silver sponsors', value: '3. Silver' },
-	{ key: 'contributors', label: 'Contributors', value: '4. Contributors' }
+	{ key: 'platinum', label: 'Platinum sponsors', value: '1. Platinum', columns: 4 },
+	{ key: 'gold', label: 'Gold sponsors', value: '2. Gold', columns: 5 },
+	{ key: 'silver', label: 'Silver sponsors', value: '3. Silver', columns: 6 },
+	{ key: 'contributors', label: 'Contributors', value: '4. Contributors', columns: 6 }
 ];
 
 /**
@@ -21,12 +22,18 @@ export const tutorialTopics = [
 	{ key: 'mapping', label: 'Mapping', value: '3. Mapping' },
 	{ key: 'customize', label: 'Customize', value: '4. Customize' },
 	{ key: 'export', label: 'Export', value: '5. Export' },
-	{ key: 'charts-and-templates', label: 'Charts and templates', value: '6. Charts and templates' }
+	{
+		key: 'charts-and-templates',
+		label: 'Charts and templates',
+		value: '6. Charts and templates',
+		// Many short tutorials: listed with small cards on two columns.
+		compact: true
+	}
 ];
 
 const sponsorTierOptions = sponsorTiers.map(({ label, value }) => ({ label, value }));
 
-/** Optional image shown behind the content of a page. */
+/** Optional image shown behind the title of a page. */
 const backgroundImageField = {
 	name: 'background_image',
 	label: 'Background Image',
@@ -38,7 +45,7 @@ const backgroundImageField = {
 const ribbonField = {
 	name: 'ribbon',
 	label: 'Ribbon',
-	hint: 'Shown at the bottom of the page, right before the footer.',
+	hint: 'Bar of links shown at the bottom of the page, right before the footer. In the home page, right after the opening.',
 	widget: 'relation',
 	collection: 'ribbons',
 	value_field: '{{slug}}',
@@ -612,7 +619,7 @@ export const config: CmsConfig = {
 									name: 'icon',
 									label: 'Icon',
 									widget: 'select',
-									options: ['email', 'github', 'twitter', 'newsletter'],
+									options: ['mail', 'github', 'twitter', 'newsletter'],
 									required: false
 								},
 								{ name: 'label', label: 'Label', widget: 'string' },

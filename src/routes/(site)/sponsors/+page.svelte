@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Markdown from '#lib/components/Markdown.svelte';
-	import SponsorTiers from '#lib/components/SponsorTiers.svelte';
+	import PageHeader from '#lib/components/organisms/PageHeader.svelte';
+	import SectionIntro from '#lib/components/organisms/SectionIntro.svelte';
+	import SponsorsSection from '#lib/components/organisms/SponsorsSection.svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -11,11 +12,6 @@
 	<title>{page.title} · RAWGraphs</title>
 </svelte:head>
 
-<h1 class="mb-4 font-serif text-4xl font-semibold">{page.title}</h1>
-{#if page.intro}
-	<p class="mb-8 max-w-2xl text-xl text-neutral-600">{page.intro}</p>
-{/if}
-
-<Markdown html={page.html} />
-
-<SponsorTiers tiers={data.sponsorTiers} />
+<PageHeader title={page.title} image={page.background_image} />
+<SectionIntro lead={page.intro} html={page.html} />
+<SponsorsSection tiers={data.sponsorTiers} />
