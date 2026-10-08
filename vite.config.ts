@@ -14,7 +14,10 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			// GitHub Pages serves `404.html` for unknown paths.
-			adapter: adapter({ fallback: '404.html' })
+			adapter: adapter({ fallback: '404.html' }),
+			// A collection emptied from the CMS leaves its `[slug]` route without pages:
+			// that must not break the build.
+			prerender: { handleUnseenRoutes: 'warn' }
 		})
 	]
 });

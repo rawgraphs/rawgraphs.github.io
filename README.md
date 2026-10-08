@@ -60,6 +60,29 @@ SvelteKit is configured in `vite.config.ts`; there is no `svelte.config.js`.
 Sveltia CMS is available at `/admin` (<http://localhost:6273/admin> in development). Its
 configuration is in `src/lib/cms/config.ts`: add or change collections there.
 
+Content is stored as Markdown files with front matter in `content/`, one folder per collection:
+
+| Collection    | Folder                   | Served at                                                                                                    |
+| ------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Pages         | `content/pages/`         | `/`, `/about`, `/support-us`, `/news`, `/sponsors`, `/learning`, `/courses`, `/gallery` (one route per file) |
+| News          | `content/news/`          | `/news`, `/news/<slug>`                                                                                      |
+| Gallery       | `content/gallery/`       | `/gallery`, `/gallery/<slug>`                                                                                |
+| Learning      | `content/learning/`      | `/learning`, `/learning/<slug>`                                                                              |
+| Courses       | `content/courses/`       | `/courses` only: courses have no page of their own                                                           |
+| Text pages    | `content/text-pages/`    | `/<slug>`                                                                                                    |
+| Sponsors      | `content/sponsors/`      | Home and `/sponsors`, for the sponsor types selected in each page                                            |
+| Ribbons       | `content/ribbons/`       | Before the footer of the pages that select one in their "Ribbon" field                                       |
+| Site → Footer | `content/site/footer.md` | Footer of every page                                                                                         |
+
+Some section titles on the site (e.g. "Main Features" and "Sponsors" in the home page, and the
+sponsor types) are the labels of the corresponding fields in the CMS configuration: rename them
+there.
+
+The files are read at build time by `src/lib/server/content.ts`; the field types are in
+`src/lib/content.ts`. When you change the fields of a collection, update the CMS configuration,
+the types and the page that renders them. Adding a new unique page to "Pages" also requires a
+new route in `src/routes/(site)/`.
+
 - **Local editing:** open `/admin` in a Chromium-based browser, choose "Work with Local
   Repository" and select the project folder. Changes are written straight to your working
   tree, with no authentication.
