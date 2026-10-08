@@ -13,7 +13,7 @@ If you are looking for the app, go to [app.rawgraphs.io](https://app.rawgraphs.i
 - [SvelteKit](https://svelte.dev/docs/kit) with [`adapter-static`](https://svelte.dev/docs/kit/adapter-static): the whole site is prerendered to static files
 - [Tailwind CSS](https://tailwindcss.com) v4, with the typography plugin
 - [Bits UI](https://bits-ui.com) for headless, accessible components
-- [Fontsource](https://fontsource.org) for self-hosted fonts (Inter Variable)
+- [Fontsource](https://fontsource.org) for self-hosted fonts (Inter Variable and Crimson Text)
 - [Sveltia CMS](https://sveltiacms.app) for editing content, served at `/admin`
 - GitHub Pages for hosting, deployed by a GitHub Action
 
@@ -26,7 +26,7 @@ npm install
 npm run dev
 ```
 
-The dev server runs at <http://localhost:5173>.
+The dev server runs at <http://localhost:6273>.
 
 | Command           | What it does                                  |
 | ----------------- | --------------------------------------------- |
@@ -57,7 +57,7 @@ SvelteKit is configured in `vite.config.ts`; there is no `svelte.config.js`.
 
 ## Content management
 
-Sveltia CMS is available at `/admin` (<http://localhost:5173/admin> in development). Its
+Sveltia CMS is available at `/admin` (<http://localhost:6273/admin> in development). Its
 configuration is in `src/lib/cms/config.ts`: add or change collections there.
 
 - **Local editing:** open `/admin` in a Chromium-based browser, choose "Work with Local
