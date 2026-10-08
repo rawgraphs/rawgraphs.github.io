@@ -1,8 +1,8 @@
 ---
-title: Ribbon 2
+title: Ribbon 3
 links:
-  - label: F.A.Q.s
-    url: /faq
+  - label: Learn
+    url: /learning
   - label: What's new?
     url: /news
   - label: Support the project

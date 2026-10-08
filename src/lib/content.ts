@@ -96,6 +96,44 @@ export type Tutorial = {
 	ribbon?: string;
 };
 
+export type DocumentationPage = {
+	title: string;
+	intro?: string;
+	/** `text` is Markdown. */
+	blocks?: { title: string; text: string; buttons?: Link[] }[];
+	background_image?: string;
+	ribbon?: string;
+};
+
+export type CustomChart = {
+	title: string;
+	updated: string;
+	icon: string;
+	image: string;
+	author: string;
+	author_url?: string;
+	data_sample_url?: string;
+	download_url?: string;
+	repository_url?: string;
+	ribbon?: string;
+};
+
+export type CustomChartsPage = ListPage & {
+	intro?: string;
+	charts_title: string;
+	resources_title: string;
+	resources?: Link[];
+};
+
+export type FaqPage = {
+	title: string;
+	intro?: string;
+	/** `answer` is Markdown. */
+	faqs?: { question: string; answer: string }[];
+	background_image?: string;
+	ribbon?: string;
+};
+
 export type Course = { title: string; date: string; duration: number };
 
 export type CoursesPage = ListPage & {

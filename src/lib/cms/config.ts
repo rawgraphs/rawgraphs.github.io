@@ -192,6 +192,89 @@ export const config: CmsConfig = {
 					]
 				},
 				{
+					name: 'documentation',
+					label: 'Documentation',
+					file: 'content/pages/documentation.md',
+					fields: [
+						{ name: 'title', label: 'Title', widget: 'string' },
+						{ name: 'intro', label: 'Intro', widget: 'text', required: false },
+						{ name: 'body', label: 'Body', widget: 'markdown', required: false },
+						{
+							name: 'blocks',
+							label: 'Blocks',
+							label_singular: 'Block',
+							widget: 'list',
+							required: false,
+							fields: [
+								{ name: 'title', label: 'Title', widget: 'string' },
+								{ name: 'text', label: 'Text', widget: 'markdown' },
+								{
+									name: 'buttons',
+									label: 'Buttons',
+									label_singular: 'Button',
+									widget: 'list',
+									required: false,
+									fields: [
+										{ name: 'label', label: 'Label', widget: 'string' },
+										{ name: 'url', label: 'URL', widget: 'string' }
+									]
+								}
+							]
+						},
+						backgroundImageField,
+						ribbonField
+					]
+				},
+				{
+					// The page listing the entries of the "Custom charts" collection.
+					name: 'custom-charts',
+					label: 'Custom charts',
+					file: 'content/pages/custom-charts.md',
+					fields: [
+						{ name: 'title', label: 'Title', widget: 'string' },
+						{ name: 'intro', label: 'Intro', widget: 'text', required: false },
+						{ name: 'body', label: 'Body', widget: 'markdown', required: false },
+						{ name: 'charts_title', label: 'Charts title', widget: 'string' },
+						{ name: 'resources_title', label: 'Resources title', widget: 'string' },
+						{
+							name: 'resources',
+							label: 'Resources',
+							label_singular: 'Resource',
+							widget: 'list',
+							required: false,
+							fields: [
+								{ name: 'label', label: 'Label', widget: 'string' },
+								{ name: 'url', label: 'URL', widget: 'string' }
+							]
+						},
+						backgroundImageField,
+						ribbonField
+					]
+				},
+				{
+					name: 'faq',
+					label: 'FAQs',
+					file: 'content/pages/faq.md',
+					fields: [
+						{ name: 'title', label: 'Title', widget: 'string' },
+						{ name: 'intro', label: 'Intro', widget: 'text', required: false },
+						{ name: 'body', label: 'Body', widget: 'markdown', required: false },
+						{
+							name: 'faqs',
+							label: 'FAQs',
+							label_singular: 'FAQ',
+							widget: 'list',
+							required: false,
+							fields: [
+								{ name: 'question', label: 'Question', widget: 'string' },
+								{ name: 'answer', label: 'Answer', widget: 'markdown' }
+							]
+						},
+						backgroundImageField,
+						ribbonField
+					]
+				},
+				{
 					// The page listing the entries of the "Gallery" collection.
 					name: 'gallery',
 					label: 'Gallery',
@@ -434,6 +517,26 @@ export const config: CmsConfig = {
 					required: false
 				},
 				{ name: 'tier', label: 'Type', widget: 'select', options: sponsorTierOptions }
+			]
+		},
+		{
+			name: 'custom-charts',
+			label: 'Custom charts',
+			label_singular: 'Custom chart',
+			folder: 'content/custom-charts',
+			create: true,
+			fields: [
+				{ name: 'title', label: 'Title', widget: 'string' },
+				{ name: 'updated', label: 'Latest update', widget: 'datetime' },
+				{ name: 'icon', label: 'Icon', widget: 'image' },
+				{ name: 'image', label: 'Image', widget: 'image' },
+				{ name: 'body', label: 'Description', widget: 'markdown' },
+				{ name: 'author', label: 'Author', widget: 'string' },
+				{ name: 'author_url', label: 'Author URL', widget: 'string', required: false },
+				{ name: 'data_sample_url', label: 'Data sample URL', widget: 'string', required: false },
+				{ name: 'download_url', label: 'Download URL', widget: 'string', required: false },
+				{ name: 'repository_url', label: 'Repository URL', widget: 'string', required: false },
+				ribbonField
 			]
 		},
 		{

@@ -62,17 +62,18 @@ configuration is in `src/lib/cms/config.ts`: add or change collections there.
 
 Content is stored as Markdown files with front matter in `content/`, one folder per collection:
 
-| Collection    | Folder                   | Served at                                                                                                    |
-| ------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Pages         | `content/pages/`         | `/`, `/about`, `/support-us`, `/news`, `/sponsors`, `/learning`, `/courses`, `/gallery` (one route per file) |
-| News          | `content/news/`          | `/news`, `/news/<slug>`                                                                                      |
-| Gallery       | `content/gallery/`       | `/gallery`, `/gallery/<slug>`                                                                                |
-| Learning      | `content/learning/`      | `/learning`, `/learning/<slug>`                                                                              |
-| Courses       | `content/courses/`       | `/courses` only: courses have no page of their own                                                           |
-| Text pages    | `content/text-pages/`    | `/<slug>`                                                                                                    |
-| Sponsors      | `content/sponsors/`      | Home and `/sponsors`, for the sponsor types selected in each page                                            |
-| Ribbons       | `content/ribbons/`       | Before the footer of the pages that select one in their "Ribbon" field                                       |
-| Site → Footer | `content/site/footer.md` | Footer of every page                                                                                         |
+| Collection    | Folder                   | Served at                                                                                                                                                |
+| ------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pages         | `content/pages/`         | `/`, `/about`, `/support-us`, `/news`, `/sponsors`, `/learning`, `/courses`, `/gallery`, `/faq`, `/documentation`, `/custom-charts` (one route per file) |
+| News          | `content/news/`          | `/news`, `/news/<slug>`                                                                                                                                  |
+| Gallery       | `content/gallery/`       | `/gallery`, `/gallery/<slug>`                                                                                                                            |
+| Learning      | `content/learning/`      | `/learning`, `/learning/<slug>`                                                                                                                          |
+| Courses       | `content/courses/`       | `/courses` only: courses have no page of their own                                                                                                       |
+| Custom charts | `content/custom-charts/` | `/custom-charts`, `/custom-charts/<slug>`                                                                                                                |
+| Text pages    | `content/text-pages/`    | `/<slug>`                                                                                                                                                |
+| Sponsors      | `content/sponsors/`      | Home and `/sponsors`, for the sponsor types selected in each page                                                                                        |
+| Ribbons       | `content/ribbons/`       | Before the footer of the pages that select one in their "Ribbon" field                                                                                   |
+| Site → Footer | `content/site/footer.md` | Footer of every page                                                                                                                                     |
 
 Some section titles on the site (e.g. "Main Features" and "Sponsors" in the home page, and the
 sponsor types) are the labels of the corresponding fields in the CMS configuration: rename them
