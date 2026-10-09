@@ -60,7 +60,10 @@ export const config: CmsConfig = {
 	backend: {
 		name: 'github',
 		repo: 'rawgraphs/rawgraphs.github.io',
-		branch: 'svelte-website'
+		branch: 'svelte-website',
+		// Sveltia CMS Authenticator on Cloudflare Workers, which handles the GitHub sign-in.
+		// If the worker moves, update this address and the callback URL of the GitHub OAuth app.
+		base_url: 'https://sveltia-cms-auth.tommaso-elli.workers.dev'
 	},
 	media_folder: 'static/uploads',
 	public_folder: '/uploads',

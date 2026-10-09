@@ -108,16 +108,18 @@ new route in `src/routes/(site)/`.
   Repository" and select the project folder. Changes are written straight to your working
   tree, with no authentication.
 - **Editing on the live site:** the GitHub backend commits to the `svelte-website` branch of
-  `rawgraphs/rawgraphs.github.io`. Signing in requires either a GitHub personal access token
-  or an OAuth client; see the
-  [Sveltia CMS GitHub backend docs](https://sveltiacms.app/en/docs/backends/github). No OAuth
-  client is configured yet.
+  `rawgraphs/rawgraphs.github.io`. The "Sign in with GitHub" button goes through a
+  [Sveltia CMS Authenticator](https://github.com/sveltia/sveltia-cms-auth) worker on Cloudflare,
+  whose address is the `base_url` of the backend in `src/lib/cms/config.ts`. The worker needs
+  the client ID and secret of a GitHub OAuth app, and the site domains in `ALLOWED_DOMAINS`.
+  Signing in with a personal access token works without it.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` builds the site and publishes `build/` to GitHub Pages. It runs
-only manually: in the **Actions** tab choose **Deploy to GitHub Pages → Run workflow** and the
-branch to publish (the site lives in `svelte-website`). Nothing is deployed on push.
+`.github/workflows/deploy.yml` builds the site and publishes `build/` to GitHub Pages:
+
+- on every push to `svelte-website`, including the commits made by the CMS
+- manually, from the **Actions** tab (**Deploy to GitHub Pages → Run workflow**)
 
 One-time repository setup:
 

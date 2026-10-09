@@ -1,7 +1,9 @@
 name: Deploy to GitHub Pages
 
-# Manual only: run it from the Actions tab, choosing the branch to publish.
+# On every push to the site branch, or manually from the Actions tab.
 on:
+  push:
+    branches: [svelte-website]
   workflow_dispatch:
 
 permissions:
