@@ -58,15 +58,13 @@ Done on the live site with Chrome driven by Playwright, then re-checked on local
 
 ## Next steps
 
-1. Commit and push the responsive fixes (check `git status`: they may still be uncommitted).
-   The push deploys the site.
-2. The `hello-world` test post and its image have been deleted (2026-11-05); the deletion is
-   not committed yet.
-3. Decide on the open items above (hero video, sponsor logos, contrast and touch targets).
-4. Finish the import and review of the old content: the import commit was marked work in
+1. Check that the deploy of commit `34f56cc` (responsive fixes, removal of the `hello-world` test
+   post and its image, these notes) went through, and look at the mobile menu on the live site.
+2. Decide on the open items above (hero video, sponsor logos, contrast and touch targets).
+3. Finish the import and review of the old content: the import commit was marked work in
    progress. Compare each section of the old site (in the git history, before `e7dcb39`) with the
    new routes.
-5. Repository settings still to confirm: Pages source set to GitHub Actions, the custom domain
+4. Repository settings still to confirm: Pages source set to GitHub Actions, the custom domain
    `rawgraphs.io`, and the `svelte-website` branch allowed in the `github-pages` environment (see
    "Deployment" in the README).
-6. Run `npm run lint` over the whole project: it was not part of the responsive work.
+5. Run `npm run lint` over the whole project: it was not part of the responsive work.
