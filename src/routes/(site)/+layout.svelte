@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '#lib/assets/favicon.svg';
+	import favicon from '#lib/assets/favicon.png';
+	import appleTouchIcon from '#lib/assets/apple-touch-icon.png';
 	import { page } from '$app/state';
 	import ActionCallsBar from '#lib/components/organisms/ActionCallsBar.svelte';
 	import Footer from '#lib/components/organisms/Footer.svelte';
@@ -14,7 +15,8 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" type="image/png" href={favicon} />
+	<link rel="apple-touch-icon" href={appleTouchIcon} />
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">
