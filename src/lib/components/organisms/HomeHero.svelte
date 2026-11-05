@@ -36,7 +36,7 @@
 	</div>
 	{#if video}
 		<video
-			class="aspect-video w-full shrink-0 bg-muted drop-shadow-media lg:w-[640px]"
+			class="aspect-[1466/907] w-full shrink-0 bg-muted drop-shadow-media lg:w-[640px]"
 			src={video}
 			autoplay
 			loop

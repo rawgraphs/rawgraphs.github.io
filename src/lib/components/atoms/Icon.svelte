@@ -5,7 +5,7 @@
 -->
 <script lang="ts" module>
 	export type IconName =
-		'mail' | 'github' | 'twitter' | 'newsletter' | 'clock' | 'chevron-down' | 'menu';
+		'mail' | 'github' | 'twitter' | 'newsletter' | 'clock' | 'chevron-down' | 'menu' | 'close';
 
 	const urls = import.meta.glob<string>('../../assets/icons/*.svg', {
 		eager: true,
@@ -13,7 +13,7 @@
 		import: 'default'
 	});
 	// Icons are 16px, unless drawn at another size.
-	const sizes: Partial<Record<IconName, number>> = { clock: 20, menu: 24 };
+	const sizes: Partial<Record<IconName, number>> = { clock: 20, menu: 24, close: 24 };
 </script>
 
 <script lang="ts">
