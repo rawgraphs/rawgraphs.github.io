@@ -33,14 +33,14 @@ main_contributors:
   - name: Giorgio Uboldi
     affiliation: Studio Calibro
     url: ''
-  - name: Giorgio Caviglia (past contributor and original author)
-    affiliation: ''
+  - name: Giorgio Caviglia
+    affiliation: Figma (past contributor and original author)
     url: ''
-  - name: Giovanni Fumagalli (past contributor)
-    affiliation: Inmagik
+  - name: Giovanni Fumagalli
+    affiliation: Inmagik (past contributor)
     url: ''
-  - name: Alberto Osio (past contributor)
-    affiliation: Inmagik
+  - name: Alberto Osio
+    affiliation: Inmagik (past contributor)
     url: ''
 contacts:
   - text: For general inquires about the project, collaborations or press [hello@rawgraphs.io](mailto:hello@rawgraphs.io)
