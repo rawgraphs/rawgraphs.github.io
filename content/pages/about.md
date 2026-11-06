@@ -14,7 +14,34 @@ team:
     description: Inmagik is a studio based in Bergamo (Italy), focused on the development of web applications, mobile apps, data management systems and interactive user experiences. We love open source components, languages and frameworks and have a lot of experience in the field of data visualization.
     url: https://inmagik.com/
     image: /uploads/team-inmagik.avif
-main_contributors: []
+main_contributors:
+  - name: Matteo Azzi
+    affiliation: Studio Calibro
+    url: ''
+  - name: Mauro Bianchi
+    affiliation: Inmagik
+    url: ''
+  - name: Daniele Ciminieri
+    affiliation: Studio Calibro
+    url: ''
+  - name: Tommaso Elli
+    affiliation: Independent Researcher and Universität Bern
+    url: ''
+  - name: Michele Mauri
+    affiliation: Politecnico di Milano
+    url: ''
+  - name: Giorgio Uboldi
+    affiliation: Studio Calibro
+    url: ''
+  - name: Giorgio Caviglia (past contributor and original author)
+    affiliation: ''
+    url: ''
+  - name: Giovanni Fumagalli (past contributor)
+    affiliation: Inmagik
+    url: ''
+  - name: Alberto Osio (past contributor)
+    affiliation: Inmagik
+    url: ''
 contacts:
   - text: For general inquires about the project, collaborations or press [hello@rawgraphs.io](mailto:hello@rawgraphs.io)
   - text: To report bugs, ask for help or request features open an issue on [Github](https://github.com/rawgraphs/rawgraphs-app/issues)
